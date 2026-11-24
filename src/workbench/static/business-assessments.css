@@ -1,0 +1,11 @@
+.workspace-app .business-assessment-panel,.workspace-app .business-requirement-basis{margin-block:24px;padding-top:20px;border-top:1px solid var(--ac-border-strong);}
+.workspace-app .business-assessment-panel h3,.workspace-app .business-assessment-output h4,.workspace-app .business-requirement-basis h4,.workspace-app .business-assessment-release-preview h4{margin:0 0 8px;font-size:16px;line-height:24px;font-weight:600;color:var(--ac-accent-text);}
+.workspace-app .business-assessment-output p,.workspace-app .business-requirement-basis p{margin:8px 0 16px;font-size:16px;line-height:24px;}
+.workspace-app .business-assessment-output .caption,.workspace-app .business-requirement-basis .caption,.workspace-app .business-assessment-citation figcaption,.workspace-app .business-assessment-signals{font-size:13px;line-height:20px;}
+.workspace-app .business-assessment-result{font-weight:600;}
+.workspace-app .business-assessment-reasons>section+section{margin-top:24px;}
+.workspace-app .business-assessment-citation{margin:16px 0;}
+.workspace-app .business-assessment-citation blockquote{margin:0 0 8px;padding-left:12px;border-left:2px solid var(--ac-border-strong);font-size:13px;line-height:20px;white-space:pre-wrap;}
+.workspace-app .business-assessment-caution{padding:12px;background:var(--ac-warning-soft);border-left:3px solid var(--ac-warning);font-size:13px;line-height:20px;}
+.workspace-app .business-assessment-release-choice,.workspace-app .business-assessment-release-preview{margin-block:20px;}
+.workspace-app .business-assessment-output details,.workspace-app .business-requirement-basis details{margin-block:16px;}

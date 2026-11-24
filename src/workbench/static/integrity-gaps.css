@@ -1,0 +1,16 @@
+.gap-thumbnail,.gap-card,.gap-type-tile{--gap-ink:var(--ac-warning);--gap-edge:var(--ac-warning-border);--gap-surface:var(--ac-warning-soft);--gap-header:var(--ac-warning-soft);color:var(--ac-ink)}
+.knowledge-card-row.gap-thumbnail{background:var(--gap-surface);border:1px solid var(--gap-edge);border-left:5px solid var(--gap-edge);border-radius:8px;padding:14px;margin:12px 0}
+.gap-label{display:flex;align-items:center;gap:7px;color:var(--gap-ink);font-weight:650;font-size:13px}
+.gap-label svg{flex-shrink:0}
+.gap-thumbnail .item-title-link:is(:link,:visited,:hover,:active){color:var(--ac-warning);text-decoration:underline;text-underline-offset:3px}
+.gap-thumbnail .caption,.gap-card .caption{color:var(--ac-warning)}
+.gap-thumbnail:hover{background:var(--ac-warning-soft)}
+.knowledge-type-tile.gap-type-tile{background:var(--gap-surface);color:var(--gap-ink);border-color:var(--gap-edge)}
+.gap-card{border:1px solid var(--gap-edge);border-top:5px solid var(--gap-edge);border-radius:8px;overflow:hidden;background:var(--ac-warning-soft)}
+.gap-card>button{margin:10px 14px}.gap-card-header{background:var(--gap-header);padding:16px}.gap-card-header h3{font-size:20px;line-height:1.35;margin:8px 0}.gap-card-body{padding:16px}
+.gap-card .form-field{margin:14px 0}.gap-card textarea,.gap-card select{max-width:100%;background:var(--ac-surface)}.gap-card details{margin:14px 0}.gap-card .label-value{margin:0 0 16px}
+.gap-card :is(a,button,input,textarea,select):focus-visible,.gap-thumbnail a:focus-visible,.gap-type-tile:focus-visible{outline:3px solid var(--ac-accent);outline-offset:3px}
+.gap-review-context{margin:12px;padding:18px;border:1px solid var(--ac-warning-border);border-radius:8px;background:var(--ac-warning-soft)}.gap-review-context h3{font-size:21px;line-height:1.35}.gap-review-context .label-value{margin:12px 0}.gap-review-context details{margin:18px 0}
+.gap-response{border-bottom:1px solid var(--ac-warning-border);padding:8px 0}.gap-response blockquote,.gap-review-context blockquote{margin:12px 0;padding:8px 12px;border-left:3px solid var(--ac-warning);white-space:pre-wrap;overflow-wrap:anywhere}.gap-source-text{max-height:240px;overflow:auto;user-select:text}.gap-form-error{color:var(--ac-danger);font-weight:600}.gap-card .caption{overflow-wrap:anywhere}
+
+.gap-guidance h4{margin:0 0 8px;font-size:16px}.gap-guidance ul{padding-left:20px;overflow-wrap:anywhere}.gap-guidance li{margin:8px 0}

@@ -1,0 +1,818 @@
+[
+  {
+    "name": ".editorconfig",
+    "path": ".editorconfig",
+    "sha": "e4df69f1e12f027a7b30a8ea9c70fef4553a288e",
+    "size": 67,
+    "url": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/.editorconfig?ref=20260901",
+    "html_url": "https://github.com/astral-sh/python-build-standalone/blob/20260901/.editorconfig",
+    "git_url": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/e4df69f1e12f027a7b30a8ea9c70fef4553a288e",
+    "download_url": "https://raw.githubusercontent.com/astral-sh/python-build-standalone/20260901/.editorconfig",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/.editorconfig?ref=20260901",
+      "git": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/e4df69f1e12f027a7b30a8ea9c70fef4553a288e",
+      "html": "https://github.com/astral-sh/python-build-standalone/blob/20260901/.editorconfig"
+    }
+  },
+  {
+    "name": ".github",
+    "path": ".github",
+    "sha": "01a3bacc60cdb6578571a9b23f51426d17001976",
+    "size": 0,
+    "url": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/.github?ref=20260901",
+    "html_url": "https://github.com/astral-sh/python-build-standalone/tree/20260901/.github",
+    "git_url": "https://api.github.com/repos/astral-sh/python-build-standalone/git/trees/01a3bacc60cdb6578571a9b23f51426d17001976",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/.github?ref=20260901",
+      "git": "https://api.github.com/repos/astral-sh/python-build-standalone/git/trees/01a3bacc60cdb6578571a9b23f51426d17001976",
+      "html": "https://github.com/astral-sh/python-build-standalone/tree/20260901/.github"
+    }
+  },
+  {
+    "name": ".gitignore",
+    "path": ".gitignore",
+    "sha": "b6d4a84ab2ac6af15fa0fc6493bfefbf1056bf03",
+    "size": 60,
+    "url": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/.gitignore?ref=20260901",
+    "html_url": "https://github.com/astral-sh/python-build-standalone/blob/20260901/.gitignore",
+    "git_url": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/b6d4a84ab2ac6af15fa0fc6493bfefbf1056bf03",
+    "download_url": "https://raw.githubusercontent.com/astral-sh/python-build-standalone/20260901/.gitignore",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/.gitignore?ref=20260901",
+      "git": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/b6d4a84ab2ac6af15fa0fc6493bfefbf1056bf03",
+      "html": "https://github.com/astral-sh/python-build-standalone/blob/20260901/.gitignore"
+    }
+  },
+  {
+    "name": ".hgignore",
+    "path": ".hgignore",
+    "sha": "597ec2280234284fcaf34f6093b0c40a143dbcf4",
+    "size": 19,
+    "url": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/.hgignore?ref=20260901",
+    "html_url": "https://github.com/astral-sh/python-build-standalone/blob/20260901/.hgignore",
+    "git_url": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/597ec2280234284fcaf34f6093b0c40a143dbcf4",
+    "download_url": "https://raw.githubusercontent.com/astral-sh/python-build-standalone/20260901/.hgignore",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/.hgignore?ref=20260901",
+      "git": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/597ec2280234284fcaf34f6093b0c40a143dbcf4",
+      "html": "https://github.com/astral-sh/python-build-standalone/blob/20260901/.hgignore"
+    }
+  },
+  {
+    "name": ".python-version",
+    "path": ".python-version",
+    "sha": "24ee5b1be9961e38a503c8e764b7385dbb6ba124",
+    "size": 5,
+    "url": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/.python-version?ref=20260901",
+    "html_url": "https://github.com/astral-sh/python-build-standalone/blob/20260901/.python-version",
+    "git_url": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/24ee5b1be9961e38a503c8e764b7385dbb6ba124",
+    "download_url": "https://raw.githubusercontent.com/astral-sh/python-build-standalone/20260901/.python-version",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/.python-version?ref=20260901",
+      "git": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/24ee5b1be9961e38a503c8e764b7385dbb6ba124",
+      "html": "https://github.com/astral-sh/python-build-standalone/blob/20260901/.python-version"
+    }
+  },
+  {
+    "name": "BENCHMARKS.md",
+    "path": "BENCHMARKS.md",
+    "sha": "74da21e0367ca6f389bc7e57198edb90f7cef9b9",
+    "size": 3259,
+    "url": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/BENCHMARKS.md?ref=20260901",
+    "html_url": "https://github.com/astral-sh/python-build-standalone/blob/20260901/BENCHMARKS.md",
+    "git_url": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/74da21e0367ca6f389bc7e57198edb90f7cef9b9",
+    "download_url": "https://raw.githubusercontent.com/astral-sh/python-build-standalone/20260901/BENCHMARKS.md",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/BENCHMARKS.md?ref=20260901",
+      "git": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/74da21e0367ca6f389bc7e57198edb90f7cef9b9",
+      "html": "https://github.com/astral-sh/python-build-standalone/blob/20260901/BENCHMARKS.md"
+    }
+  },
+  {
+    "name": "CONTRIBUTING.rst",
+    "path": "CONTRIBUTING.rst",
+    "sha": "4a9716cb3798a0fe8c152a159eb46bea65e8a511",
+    "size": 3033,
+    "url": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/CONTRIBUTING.rst?ref=20260901",
+    "html_url": "https://github.com/astral-sh/python-build-standalone/blob/20260901/CONTRIBUTING.rst",
+    "git_url": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/4a9716cb3798a0fe8c152a159eb46bea65e8a511",
+    "download_url": "https://raw.githubusercontent.com/astral-sh/python-build-standalone/20260901/CONTRIBUTING.rst",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/CONTRIBUTING.rst?ref=20260901",
+      "git": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/4a9716cb3798a0fe8c152a159eb46bea65e8a511",
+      "html": "https://github.com/astral-sh/python-build-standalone/blob/20260901/CONTRIBUTING.rst"
+    }
+  },
+  {
+    "name": "Cargo.lock",
+    "path": "Cargo.lock",
+    "sha": "1f4f9ede1328eb154ff267740965b5eff2eabce1",
+    "size": 97658,
+    "url": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/Cargo.lock?ref=20260901",
+    "html_url": "https://github.com/astral-sh/python-build-standalone/blob/20260901/Cargo.lock",
+    "git_url": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/1f4f9ede1328eb154ff267740965b5eff2eabce1",
+    "download_url": "https://raw.githubusercontent.com/astral-sh/python-build-standalone/20260901/Cargo.lock",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/Cargo.lock?ref=20260901",
+      "git": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/1f4f9ede1328eb154ff267740965b5eff2eabce1",
+      "html": "https://github.com/astral-sh/python-build-standalone/blob/20260901/Cargo.lock"
+    }
+  },
+  {
+    "name": "Cargo.toml",
+    "path": "Cargo.toml",
+    "sha": "7cc511c48c39942c4d4af5af255e3de8bac8e6e1",
+    "size": 932,
+    "url": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/Cargo.toml?ref=20260901",
+    "html_url": "https://github.com/astral-sh/python-build-standalone/blob/20260901/Cargo.toml",
+    "git_url": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/7cc511c48c39942c4d4af5af255e3de8bac8e6e1",
+    "download_url": "https://raw.githubusercontent.com/astral-sh/python-build-standalone/20260901/Cargo.toml",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/Cargo.toml?ref=20260901",
+      "git": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/7cc511c48c39942c4d4af5af255e3de8bac8e6e1",
+      "html": "https://github.com/astral-sh/python-build-standalone/blob/20260901/Cargo.toml"
+    }
+  },
+  {
+    "name": "Justfile",
+    "path": "Justfile",
+    "sha": "56acfa3063bc59f166c32231714c98627684f25e",
+    "size": 4880,
+    "url": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/Justfile?ref=20260901",
+    "html_url": "https://github.com/astral-sh/python-build-standalone/blob/20260901/Justfile",
+    "git_url": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/56acfa3063bc59f166c32231714c98627684f25e",
+    "download_url": "https://raw.githubusercontent.com/astral-sh/python-build-standalone/20260901/Justfile",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/Justfile?ref=20260901",
+      "git": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/56acfa3063bc59f166c32231714c98627684f25e",
+      "html": "https://github.com/astral-sh/python-build-standalone/blob/20260901/Justfile"
+    }
+  },
+  {
+    "name": "LICENSE",
+    "path": "LICENSE",
+    "sha": "a612ad9813b006ce81d1ee438dd784da99a54007",
+    "size": 16725,
+    "url": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/LICENSE?ref=20260901",
+    "html_url": "https://github.com/astral-sh/python-build-standalone/blob/20260901/LICENSE",
+    "git_url": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/a612ad9813b006ce81d1ee438dd784da99a54007",
+    "download_url": "https://raw.githubusercontent.com/astral-sh/python-build-standalone/20260901/LICENSE",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/LICENSE?ref=20260901",
+      "git": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/a612ad9813b006ce81d1ee438dd784da99a54007",
+      "html": "https://github.com/astral-sh/python-build-standalone/blob/20260901/LICENSE"
+    }
+  },
+  {
+    "name": "LICENSE.bdb.txt",
+    "path": "LICENSE.bdb.txt",
+    "sha": "0601b45e01c6bda505d9d6697c77a28edf378722",
+    "size": 7293,
+    "url": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/LICENSE.bdb.txt?ref=20260901",
+    "html_url": "https://github.com/astral-sh/python-build-standalone/blob/20260901/LICENSE.bdb.txt",
+    "git_url": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/0601b45e01c6bda505d9d6697c77a28edf378722",
+    "download_url": "https://raw.githubusercontent.com/astral-sh/python-build-standalone/20260901/LICENSE.bdb.txt",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/LICENSE.bdb.txt?ref=20260901",
+      "git": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/0601b45e01c6bda505d9d6697c77a28edf378722",
+      "html": "https://github.com/astral-sh/python-build-standalone/blob/20260901/LICENSE.bdb.txt"
+    }
+  },
+  {
+    "name": "LICENSE.bzip2.txt",
+    "path": "LICENSE.bzip2.txt",
+    "sha": "a5c4cdbc3f5e894f765d903f3c5939d7aa009615",
+    "size": 1743,
+    "url": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/LICENSE.bzip2.txt?ref=20260901",
+    "html_url": "https://github.com/astral-sh/python-build-standalone/blob/20260901/LICENSE.bzip2.txt",
+    "git_url": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/a5c4cdbc3f5e894f765d903f3c5939d7aa009615",
+    "download_url": "https://raw.githubusercontent.com/astral-sh/python-build-standalone/20260901/LICENSE.bzip2.txt",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/LICENSE.bzip2.txt?ref=20260901",
+      "git": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/a5c4cdbc3f5e894f765d903f3c5939d7aa009615",
+      "html": "https://github.com/astral-sh/python-build-standalone/blob/20260901/LICENSE.bzip2.txt"
+    }
+  },
+  {
+    "name": "LICENSE.cpython.txt",
+    "path": "LICENSE.cpython.txt",
+    "sha": "1007a80520a7ff53a8dd5d8847bd4c0a34d46442",
+    "size": 36164,
+    "url": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/LICENSE.cpython.txt?ref=20260901",
+    "html_url": "https://github.com/astral-sh/python-build-standalone/blob/20260901/LICENSE.cpython.txt",
+    "git_url": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/1007a80520a7ff53a8dd5d8847bd4c0a34d46442",
+    "download_url": "https://raw.githubusercontent.com/astral-sh/python-build-standalone/20260901/LICENSE.cpython.txt",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/LICENSE.cpython.txt?ref=20260901",
+      "git": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/1007a80520a7ff53a8dd5d8847bd4c0a34d46442",
+      "html": "https://github.com/astral-sh/python-build-standalone/blob/20260901/LICENSE.cpython.txt"
+    }
+  },
+  {
+    "name": "LICENSE.expat.txt",
+    "path": "LICENSE.expat.txt",
+    "sha": "ce9e5939291e45f9633f540efc6ae58a26c041ef",
+    "size": 1144,
+    "url": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/LICENSE.expat.txt?ref=20260901",
+    "html_url": "https://github.com/astral-sh/python-build-standalone/blob/20260901/LICENSE.expat.txt",
+    "git_url": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/ce9e5939291e45f9633f540efc6ae58a26c041ef",
+    "download_url": "https://raw.githubusercontent.com/astral-sh/python-build-standalone/20260901/LICENSE.expat.txt",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/LICENSE.expat.txt?ref=20260901",
+      "git": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/ce9e5939291e45f9633f540efc6ae58a26c041ef",
+      "html": "https://github.com/astral-sh/python-build-standalone/blob/20260901/LICENSE.expat.txt"
+    }
+  },
+  {
+    "name": "LICENSE.libX11.txt",
+    "path": "LICENSE.libX11.txt",
+    "sha": "b065516e4437c493f9cbf32cc7d15db60f68bc74",
+    "size": 47018,
+    "url": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/LICENSE.libX11.txt?ref=20260901",
+    "html_url": "https://github.com/astral-sh/python-build-standalone/blob/20260901/LICENSE.libX11.txt",
+    "git_url": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/b065516e4437c493f9cbf32cc7d15db60f68bc74",
+    "download_url": "https://raw.githubusercontent.com/astral-sh/python-build-standalone/20260901/LICENSE.libX11.txt",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/LICENSE.libX11.txt?ref=20260901",
+      "git": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/b065516e4437c493f9cbf32cc7d15db60f68bc74",
+      "html": "https://github.com/astral-sh/python-build-standalone/blob/20260901/LICENSE.libX11.txt"
+    }
+  },
+  {
+    "name": "LICENSE.libXau.txt",
+    "path": "LICENSE.libXau.txt",
+    "sha": "64492ad8091f917787b14f12ba236e56de7addd2",
+    "size": 1148,
+    "url": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/LICENSE.libXau.txt?ref=20260901",
+    "html_url": "https://github.com/astral-sh/python-build-standalone/blob/20260901/LICENSE.libXau.txt",
+    "git_url": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/64492ad8091f917787b14f12ba236e56de7addd2",
+    "download_url": "https://raw.githubusercontent.com/astral-sh/python-build-standalone/20260901/LICENSE.libXau.txt",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/LICENSE.libXau.txt?ref=20260901",
+      "git": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/64492ad8091f917787b14f12ba236e56de7addd2",
+      "html": "https://github.com/astral-sh/python-build-standalone/blob/20260901/LICENSE.libXau.txt"
+    }
+  },
+  {
+    "name": "LICENSE.libedit.txt",
+    "path": "LICENSE.libedit.txt",
+    "sha": "52c8707dc590da3ef3b8a487475e4fe0b191f976",
+    "size": 1614,
+    "url": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/LICENSE.libedit.txt?ref=20260901",
+    "html_url": "https://github.com/astral-sh/python-build-standalone/blob/20260901/LICENSE.libedit.txt",
+    "git_url": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/52c8707dc590da3ef3b8a487475e4fe0b191f976",
+    "download_url": "https://raw.githubusercontent.com/astral-sh/python-build-standalone/20260901/LICENSE.libedit.txt",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/LICENSE.libedit.txt?ref=20260901",
+      "git": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/52c8707dc590da3ef3b8a487475e4fe0b191f976",
+      "html": "https://github.com/astral-sh/python-build-standalone/blob/20260901/LICENSE.libedit.txt"
+    }
+  },
+  {
+    "name": "LICENSE.libffi.txt",
+    "path": "LICENSE.libffi.txt",
+    "sha": "acb2f7a07d7c5093f258ce7f6e8711fa63e68747",
+    "size": 1132,
+    "url": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/LICENSE.libffi.txt?ref=20260901",
+    "html_url": "https://github.com/astral-sh/python-build-standalone/blob/20260901/LICENSE.libffi.txt",
+    "git_url": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/acb2f7a07d7c5093f258ce7f6e8711fa63e68747",
+    "download_url": "https://raw.githubusercontent.com/astral-sh/python-build-standalone/20260901/LICENSE.libffi.txt",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/LICENSE.libffi.txt?ref=20260901",
+      "git": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/acb2f7a07d7c5093f258ce7f6e8711fa63e68747",
+      "html": "https://github.com/astral-sh/python-build-standalone/blob/20260901/LICENSE.libffi.txt"
+    }
+  },
+  {
+    "name": "LICENSE.liblzma.txt",
+    "path": "LICENSE.liblzma.txt",
+    "sha": "2d7885199716b722b52832f73fa75285459b08ae",
+    "size": 660,
+    "url": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/LICENSE.liblzma.txt?ref=20260901",
+    "html_url": "https://github.com/astral-sh/python-build-standalone/blob/20260901/LICENSE.liblzma.txt",
+    "git_url": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/2d7885199716b722b52832f73fa75285459b08ae",
+    "download_url": "https://raw.githubusercontent.com/astral-sh/python-build-standalone/20260901/LICENSE.liblzma.txt",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/LICENSE.liblzma.txt?ref=20260901",
+      "git": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/2d7885199716b722b52832f73fa75285459b08ae",
+      "html": "https://github.com/astral-sh/python-build-standalone/blob/20260901/LICENSE.liblzma.txt"
+    }
+  },
+  {
+    "name": "LICENSE.libuuid.txt",
+    "path": "LICENSE.libuuid.txt",
+    "sha": "ec87a77f17f3f9415bd05ae1fb21c6009765f8b1",
+    "size": 1432,
+    "url": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/LICENSE.libuuid.txt?ref=20260901",
+    "html_url": "https://github.com/astral-sh/python-build-standalone/blob/20260901/LICENSE.libuuid.txt",
+    "git_url": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/ec87a77f17f3f9415bd05ae1fb21c6009765f8b1",
+    "download_url": "https://raw.githubusercontent.com/astral-sh/python-build-standalone/20260901/LICENSE.libuuid.txt",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/LICENSE.libuuid.txt?ref=20260901",
+      "git": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/ec87a77f17f3f9415bd05ae1fb21c6009765f8b1",
+      "html": "https://github.com/astral-sh/python-build-standalone/blob/20260901/LICENSE.libuuid.txt"
+    }
+  },
+  {
+    "name": "LICENSE.libxcb.txt",
+    "path": "LICENSE.libxcb.txt",
+    "sha": "54bfbe5b02074d0c276959c9140072ccba0dc670",
+    "size": 1337,
+    "url": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/LICENSE.libxcb.txt?ref=20260901",
+    "html_url": "https://github.com/astral-sh/python-build-standalone/blob/20260901/LICENSE.libxcb.txt",
+    "git_url": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/54bfbe5b02074d0c276959c9140072ccba0dc670",
+    "download_url": "https://raw.githubusercontent.com/astral-sh/python-build-standalone/20260901/LICENSE.libxcb.txt",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/LICENSE.libxcb.txt?ref=20260901",
+      "git": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/54bfbe5b02074d0c276959c9140072ccba0dc670",
+      "html": "https://github.com/astral-sh/python-build-standalone/blob/20260901/LICENSE.libxcb.txt"
+    }
+  },
+  {
+    "name": "LICENSE.mpdecimal.txt",
+    "path": "LICENSE.mpdecimal.txt",
+    "sha": "c7688a928cd5292e5c2a729431fab7b30fd44a05",
+    "size": 1284,
+    "url": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/LICENSE.mpdecimal.txt?ref=20260901",
+    "html_url": "https://github.com/astral-sh/python-build-standalone/blob/20260901/LICENSE.mpdecimal.txt",
+    "git_url": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/c7688a928cd5292e5c2a729431fab7b30fd44a05",
+    "download_url": "https://raw.githubusercontent.com/astral-sh/python-build-standalone/20260901/LICENSE.mpdecimal.txt",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/LICENSE.mpdecimal.txt?ref=20260901",
+      "git": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/c7688a928cd5292e5c2a729431fab7b30fd44a05",
+      "html": "https://github.com/astral-sh/python-build-standalone/blob/20260901/LICENSE.mpdecimal.txt"
+    }
+  },
+  {
+    "name": "LICENSE.ncurses.txt",
+    "path": "LICENSE.ncurses.txt",
+    "sha": "3a229753681327c4089d8fdaf9293658c7befe4a",
+    "size": 1447,
+    "url": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/LICENSE.ncurses.txt?ref=20260901",
+    "html_url": "https://github.com/astral-sh/python-build-standalone/blob/20260901/LICENSE.ncurses.txt",
+    "git_url": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/3a229753681327c4089d8fdaf9293658c7befe4a",
+    "download_url": "https://raw.githubusercontent.com/astral-sh/python-build-standalone/20260901/LICENSE.ncurses.txt",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/LICENSE.ncurses.txt?ref=20260901",
+      "git": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/3a229753681327c4089d8fdaf9293658c7befe4a",
+      "html": "https://github.com/astral-sh/python-build-standalone/blob/20260901/LICENSE.ncurses.txt"
+    }
+  },
+  {
+    "name": "LICENSE.openssl-1.1.txt",
+    "path": "LICENSE.openssl-1.1.txt",
+    "sha": "5b5ccdc968ca4fe60b62a161d7e7b7a18c79f1c7",
+    "size": 6120,
+    "url": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/LICENSE.openssl-1.1.txt?ref=20260901",
+    "html_url": "https://github.com/astral-sh/python-build-standalone/blob/20260901/LICENSE.openssl-1.1.txt",
+    "git_url": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/5b5ccdc968ca4fe60b62a161d7e7b7a18c79f1c7",
+    "download_url": "https://raw.githubusercontent.com/astral-sh/python-build-standalone/20260901/LICENSE.openssl-1.1.txt",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/LICENSE.openssl-1.1.txt?ref=20260901",
+      "git": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/5b5ccdc968ca4fe60b62a161d7e7b7a18c79f1c7",
+      "html": "https://github.com/astral-sh/python-build-standalone/blob/20260901/LICENSE.openssl-1.1.txt"
+    }
+  },
+  {
+    "name": "LICENSE.openssl-3.txt",
+    "path": "LICENSE.openssl-3.txt",
+    "sha": "49cc83d2ee29d13453188217f0e4edd70c7f842f",
+    "size": 10175,
+    "url": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/LICENSE.openssl-3.txt?ref=20260901",
+    "html_url": "https://github.com/astral-sh/python-build-standalone/blob/20260901/LICENSE.openssl-3.txt",
+    "git_url": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/49cc83d2ee29d13453188217f0e4edd70c7f842f",
+    "download_url": "https://raw.githubusercontent.com/astral-sh/python-build-standalone/20260901/LICENSE.openssl-3.txt",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/LICENSE.openssl-3.txt?ref=20260901",
+      "git": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/49cc83d2ee29d13453188217f0e4edd70c7f842f",
+      "html": "https://github.com/astral-sh/python-build-standalone/blob/20260901/LICENSE.openssl-3.txt"
+    }
+  },
+  {
+    "name": "LICENSE.sqlite.txt",
+    "path": "LICENSE.sqlite.txt",
+    "sha": "68b36ebd1990e92998ca64a30af0a726357ebdea",
+    "size": 1481,
+    "url": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/LICENSE.sqlite.txt?ref=20260901",
+    "html_url": "https://github.com/astral-sh/python-build-standalone/blob/20260901/LICENSE.sqlite.txt",
+    "git_url": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/68b36ebd1990e92998ca64a30af0a726357ebdea",
+    "download_url": "https://raw.githubusercontent.com/astral-sh/python-build-standalone/20260901/LICENSE.sqlite.txt",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/LICENSE.sqlite.txt?ref=20260901",
+      "git": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/68b36ebd1990e92998ca64a30af0a726357ebdea",
+      "html": "https://github.com/astral-sh/python-build-standalone/blob/20260901/LICENSE.sqlite.txt"
+    }
+  },
+  {
+    "name": "LICENSE.tcl.txt",
+    "path": "LICENSE.tcl.txt",
+    "sha": "d8049cd9e7ca055f7e584a76f88861a294b30c9c",
+    "size": 2255,
+    "url": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/LICENSE.tcl.txt?ref=20260901",
+    "html_url": "https://github.com/astral-sh/python-build-standalone/blob/20260901/LICENSE.tcl.txt",
+    "git_url": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/d8049cd9e7ca055f7e584a76f88861a294b30c9c",
+    "download_url": "https://raw.githubusercontent.com/astral-sh/python-build-standalone/20260901/LICENSE.tcl.txt",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/LICENSE.tcl.txt?ref=20260901",
+      "git": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/d8049cd9e7ca055f7e584a76f88861a294b30c9c",
+      "html": "https://github.com/astral-sh/python-build-standalone/blob/20260901/LICENSE.tcl.txt"
+    }
+  },
+  {
+    "name": "LICENSE.tix.txt",
+    "path": "LICENSE.tix.txt",
+    "sha": "5323a3fc39f6c196065fc49803b6777410b02c92",
+    "size": 2826,
+    "url": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/LICENSE.tix.txt?ref=20260901",
+    "html_url": "https://github.com/astral-sh/python-build-standalone/blob/20260901/LICENSE.tix.txt",
+    "git_url": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/5323a3fc39f6c196065fc49803b6777410b02c92",
+    "download_url": "https://raw.githubusercontent.com/astral-sh/python-build-standalone/20260901/LICENSE.tix.txt",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/LICENSE.tix.txt?ref=20260901",
+      "git": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/5323a3fc39f6c196065fc49803b6777410b02c92",
+      "html": "https://github.com/astral-sh/python-build-standalone/blob/20260901/LICENSE.tix.txt"
+    }
+  },
+  {
+    "name": "LICENSE.zlib.txt",
+    "path": "LICENSE.zlib.txt",
+    "sha": "5eb28a147858fcb57ed306ed6fbd9c03f22f9452",
+    "size": 995,
+    "url": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/LICENSE.zlib.txt?ref=20260901",
+    "html_url": "https://github.com/astral-sh/python-build-standalone/blob/20260901/LICENSE.zlib.txt",
+    "git_url": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/5eb28a147858fcb57ed306ed6fbd9c03f22f9452",
+    "download_url": "https://raw.githubusercontent.com/astral-sh/python-build-standalone/20260901/LICENSE.zlib.txt",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/LICENSE.zlib.txt?ref=20260901",
+      "git": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/5eb28a147858fcb57ed306ed6fbd9c03f22f9452",
+      "html": "https://github.com/astral-sh/python-build-standalone/blob/20260901/LICENSE.zlib.txt"
+    }
+  },
+  {
+    "name": "README.rst",
+    "path": "README.rst",
+    "sha": "1377f33b104831b96203b05822d7119ea595d74a",
+    "size": 252,
+    "url": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/README.rst?ref=20260901",
+    "html_url": "https://github.com/astral-sh/python-build-standalone/blob/20260901/README.rst",
+    "git_url": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/1377f33b104831b96203b05822d7119ea595d74a",
+    "download_url": "https://raw.githubusercontent.com/astral-sh/python-build-standalone/20260901/README.rst",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/README.rst?ref=20260901",
+      "git": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/1377f33b104831b96203b05822d7119ea595d74a",
+      "html": "https://github.com/astral-sh/python-build-standalone/blob/20260901/README.rst"
+    }
+  },
+  {
+    "name": "build.py",
+    "path": "build.py",
+    "sha": "12c3fdb1bdfc374990312e3133fb0b1d97aa1ae4",
+    "size": 1208,
+    "url": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/build.py?ref=20260901",
+    "html_url": "https://github.com/astral-sh/python-build-standalone/blob/20260901/build.py",
+    "git_url": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/12c3fdb1bdfc374990312e3133fb0b1d97aa1ae4",
+    "download_url": "https://raw.githubusercontent.com/astral-sh/python-build-standalone/20260901/build.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/build.py?ref=20260901",
+      "git": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/12c3fdb1bdfc374990312e3133fb0b1d97aa1ae4",
+      "html": "https://github.com/astral-sh/python-build-standalone/blob/20260901/build.py"
+    }
+  },
+  {
+    "name": "check.py",
+    "path": "check.py",
+    "sha": "0f3e41cac14de9d6aa5a35666d4ea76ce6a01194",
+    "size": 1447,
+    "url": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/check.py?ref=20260901",
+    "html_url": "https://github.com/astral-sh/python-build-standalone/blob/20260901/check.py",
+    "git_url": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/0f3e41cac14de9d6aa5a35666d4ea76ce6a01194",
+    "download_url": "https://raw.githubusercontent.com/astral-sh/python-build-standalone/20260901/check.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/check.py?ref=20260901",
+      "git": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/0f3e41cac14de9d6aa5a35666d4ea76ce6a01194",
+      "html": "https://github.com/astral-sh/python-build-standalone/blob/20260901/check.py"
+    }
+  },
+  {
+    "name": "ci-defaults.yaml",
+    "path": "ci-defaults.yaml",
+    "sha": "56f6126759a18639c78f7da9daae23bd63f7184c",
+    "size": 541,
+    "url": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/ci-defaults.yaml?ref=20260901",
+    "html_url": "https://github.com/astral-sh/python-build-standalone/blob/20260901/ci-defaults.yaml",
+    "git_url": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/56f6126759a18639c78f7da9daae23bd63f7184c",
+    "download_url": "https://raw.githubusercontent.com/astral-sh/python-build-standalone/20260901/ci-defaults.yaml",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/ci-defaults.yaml?ref=20260901",
+      "git": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/56f6126759a18639c78f7da9daae23bd63f7184c",
+      "html": "https://github.com/astral-sh/python-build-standalone/blob/20260901/ci-defaults.yaml"
+    }
+  },
+  {
+    "name": "ci-matrix.py",
+    "path": "ci-matrix.py",
+    "sha": "9fde57623c680c41231126cc362c00d9dd6d57d7",
+    "size": 23526,
+    "url": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/ci-matrix.py?ref=20260901",
+    "html_url": "https://github.com/astral-sh/python-build-standalone/blob/20260901/ci-matrix.py",
+    "git_url": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/9fde57623c680c41231126cc362c00d9dd6d57d7",
+    "download_url": "https://raw.githubusercontent.com/astral-sh/python-build-standalone/20260901/ci-matrix.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/ci-matrix.py?ref=20260901",
+      "git": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/9fde57623c680c41231126cc362c00d9dd6d57d7",
+      "html": "https://github.com/astral-sh/python-build-standalone/blob/20260901/ci-matrix.py"
+    }
+  },
+  {
+    "name": "ci-runners.yaml",
+    "path": "ci-runners.yaml",
+    "sha": "e6bdd0f9be6ec17bbe9ad898ad06ce13af481ad1",
+    "size": 745,
+    "url": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/ci-runners.yaml?ref=20260901",
+    "html_url": "https://github.com/astral-sh/python-build-standalone/blob/20260901/ci-runners.yaml",
+    "git_url": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/e6bdd0f9be6ec17bbe9ad898ad06ce13af481ad1",
+    "download_url": "https://raw.githubusercontent.com/astral-sh/python-build-standalone/20260901/ci-runners.yaml",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/ci-runners.yaml?ref=20260901",
+      "git": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/e6bdd0f9be6ec17bbe9ad898ad06ce13af481ad1",
+      "html": "https://github.com/astral-sh/python-build-standalone/blob/20260901/ci-runners.yaml"
+    }
+  },
+  {
+    "name": "ci-targets.yaml",
+    "path": "ci-targets.yaml",
+    "sha": "d75eb60cf6d4943c4576e8dfa799e1672d4cee78",
+    "size": 8567,
+    "url": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/ci-targets.yaml?ref=20260901",
+    "html_url": "https://github.com/astral-sh/python-build-standalone/blob/20260901/ci-targets.yaml",
+    "git_url": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/d75eb60cf6d4943c4576e8dfa799e1672d4cee78",
+    "download_url": "https://raw.githubusercontent.com/astral-sh/python-build-standalone/20260901/ci-targets.yaml",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/ci-targets.yaml?ref=20260901",
+      "git": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/d75eb60cf6d4943c4576e8dfa799e1672d4cee78",
+      "html": "https://github.com/astral-sh/python-build-standalone/blob/20260901/ci-targets.yaml"
+    }
+  },
+  {
+    "name": "cpython-unix",
+    "path": "cpython-unix",
+    "sha": "bf3ea66fb71004022eca43f88e95f163a4254b6c",
+    "size": 0,
+    "url": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/cpython-unix?ref=20260901",
+    "html_url": "https://github.com/astral-sh/python-build-standalone/tree/20260901/cpython-unix",
+    "git_url": "https://api.github.com/repos/astral-sh/python-build-standalone/git/trees/bf3ea66fb71004022eca43f88e95f163a4254b6c",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/cpython-unix?ref=20260901",
+      "git": "https://api.github.com/repos/astral-sh/python-build-standalone/git/trees/bf3ea66fb71004022eca43f88e95f163a4254b6c",
+      "html": "https://github.com/astral-sh/python-build-standalone/tree/20260901/cpython-unix"
+    }
+  },
+  {
+    "name": "cpython-windows",
+    "path": "cpython-windows",
+    "sha": "3dc6a9e40ca48cfaa8d555a87b04e8bc0eed9e30",
+    "size": 0,
+    "url": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/cpython-windows?ref=20260901",
+    "html_url": "https://github.com/astral-sh/python-build-standalone/tree/20260901/cpython-windows",
+    "git_url": "https://api.github.com/repos/astral-sh/python-build-standalone/git/trees/3dc6a9e40ca48cfaa8d555a87b04e8bc0eed9e30",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/cpython-windows?ref=20260901",
+      "git": "https://api.github.com/repos/astral-sh/python-build-standalone/git/trees/3dc6a9e40ca48cfaa8d555a87b04e8bc0eed9e30",
+      "html": "https://github.com/astral-sh/python-build-standalone/tree/20260901/cpython-windows"
+    }
+  },
+  {
+    "name": "docs",
+    "path": "docs",
+    "sha": "dc0d6816ee0a7079caa7ff8d7324077bb951353a",
+    "size": 0,
+    "url": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/docs?ref=20260901",
+    "html_url": "https://github.com/astral-sh/python-build-standalone/tree/20260901/docs",
+    "git_url": "https://api.github.com/repos/astral-sh/python-build-standalone/git/trees/dc0d6816ee0a7079caa7ff8d7324077bb951353a",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/docs?ref=20260901",
+      "git": "https://api.github.com/repos/astral-sh/python-build-standalone/git/trees/dc0d6816ee0a7079caa7ff8d7324077bb951353a",
+      "html": "https://github.com/astral-sh/python-build-standalone/tree/20260901/docs"
+    }
+  },
+  {
+    "name": "generate-version-metadata.py",
+    "path": "generate-version-metadata.py",
+    "sha": "64466e0c4564c6a1be3131a82c7fde2b67783e7b",
+    "size": 3061,
+    "url": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/generate-version-metadata.py?ref=20260901",
+    "html_url": "https://github.com/astral-sh/python-build-standalone/blob/20260901/generate-version-metadata.py",
+    "git_url": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/64466e0c4564c6a1be3131a82c7fde2b67783e7b",
+    "download_url": "https://raw.githubusercontent.com/astral-sh/python-build-standalone/20260901/generate-version-metadata.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/generate-version-metadata.py?ref=20260901",
+      "git": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/64466e0c4564c6a1be3131a82c7fde2b67783e7b",
+      "html": "https://github.com/astral-sh/python-build-standalone/blob/20260901/generate-version-metadata.py"
+    }
+  },
+  {
+    "name": "mypy.ini",
+    "path": "mypy.ini",
+    "sha": "08898d53c0d6428a8ef05161d0fda1aeb07a7583",
+    "size": 197,
+    "url": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/mypy.ini?ref=20260901",
+    "html_url": "https://github.com/astral-sh/python-build-standalone/blob/20260901/mypy.ini",
+    "git_url": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/08898d53c0d6428a8ef05161d0fda1aeb07a7583",
+    "download_url": "https://raw.githubusercontent.com/astral-sh/python-build-standalone/20260901/mypy.ini",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/mypy.ini?ref=20260901",
+      "git": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/08898d53c0d6428a8ef05161d0fda1aeb07a7583",
+      "html": "https://github.com/astral-sh/python-build-standalone/blob/20260901/mypy.ini"
+    }
+  },
+  {
+    "name": "pyproject.toml",
+    "path": "pyproject.toml",
+    "sha": "c52450b9aaff4900dc263cdde64ffecb9643a4ea",
+    "size": 1011,
+    "url": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/pyproject.toml?ref=20260901",
+    "html_url": "https://github.com/astral-sh/python-build-standalone/blob/20260901/pyproject.toml",
+    "git_url": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/c52450b9aaff4900dc263cdde64ffecb9643a4ea",
+    "download_url": "https://raw.githubusercontent.com/astral-sh/python-build-standalone/20260901/pyproject.toml",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/pyproject.toml?ref=20260901",
+      "git": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/c52450b9aaff4900dc263cdde64ffecb9643a4ea",
+      "html": "https://github.com/astral-sh/python-build-standalone/blob/20260901/pyproject.toml"
+    }
+  },
+  {
+    "name": "python-licenses.rst",
+    "path": "python-licenses.rst",
+    "sha": "cfc2a2335573b7a9e93a3b5266737081e1deef2a",
+    "size": 105875,
+    "url": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/python-licenses.rst?ref=20260901",
+    "html_url": "https://github.com/astral-sh/python-build-standalone/blob/20260901/python-licenses.rst",
+    "git_url": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/cfc2a2335573b7a9e93a3b5266737081e1deef2a",
+    "download_url": "https://raw.githubusercontent.com/astral-sh/python-build-standalone/20260901/python-licenses.rst",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/python-licenses.rst?ref=20260901",
+      "git": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/cfc2a2335573b7a9e93a3b5266737081e1deef2a",
+      "html": "https://github.com/astral-sh/python-build-standalone/blob/20260901/python-licenses.rst"
+    }
+  },
+  {
+    "name": "pythonbuild",
+    "path": "pythonbuild",
+    "sha": "e687657bb00cee7e9245e0f29a94286818be09e0",
+    "size": 0,
+    "url": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/pythonbuild?ref=20260901",
+    "html_url": "https://github.com/astral-sh/python-build-standalone/tree/20260901/pythonbuild",
+    "git_url": "https://api.github.com/repos/astral-sh/python-build-standalone/git/trees/e687657bb00cee7e9245e0f29a94286818be09e0",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/pythonbuild?ref=20260901",
+      "git": "https://api.github.com/repos/astral-sh/python-build-standalone/git/trees/e687657bb00cee7e9245e0f29a94286818be09e0",
+      "html": "https://github.com/astral-sh/python-build-standalone/tree/20260901/pythonbuild"
+    }
+  },
+  {
+    "name": "ruff.toml",
+    "path": "ruff.toml",
+    "sha": "c914f91a748419018e6f1f4bb5adc528b7277385",
+    "size": 32,
+    "url": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/ruff.toml?ref=20260901",
+    "html_url": "https://github.com/astral-sh/python-build-standalone/blob/20260901/ruff.toml",
+    "git_url": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/c914f91a748419018e6f1f4bb5adc528b7277385",
+    "download_url": "https://raw.githubusercontent.com/astral-sh/python-build-standalone/20260901/ruff.toml",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/ruff.toml?ref=20260901",
+      "git": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/c914f91a748419018e6f1f4bb5adc528b7277385",
+      "html": "https://github.com/astral-sh/python-build-standalone/blob/20260901/ruff.toml"
+    }
+  },
+  {
+    "name": "scripts",
+    "path": "scripts",
+    "sha": "452f0d04887367c19101d58c0ce10f8d40933660",
+    "size": 0,
+    "url": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/scripts?ref=20260901",
+    "html_url": "https://github.com/astral-sh/python-build-standalone/tree/20260901/scripts",
+    "git_url": "https://api.github.com/repos/astral-sh/python-build-standalone/git/trees/452f0d04887367c19101d58c0ce10f8d40933660",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/scripts?ref=20260901",
+      "git": "https://api.github.com/repos/astral-sh/python-build-standalone/git/trees/452f0d04887367c19101d58c0ce10f8d40933660",
+      "html": "https://github.com/astral-sh/python-build-standalone/tree/20260901/scripts"
+    }
+  },
+  {
+    "name": "src",
+    "path": "src",
+    "sha": "6ad31337e147f3283713a3041304ddd9cba033d3",
+    "size": 0,
+    "url": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/src?ref=20260901",
+    "html_url": "https://github.com/astral-sh/python-build-standalone/tree/20260901/src",
+    "git_url": "https://api.github.com/repos/astral-sh/python-build-standalone/git/trees/6ad31337e147f3283713a3041304ddd9cba033d3",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/src?ref=20260901",
+      "git": "https://api.github.com/repos/astral-sh/python-build-standalone/git/trees/6ad31337e147f3283713a3041304ddd9cba033d3",
+      "html": "https://github.com/astral-sh/python-build-standalone/tree/20260901/src"
+    }
+  },
+  {
+    "name": "test-distribution.py",
+    "path": "test-distribution.py",
+    "sha": "c4018f1021a461425b01d78dab47c331ed761657",
+    "size": 621,
+    "url": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/test-distribution.py?ref=20260901",
+    "html_url": "https://github.com/astral-sh/python-build-standalone/blob/20260901/test-distribution.py",
+    "git_url": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/c4018f1021a461425b01d78dab47c331ed761657",
+    "download_url": "https://raw.githubusercontent.com/astral-sh/python-build-standalone/20260901/test-distribution.py",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/test-distribution.py?ref=20260901",
+      "git": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/c4018f1021a461425b01d78dab47c331ed761657",
+      "html": "https://github.com/astral-sh/python-build-standalone/blob/20260901/test-distribution.py"
+    }
+  },
+  {
+    "name": "tests",
+    "path": "tests",
+    "sha": "d50aae13132bf66d6ab5cb7eb67eeb838adc1813",
+    "size": 0,
+    "url": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/tests?ref=20260901",
+    "html_url": "https://github.com/astral-sh/python-build-standalone/tree/20260901/tests",
+    "git_url": "https://api.github.com/repos/astral-sh/python-build-standalone/git/trees/d50aae13132bf66d6ab5cb7eb67eeb838adc1813",
+    "download_url": null,
+    "type": "dir",
+    "_links": {
+      "self": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/tests?ref=20260901",
+      "git": "https://api.github.com/repos/astral-sh/python-build-standalone/git/trees/d50aae13132bf66d6ab5cb7eb67eeb838adc1813",
+      "html": "https://github.com/astral-sh/python-build-standalone/tree/20260901/tests"
+    }
+  },
+  {
+    "name": "uv.lock",
+    "path": "uv.lock",
+    "sha": "09c6606784da149d20fc281009a03813f7fc9de3",
+    "size": 404811,
+    "url": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/uv.lock?ref=20260901",
+    "html_url": "https://github.com/astral-sh/python-build-standalone/blob/20260901/uv.lock",
+    "git_url": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/09c6606784da149d20fc281009a03813f7fc9de3",
+    "download_url": "https://raw.githubusercontent.com/astral-sh/python-build-standalone/20260901/uv.lock",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/astral-sh/python-build-standalone/contents/uv.lock?ref=20260901",
+      "git": "https://api.github.com/repos/astral-sh/python-build-standalone/git/blobs/09c6606784da149d20fc281009a03813f7fc9de3",
+      "html": "https://github.com/astral-sh/python-build-standalone/blob/20260901/uv.lock"
+    }
+  }
+]

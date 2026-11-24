@@ -1,0 +1,420 @@
+/* Site-wide attention hierarchy. Existing workspace tokens and workflows remain authoritative. */
+:root{
+ --signal-caution-ink:var(--ws-color-text-body-default);
+ --signal-caution-bg:var(--ws-color-secondary-yellow-light);
+ --signal-danger-ink:var(--ws-color-destruct-red);
+ --signal-danger-bg:var(--ws-color-destruct-red-light-50);
+ --signal-success-ink:var(--ws-color-text-alert-success);
+ --signal-warning-ink:var(--ws-color-text-body-default);
+ --signal-warning-surface:var(--ws-color-secondary-yellow-light);
+ --signal-warning-border:var(--ws-color-border-alert-warning);
+ --signal-identity-ink:var(--ws-violet-110);
+ --action-border:var(--ws-color-border-activation-default);
+ --signal-panel-border:var(--ws-color-grayscale-gray-40);
+ --workbench-module-gap:24px;
+ --workbench-locked-field-text:var(--ws-color-text-body-helper);
+}
+
+/* Stable location and readable task titles; environment details stay subordinate. */
+.workspace-app .topbar{min-height:72px;padding-top:8px;padding-bottom:8px;gap:12px 20px}
+.workspace-app .topbar :is(.ui-control-label,.domain-workspace-control>span){font-size:13px;line-height:18px;color:var(--muted);font-weight:400}
+.workspace-app .topbar :is(select,.ui-selector){min-height:32px;height:32px;padding-top:4px;padding-bottom:4px;font-size:13px;line-height:20px}
+.project-page-header,.project-page-header:not(.has-status){grid-template-columns:minmax(0,2fr) minmax(240px,1fr);gap:24px;align-items:start;margin-bottom:24px}
+.project-title-area .project-page-identity{margin-bottom:12px}
+/* A primary action is visually distinct; secondary actions keep their local context. */
+button.primary:not(.danger){background:var(--ws-color-background-activation-default);border-color:var(--ws-color-background-activation-default);color:var(--ac-text-inverse)}
+button.primary:not(.danger):hover:not(:disabled){background:var(--ws-color-background-activation-hover);border-color:var(--ws-color-background-activation-hover)}
+button.primary:not(.danger):disabled{background:var(--action-bg);border-color:var(--action-border);color:var(--action-text)}
+.workspace-app :is(.card,.sponsor-panel,.field-coach,.coach-card,.packet-record){box-shadow:none;border-color:var(--signal-panel-border);background:var(--ac-surface)}
+.workspace-app :is(.caption,.context-strip,.label-value>label,.mono){font-weight:400}
+.workspace-app :is(.caption,.mono),.acx-dialog :is(.caption,.mono){font-size:13px;line-height:20px}
+.workspace-app .context-strip{font-size:13px;line-height:20px;gap:8px 16px}
+
+/* Neutral is the default. Severity must be supplied by the authored state, never guessed from prose. */
+.banner,.banner.blue,.signal-notice{position:relative;border:0;border-left:2px solid var(--line);border-radius:0;background:var(--ws-color-background-surface-dimmer);color:var(--ws-color-text-body-default);padding:16px 20px;font-size:16px;line-height:24px;box-shadow:none}
+.banner p,.signal-notice p{font-size:16px;line-height:24px;margin:8px 0 0}
+.banner :is(strong,h3),.signal-notice :is(strong,h3){font-size:16px;line-height:24px}
+.signal-notice.signal-advisory{border-left:3px solid var(--signal-warning-border);background:var(--signal-caution-bg);padding-left:40px}
+.signal-notice.signal-critical{border-left:3px solid var(--signal-danger-ink);background:var(--signal-danger-bg);padding-left:40px}
+.signal-notice:is(.signal-advisory,.signal-critical)::before{content:'!';position:absolute;left:14px;top:14px;display:grid;place-items:center;width:16px;height:16px;border:1.5px solid currentColor;border-radius:50%;font-size:11px;line-height:1;font-weight:700;color:var(--ws-color-text-body-default)}
+.signal-notice.signal-critical::before{color:var(--signal-danger-ink)}
+.signal-notice.signal-success{border-left-color:var(--signal-success-ink);background:var(--ws-color-background-surface-dimmer)}
+.tag{font-size:13px;line-height:18px;font-weight:400;border:0;border-radius:4px}
+.tag:is(.blue,.purple){background:var(--ws-color-background-surface-dimmer);color:var(--muted)}
+.tag.amber{background:var(--signal-caution-bg);border:0;color:var(--ws-color-text-body-default)}
+.tag.red{background:var(--signal-danger-bg);color:var(--signal-danger-ink)}
+.signal-inline-advisory{display:inline-flex;align-items:baseline;gap:4px;padding:2px 6px;border-radius:3px;background:var(--signal-caution-bg);color:var(--ws-color-text-body-default)}
+/* One condition vocabulary: identity is text; changing conditions are chips. */
+.workspace-app .condition-strip{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.workspace-app .condition-chip{display:inline-flex;align-items:center;gap:6px;width:fit-content;max-width:100%;padding:2px 8px;border:1px solid var(--ac-border-strong);border-radius:4px;background:var(--ac-surface-subtle);color:var(--ac-text-secondary);font-size:13px;line-height:20px;font-weight:400;white-space:normal}
+.workspace-app .condition-chip-attention{background:var(--ac-accent-soft);border-color:var(--ac-suggested-border);color:var(--ac-accent-text)}
+.workspace-app .condition-chip-advisory{background:var(--signal-caution-bg);border-color:var(--signal-warning-border);color:var(--ac-text)}
+.workspace-app .condition-chip-critical{background:var(--signal-danger-bg);border-color:var(--signal-danger-ink);color:var(--signal-danger-ink)}
+.workspace-app .condition-chip-success{background:var(--ws-color-background-surface-dimmer);border-color:var(--signal-success-ink);color:var(--signal-success-ink)}
+.workspace-app .condition-chip>span{font-size:13px;line-height:20px}
+.error:not(:empty),.sponsor-error:not(:empty){border-left:3px solid var(--signal-danger-ink);background:var(--signal-danger-bg);padding:12px 16px;font-size:13px;line-height:20px}
+
+/* Navigation and reference tools should remain findable without competing with the task. */
+.ws-site-navigation .app-navigation-link small{font-size:13px;line-height:18px;color:var(--muted)}
+.ws-site-navigation .navigation-chat-item-title{font-weight:400}
+.ws-site-navigation .navigation-chat-earlier>summary{font-size:13px;font-weight:400;color:var(--muted)}
+.ws-site-navigation .app-navigation-group{margin-top:20px}
+.workspace-app .sponsor-guidance{border:0;background:transparent;padding:0;margin:0 0 16px}
+.workspace-app .sponsor-guidance>summary{font-size:13px;line-height:20px;font-weight:400;color:var(--muted);min-height:32px;padding:6px 0}
+.workspace-app .sponsor-guidance-content{padding:24px;gap:32px}
+.workspace-app .sponsor-guidance-content>div{min-width:0}
+.workspace-app .sponsor-guidance-content strong{display:block;font-size:16px;line-height:24px;font-weight:600}
+.workspace-app .sponsor-guidance-content p{margin:12px 0 0;font-size:16px;line-height:24px}
+.workspace-app .sponsor-meter{background:transparent;border:0;border-radius:0;padding:4px 0;font-size:13px;line-height:20px}
+.workspace-app .sponsor-meter meter{height:4px}
+.workspace-app .sponsor-framing-resources .sponsor-panel-head h2{font-size:16px;line-height:24px}
+.workspace-app .sponsor-framing-resources .sponsor-dropzone{padding:12px 16px}
+.workspace-app .sponsor-framing-resources :is(.sponsor-dropzone strong,.sponsor-dropzone p){font-size:13px;line-height:20px}
+.workspace-app .sponsor-framing-resources .sponsor-panel-body{padding-top:12px;padding-bottom:12px}
+.workspace-app .sponsor-source-tools{margin:12px 0 0;padding:0;border:0;background:transparent;font-size:13px;line-height:20px}
+.workspace-app .sponsor-source-tools>summary{font-size:13px;line-height:20px;font-weight:400;color:var(--muted);min-height:32px;padding:6px 0}
+.workspace-app .sponsor-source-tools .caption{font-size:13px;line-height:20px}
+.workspace-app .sponsor-framing-editor .sponsor-value-field[data-framing-field="name"]{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:12px}
+.workspace-app .sponsor-framing-editor [data-framing-field="name"] .sponsor-framing-field-actions{margin:0 0 8px}
+.workspace-app .sponsor-framing-step-row{margin-bottom:16px}
+.workspace-app .sponsor-north-star>summary strong,.workspace-app .sponsor-qnav .sponsor-panel-head h2{font-size:16px;line-height:24px}
+.workspace-app .sponsor-answer-head{justify-content:flex-start;margin:12px 0 6px;font-size:13px;line-height:20px}
+.workspace-app .sponsor-consider{font-size:16px;line-height:24px;margin:24px 0;padding:16px 20px}
+.workspace-app .sponsor-consider strong{font-size:16px;line-height:24px;font-weight:600}
+.workspace-app .sponsor-coach-log>.caption{font-size:13px;line-height:20px}
+.workspace-app .sponsor-model-guidance{font-size:13px;line-height:20px;color:var(--ws-color-text-body-helper)}
+.workspace-app .sponsor-coverage>summary{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:12px 32px 12px 16px;position:relative;font-size:13px;line-height:20px;font-weight:400;cursor:pointer;list-style:none}
+.workspace-app .sponsor-coverage>summary::-webkit-details-marker{display:none}
+.workspace-app .sponsor-coverage>summary::after{content:'';position:absolute;right:14px;top:18px;width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg)}
+.workspace-app .sponsor-coverage[open]>summary::after{transform:rotate(225deg);top:21px}
+.workspace-app .sponsor-coverage>summary>span:first-child{font-weight:600}
+.workspace-app .sponsor-coverage>summary>span:last-child{color:var(--muted)}
+.workspace-app :is(.sponsor-review-rail,.sponsor-coverage) :is(summary,.sponsor-section-meter){font-size:13px;line-height:20px}
+.workspace-app .sponsor-review-actions{padding:24px}
+.workspace-app .sponsor-review-actions>h2{margin:0}
+.workspace-app .direction-review-section{margin:24px 0 0;padding:24px 0 0;border:0;border-top:1px solid var(--line)}
+.workspace-app .direction-review-section h3,.workspace-app .direction-review-section h4{font-size:16px;line-height:24px;font-weight:600;margin:0}
+.workspace-app .direction-review-section p{font-size:16px;line-height:24px;margin:12px 0 0}
+.workspace-app .direction-review-section .caption{font-size:13px;line-height:20px;color:var(--muted)}
+.workspace-app .direction-review-prerequisites{border-left:3px solid var(--signal-warning-border);padding-left:16px;margin-top:16px;display:grid;gap:20px}
+.workspace-app .direction-review-task p{margin:0}
+.workspace-app .direction-review-task>button{margin-top:12px}
+.workspace-app .direction-review-task ul{margin:8px 0 0;padding-left:20px;font-size:16px;line-height:24px}
+.workspace-app .direction-review-actions{display:grid;gap:12px;margin-top:24px}
+.workspace-app .direction-review-actions>button,.workspace-app .direction-review-section>button,.workspace-app .direction-review-detail>button{width:100%;white-space:normal}
+.workspace-app .direction-review-section>button{margin-top:16px}
+.workspace-app .direction-review-responses{margin:20px 0 0;display:grid;gap:20px}
+.workspace-app .direction-review-responses dt{font-size:13px;line-height:20px;color:var(--muted);font-weight:400}
+.workspace-app .direction-review-responses dd{font-size:16px;line-height:24px;margin:4px 0 0;overflow-wrap:anywhere}
+.workspace-app .direction-review-detail>button{margin-top:24px}
+.workspace-app .sponsor-review-actions .direction-review-history>summary{position:relative;display:grid;gap:8px;padding-right:24px;list-style:none;font-size:16px;line-height:24px;font-weight:600;cursor:pointer}
+.workspace-app .direction-review-history>summary::-webkit-details-marker{display:none}
+.workspace-app .direction-review-history>summary::after{content:'';position:absolute;right:2px;top:7px;width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg)}
+.workspace-app .direction-review-history[open]>summary::after{transform:rotate(225deg);top:10px}
+.workspace-app .direction-review-history>summary>.caption{font-weight:400}
+.workspace-app .direction-review-publication-detail{margin:20px 0 0;padding:0;border:0}
+.workspace-app .direction-review-publication-detail>summary{font-size:13px;line-height:20px;font-weight:400}
+.workspace-app .direction-review-footer{margin-top:24px;padding-top:20px;border-top:1px solid var(--line)}
+@media(max-width:700px){.workspace-app .sponsor-review-actions{padding:16px}}
+.workspace-app .sponsor-review-rail h2{font-size:16px;line-height:24px}
+.workspace-app .sponsor-section-meter meter::-webkit-meter-optimum-value{background:var(--ws-color-grayscale-gray-40)}
+
+/* Home leads to project work. Announcements and introductory decoration stay quiet. */
+.workspace-app .home-hero{align-items:flex-start;text-align:left;padding:24px;background:var(--ac-surface)}
+.workspace-app .home-hero h1{font-size:28px;line-height:36px;margin:12px 0 0}
+.workspace-app .home-lede{max-width:58ch;margin-top:16px;font-size:16px;line-height:24px}
+.workspace-app .home-arcs{display:none}
+.workspace-app .home-pill{padding:0;border:0;border-radius:0;background:transparent;text-transform:none;letter-spacing:normal;font-size:13px;line-height:20px;font-weight:400;color:var(--muted)}
+.workspace-app .home-reassure{margin-top:12px;font-size:13px;line-height:20px}
+.workspace-app .home-announcements{padding:24px}
+.workspace-app .home-announcements h2{font-size:16px;line-height:24px;color:var(--ws-color-text-body-default)}
+.workspace-app .home-announcement-list :is(h3,p){font-size:16px;line-height:24px}
+.workspace-app .home-announcement-list h3{font-weight:600}
+.workspace-app .home-project-table :is(th,td,small){font-size:13px;line-height:20px}
+.workspace-app .home-project-table td{padding-top:20px;padding-bottom:20px}
+.workspace-app .home-project-table :is(th,td):first-child{width:30%;min-width:220px}
+.workspace-app .home-project-table strong{font-weight:400}
+.workspace-app .home-stage,.workspace-app .home-stage.is-published{background:var(--ws-color-background-surface-dimmer);color:var(--muted);font-size:13px;line-height:20px;font-weight:400;border-radius:4px}
+.workspace-app .home-needs{font-size:16px;line-height:24px;font-weight:500}
+.workspace-app .home-project-table td:first-child .item-title-link{font-size:16px;line-height:24px}
+.workspace-app .home-count{display:inline-flex;align-items:center;justify-content:center;min-width:24px;min-height:24px;padding:2px 8px;border:0;border-radius:4px;background:var(--ws-color-secondary-blue-light);color:var(--ws-color-border-alert-info);font-size:13px;line-height:20px;font-weight:400}
+.workspace-app .home-filter-bar:has(>#home-results.sr-only){margin:0}
+
+/* Shared sizes do not make every heading equally prominent. */
+.workspace-app :is(.settings-dialog,.acx-dialog) .dialog-body>section>h3{font-size:16px;line-height:24px}
+.workspace-app .delivery-source-item .caption{font-size:13px;line-height:20px}
+.acx-view-delivery .grid.cols>aside h2{font-size:16px;line-height:24px}
+.acx-view-delivery .grid.cols>aside :is(.mono,summary),.acx-view-delivery .delivery-source-item small{font-size:13px;line-height:20px}
+.requirement-authority-summary{margin-bottom:12px}
+.workspace-app .project-status-area>.requirement-authority-summary{margin:0;padding:16px;background:var(--ws-color-background-surface-dimmer);border-radius:4px}
+.workspace-app .requirement-authority-summary>.requirement-status-chips{display:grid;gap:8px;justify-items:start}
+.workspace-app .requirement-status-chips>.workbench-context-chip:not(.workbench-context-chip-progress){background:var(--ac-surface)}
+.workspace-app .requirement-status-counts{display:flex;flex-wrap:wrap;gap:8px}
+.workspace-app .requirement-status-counts>.workbench-context-chip:not(.workbench-context-chip-progress){background:var(--ac-surface)}
+.workspace-app .requirement-authority-summary>p{margin:12px 0 0;font-size:13px;line-height:20px}
+.workspace-app .requirement-authority-summary>.item-title-link{display:inline-block;margin-top:12px;font-size:13px;line-height:20px}
+.workspace-app .project-page-header:has(.requirement-authority-summary) .project-title-area>.page-head{margin-top:auto}
+.workspace-app .requirements-toolbar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px 24px;padding:0 24px;margin:0 0 24px;background:var(--ac-surface);border-radius:8px}
+.workspace-app .requirements-toolbar>.requirements-tabstrip{display:flex;align-items:stretch;gap:8px;margin:0;min-width:0;max-width:100%;overflow-x:auto}
+.workspace-app .requirements-toolbar .requirements-tabstrip>button,.workspace-app .requirements-toolbar .requirements-tabstrip>button.selected{flex:none;min-height:48px;margin:0;padding:12px 16px;border:0;border-bottom:3px solid transparent;border-radius:0;box-shadow:none;background:transparent;color:var(--ac-text);font-size:13px;line-height:20px;font-weight:400}
+.workspace-app .requirements-toolbar .requirements-tabstrip>button[aria-pressed="true"]{border-bottom-color:var(--blue);color:var(--blue)}
+.workspace-app .requirements-toolbar .requirements-tabstrip>button:hover:not(:disabled){background:var(--ws-color-background-surface-dimmer)}
+.workspace-app .requirements-toolbar>.setup-draft-access{display:flex;align-items:center;gap:8px 12px;margin:0;padding:12px 0;font-size:13px;line-height:20px}
+.workspace-app .field-coach-work>:first-child{margin-top:0}
+.workspace-app .requirements-baseline-empty{margin:0;padding:0;font-size:13px;line-height:20px;color:var(--muted)}
+.workspace-app .requirements-toolbar-empty{background:transparent;padding:0;margin-bottom:16px}
+.workspace-app .requirement-review-workspace{margin:0;padding:24px}
+.workspace-app .requirement-review-workspace>h2{margin:0}
+.workspace-app .requirement-review-filters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:24px 0;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.workspace-app .requirement-review-filter{display:grid;gap:8px;margin:0;min-width:0;font-size:13px;line-height:20px}
+.workspace-app .requirement-review-filter select{width:100%;min-width:0;font-size:13px;line-height:20px}
+.workspace-app .requirement-review-workspace>.section{margin-top:0}
+.workspace-app .requirement-review-workspace>.section>h2{font-size:16px;line-height:24px;font-weight:600;margin:0}
+.workspace-app :is(.pending-requirement,.requirement-shell){border:1px solid var(--signal-panel-border);border-radius:8px;margin:16px 0 0;padding:0;overflow:hidden;scroll-margin-top:104px}
+.workspace-app :is(.pending-requirement,.requirement-shell)>summary{display:grid;position:relative;gap:8px;padding:16px 40px 16px 16px;background:var(--ws-color-background-surface-dimmer);list-style:none;cursor:pointer}
+.workspace-app :is(.pending-requirement,.requirement-shell)>summary::-webkit-details-marker{display:none}
+.workspace-app :is(.pending-requirement,.requirement-shell)>summary::after{content:'';position:absolute;right:18px;top:22px;width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg)}
+.workspace-app :is(.pending-requirement,.requirement-shell)[open]>summary::after{transform:rotate(225deg);top:25px}
+.workspace-app :is(.pending-requirement,.requirement-shell)>summary>span:first-child{font-size:16px;line-height:24px;font-weight:600}
+.workspace-app :is(.pending-requirement,.requirement-shell)>summary>.caption{justify-self:start;display:inline-flex;padding:4px 8px;background:var(--ws-color-secondary-blue-light);color:var(--ws-color-border-alert-info);border-radius:4px;font-size:13px;line-height:20px;font-weight:400}
+.workspace-app :is(.pending-requirement,.requirement-shell)>.details-body{padding:20px 16px;border-top:1px solid var(--line)}
+.workspace-app :is(.pending-requirement,.requirement-shell) .label-value{margin:0 0 24px}
+.workspace-app :is(.pending-requirement,.requirement-shell) .label-value>label{display:block;margin:0 0 8px;font-size:16px;line-height:24px;font-weight:600;color:var(--ac-text)}
+.workspace-app :is(.pending-requirement,.requirement-shell) .label-value>.pre{font-size:16px;line-height:24px}
+@media(max-width:700px){.workspace-app .requirement-review-workspace{padding:16px}.workspace-app .requirement-review-filters{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:700px){.workspace-app .requirements-toolbar{padding:0 16px}.workspace-app .requirements-toolbar .requirements-tabstrip>button,.workspace-app .requirements-toolbar .requirements-tabstrip>button.selected{padding-inline:8px}}
+.workspace-app .setup-draft-access{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;margin:12px 0 16px;font-size:13px;line-height:20px}
+@media(max-width:680px){.workspace-app .topbar{padding:8px 16px;gap:8px}.project-page-header{gap:8px}.workspace-app .home-hero,.workspace-app .home-announcements{padding:20px 16px}}
+
+@media(min-width:620px) and (max-width:820px){
+ .workspace-app .topbar:has(.domain-workspace-control){display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1.2fr) minmax(0,.85fr);gap:12px}
+ .workspace-app .topbar:has(.domain-workspace-control)>:is(.project-switcher,.role-switcher,.domain-workspace-control){min-width:0;width:100%;max-width:none}
+}
+@media(pointer:coarse){.workspace-app .sponsor-guidance>summary{min-height:44px}.workspace-app .topbar :is(select,.ui-selector){height:44px;min-height:44px}}
+
+@media(forced-colors:active){.signal-notice{border:1px solid CanvasText}.signal-notice:is(.signal-advisory,.signal-critical)::before{color:CanvasText}.workspace-app button.primary:not(.danger){border:1px solid ButtonText}}
+
+/* Scan roles: reading 16/24, metadata 13/20, compact controls 13/16. */
+.project-page-identity .project-page-title,.project-page-id,.thought-partner-title,.workspace-app .main .thought-partner-title,#modal .thought-partner-title{color:var(--signal-identity-ink)}
+.project-title-area :is(.page-head,.sponsor-heading,.chat-page-head) p,.acx-page>.page-head p{font-size:13px;line-height:20px;max-width:62ch;margin:8px 0 0}
+.workspace-app :is(.workbench-field-guide,.sponsor-value-description,.sponsor-field>small,.sponsor-answer-head>span,.answer-hint){font-size:16px;line-height:24px;font-weight:400;color:var(--ws-color-text-body-helper)}
+.workspace-app .sponsor-edit-block.sponsor-value-field{gap:12px;padding:24px;background:var(--ws-color-background-surface-dimmer);border-color:var(--ws-color-border-light)}
+.workspace-app .sponsor-framing-editor .sponsor-panel-body{padding:24px}
+.workspace-app .sponsor-core-fields{row-gap:24px}
+.workspace-app .sponsor-value-field>.workbench-review-actions{margin-top:12px;gap:12px}
+.workspace-app .sponsor-framing-editor [data-framing-field="name"]{margin-bottom:24px}
+.workspace-app .sponsor-question-work{gap:24px}
+.workspace-app .workbench-module-header{padding-bottom:20px}
+.workspace-app .workbench-module-drawers>details+details{margin-top:16px}
+.workspace-app .sponsor-source-tools{padding-top:12px;margin-top:20px;border-top:1px solid var(--line)}
+.developer-workspace-details{margin-top:24px;padding-top:20px;border-top:1px solid var(--line)}
+.developer-workspace-details>summary{font-size:16px;line-height:24px;font-weight:600;cursor:pointer}
+.developer-workspace-details .details-body{padding-top:20px}
+.developer-workspace-details .role-switcher{margin-bottom:24px;max-width:100%}
+.workspace-app .ws-app-user .preview-role-switcher{width:220px;max-width:100%;flex:none;display:grid;gap:4px}
+.workspace-app .preview-role-switcher>.ui-control-label{font-size:13px;line-height:16px;color:var(--ac-text-inverse);font-weight:400;margin:0}
+.workspace-app .preview-role-switcher .ui-selector{width:100%;height:32px;min-height:32px;padding-top:4px;padding-bottom:4px;font-size:13px;line-height:20px;background:var(--ac-surface);color:var(--ac-text)}
+.workspace-app .preview-role-switcher .ui-selector:focus-visible{outline:2px solid var(--ac-surface);outline-offset:3px}
+@media(max-width:1100px){.workspace-app .ws-app-user .preview-role-switcher{width:180px}}
+@media(max-width:820px){.workspace-app .ws-app-user .preview-role-switcher{width:150px}.workspace-app .ws-app-user:has(.preview-role-switcher){gap:8px}}
+@media(max-width:820px){.workspace-app .ws-app-header:has(.preview-role-switcher) .ws-product-descriptor{display:none}.workspace-app .ws-app-header:has(.preview-role-switcher) .ws-app-title{height:auto;flex:none}}
+@media(max-width:480px){.workspace-app .ws-app-header:has(.preview-role-switcher){height:auto;min-height:64px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;padding-bottom:12px}.workspace-app .ws-app-header:has(.preview-role-switcher)>.ws-app-user{grid-column:1/-1;grid-row:2;width:100%;margin:0;justify-content:space-between}.workspace-app .ws-app-header:has(.preview-role-switcher)>.ws-menu-button{grid-column:2;grid-row:1}.workspace-app .ws-app-user .preview-role-switcher{width:min(220px,70%)}.workspace-app .ws-app-header:has(.preview-role-switcher)~* .sponsor-document>section{scroll-margin-top:160px}}
+
+/* Current is selected, available is outlined/actionable, unavailable is native-disabled. */
+.workspace-app :is(.app-navigation-link,.navigation-chat-title)[aria-current="page"]{background:var(--ac-surface);color:var(--ac-text);border-inline-start:3px solid var(--blue);font-weight:600}
+.workspace-app .sponsor-qnav button[aria-current="true"]{background:var(--ac-surface);border-inline-start:3px solid var(--blue);font-weight:600;color:var(--ac-text)}
+.workspace-app .sponsor-resource-tabs button[aria-pressed="true"],.workspace-app :is(.requirements-switch,.settings-tabs) button.selected{background:var(--ac-surface);color:var(--ac-text);border-color:transparent;border-bottom:3px solid var(--blue);font-weight:600;border-radius:0}
+.workspace-app button:disabled,#modal button:disabled{opacity:1;background:var(--ac-surface-subtle)!important;color:var(--ac-text-secondary)!important;border-color:var(--ac-border-strong)!important;cursor:not-allowed;box-shadow:none}
+.workspace-app .sponsor-complete:has(input:disabled){background:var(--ac-surface-subtle);color:var(--ac-text-secondary);border-color:var(--ac-border-strong)}
+.workspace-app :is(.sponsor-north-star,.domain-brief-stack):not([open])>summary{background:var(--ac-surface)}
+.workspace-app button.team-timeline-bar{border:1px solid var(--signal-identity-ink);color:var(--signal-identity-ink)}
+.workspace-app button.team-timeline-bar.team-timeline-waiting{border-color:var(--ws-color-text-body-default);color:var(--ws-color-text-body-default)}
+.workspace-app button.team-timeline-connected{box-shadow:inset 0 0 0 2px var(--blue)}
+/* Project headers use one context style, one title style and one tab style. */
+.workspace-app .project-page-identity{align-items:baseline;gap:4px 8px;margin:0 0 16px;color:var(--signal-identity-ink)}
+.workspace-app .project-page-identity :is(.project-page-title,.project-page-key,.project-page-id,.project-page-version){font-size:13px;line-height:20px;font-weight:400;letter-spacing:normal;color:inherit}
+.workspace-app .project-page-key{gap:8px}
+.workspace-app .project-title-area h1{font-size:28px;line-height:36px;font-weight:600}
+.workspace-app .project-title-area .sponsor-heading .eyebrow{display:none}
+.workspace-app :is(.bridge-sections,.ws-task-navigation) button{font-size:13px;line-height:20px;font-weight:400}
+.workspace-app :is(.bridge-sections,.ws-task-navigation) button[aria-current="page"]{font-weight:400;color:var(--blue)}
+/* Shared module hanglines and insets carry hierarchy without extra type variants. */
+.workspace-app .main h2:not(.thought-partner-title){font-size:20px;line-height:28px;font-weight:600}
+.workspace-app .main .thought-partner-title,#modal .thought-partner-title{font-size:20px;line-height:28px;font-weight:400}
+.workspace-app .workbench-record-module{padding:0}
+.workspace-app .workbench-module-header{padding:24px 24px 0}
+.workspace-app .workbench-module-drawers{padding:20px 24px 24px}
+.workspace-app :is(.sponsor-panel-head,.sponsor-coach-title),.workspace-app .domain-working-layout>.chat-console>header{padding:24px}
+.workspace-app .field-coach,.workspace-app .sponsor-planning #field-coach{padding:24px}
+.workspace-app .accountability-project-rail .accountability-rail-panel>header{padding-top:24px}
+.workspace-app .sponsor-framing-grid>.sponsor-panel>.sponsor-panel-head,.workspace-app .sponsor-framing-grid>.sponsor-panel>.sponsor-panel-body{padding-inline:24px}
+.workspace-app .project-status-area>.sponsor-heading-actions{width:100%}
+.workspace-app .sponsor-review-status{display:grid;gap:12px;width:100%;min-width:0}
+.workspace-app .project-page-header:has(.sponsor-review-status) .project-title-area>.sponsor-heading{margin-top:0}
+.workspace-app .sponsor-review-status>.tag{justify-self:start}
+.workspace-app .project-status-area .sponsor-coverage{margin:0;width:100%;background:var(--ws-color-background-surface-dimmer);border:0}
+.workspace-app .project-status-area .sponsor-coverage>summary>span:last-child{color:var(--ws-color-border-alert-info);white-space:nowrap}
+.workspace-app .sponsor-document-head>.eyebrow{font-size:13px;line-height:20px;font-weight:400}
+.workspace-app .sponsor-document-head{padding:24px}
+.workspace-app .sponsor-document>section{scroll-margin-top:104px}
+/* Narrative subheads lead their paragraph; a larger gap separates the next subject. */
+.workspace-app .sponsor-core-summary{margin-top:20px}
+.workspace-app :is(.sponsor-document,.sponsor-core-summary) .label-value{margin:0 0 32px}
+.workspace-app :is(.sponsor-document,.sponsor-core-summary) .label-value:last-child{margin-bottom:0}
+.workspace-app :is(.sponsor-document,.sponsor-core-summary) .label-value>label{display:block;font-size:16px;line-height:24px;font-weight:600;color:var(--ws-color-text-body-default);margin:0 0 8px}
+.workspace-app :is(.sponsor-document,.sponsor-core-summary) .label-value>.pre{font-size:16px;line-height:24px;margin:0}
+.workspace-app .sponsor-document .sponsor-doc-answer{padding:0;margin:24px 0 0}
+.workspace-app .sponsor-document .sponsor-doc-answer+.sponsor-doc-answer{margin-top:32px}
+.workspace-app .sponsor-document .sponsor-doc-answer h3{font-size:16px;line-height:24px;font-weight:600;color:var(--ws-color-text-body-default)}
+.workspace-app .sponsor-answer-heading{display:flex;align-items:baseline;flex-wrap:wrap;gap:8px 12px;min-width:0}
+.workspace-app .sponsor-answer-status{flex:none}
+/* Keep the saved role structure visible as a scan-friendly set of disclosures. */
+.workspace-app .sponsor-role-profile{margin:16px 0 0;padding:0;border:1px solid var(--signal-panel-border);border-radius:8px;background:var(--ac-surface);overflow:hidden}
+.workspace-app .sponsor-role-profile>summary{position:relative;display:grid;gap:8px;padding:16px 40px 16px 16px;list-style:none;background:var(--ws-color-background-surface-dimmer);cursor:pointer}
+.workspace-app .sponsor-role-profile>summary::-webkit-details-marker{display:none}
+.workspace-app .sponsor-role-profile>summary::after{content:'';position:absolute;right:18px;top:23px;width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg)}
+.workspace-app .sponsor-role-profile[open]>summary::after{transform:rotate(225deg);top:26px}
+.workspace-app .sponsor-role-profile-name{font-size:16px;line-height:24px;font-weight:600;color:var(--ws-color-text-body-default);overflow-wrap:anywhere}
+.workspace-app .sponsor-role-profile-preview{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;font-size:16px;line-height:24px;font-weight:400;color:var(--muted)}
+.workspace-app .sponsor-role-profile[open]>summary .sponsor-role-profile-preview{display:none}
+.workspace-app .sponsor-role-profile>dl{display:grid;gap:24px;margin:0;padding:20px 16px;border-top:1px solid var(--line)}
+.workspace-app .sponsor-role-profile dt{font-size:16px;line-height:24px;font-weight:600;color:var(--ws-color-text-body-default)}
+.workspace-app .sponsor-role-profile dd{font-size:16px;line-height:24px;font-weight:400;margin:8px 0 0;overflow-wrap:anywhere}
+/* Context labels identify facts; progress is calm information, never an evidence grade. */
+.workspace-app .workbench-context-chips{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0;padding:0}
+.workspace-app .workbench-context-chip{display:inline-flex;align-items:baseline;flex-wrap:wrap;gap:4px 8px;max-width:100%;padding:4px 8px;border:0;border-radius:4px;background:var(--ws-color-background-surface-dimmer);color:var(--ws-color-text-body-default);font-size:13px;line-height:20px;font-weight:400}
+.workspace-app .workbench-context-chip dt{color:var(--ws-color-text-body-helper);font-size:inherit;line-height:inherit;font-weight:400}
+.workspace-app .workbench-context-chip dd{margin:0;font-size:inherit;line-height:inherit;font-weight:400;overflow-wrap:anywhere;min-width:0}
+.workspace-app .workbench-context-chip-progress{background:var(--ws-color-secondary-blue-light);color:var(--ws-color-border-alert-info)}
+.workspace-app .workbench-context-chip-progress dt{color:inherit}
+.workspace-app .workbench-context-row{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 16px;margin-top:16px}
+.workspace-app .workbench-context-row>.workbench-context-chips{margin:0}
+.workspace-app .record-metadata{margin:0;padding:0;border:0;font-size:13px;line-height:20px;min-width:0}
+.workspace-app .record-metadata>summary{font-size:13px;line-height:20px;font-weight:400;color:var(--muted);cursor:pointer}
+.workspace-app .record-metadata>.metadata-content{margin-top:12px;font-size:13px;line-height:20px;overflow-wrap:anywhere}
+.workspace-app .record-reference{font-family:inherit;font-size:13px;line-height:20px;font-weight:400;color:var(--muted)}
+.workspace-app .project-identity-details{position:relative;color:var(--muted)}
+.workspace-app .project-identity-details>.metadata-content{position:absolute;right:0;z-index:5;min-width:160px;padding:12px 16px;background:var(--ac-surface);border:1px solid var(--line);border-radius:4px;box-shadow:0 2px 8px #0001}
+.workspace-app .domain-resolution{display:grid;gap:24px;margin-top:24px}
+.workspace-app .domain-resolution-team{margin:0;padding:0}
+.workspace-app .domain-resolution-team>h3{margin:0 0 12px;font-size:16px;line-height:24px;font-weight:600}
+.workspace-app .domain-resolution-report+.domain-resolution-report{margin-top:12px}
+.workspace-app .domain-resolution-report-title{font-size:13px;line-height:20px}
+.workspace-app .domain-resolution-source{margin-top:16px}
+.workspace-app .domain-resolution-empty-row{display:flex;align-items:baseline;flex-wrap:wrap;gap:8px 16px;font-size:13px;line-height:20px;color:var(--muted);padding:0}
+.workspace-app .domain-resolution-empty-row>p{margin:0}
+.workspace-app .domain-resolution-empty-row>.domain-resolution-source{margin:0}
+.workspace-app .pending-requirement>summary>.pending-requirement-evidence{justify-self:start;background:var(--ac-surface);color:var(--muted)}
+.workspace-app .pending-requirement-reports .item-title-link{font-size:13px;line-height:20px}
+.workspace-app .requirement-source-details{margin-top:24px;border:0;padding:0}
+.workspace-app .requirement-source-details>summary{font-size:13px;line-height:20px;font-weight:400;color:var(--muted)}
+.workspace-app .requirement-source-details>.details-body{padding:12px 0 0}
+.workspace-app [data-ratified-category][hidden]{display:none!important}
+.workspace-app .requirements-category-filter{display:flex;align-items:center;gap:8px;max-width:260px;font-size:13px;line-height:20px}
+.workspace-app .requirements-category-filter select{font-size:13px;line-height:20px;min-width:0;width:100%}
+.workspace-app .requirement-definition{margin:24px 0;padding:16px;background:var(--ws-color-background-surface-dimmer);border-radius:4px}
+.workspace-app .requirement-definition>:is(h3,h4){margin:0;font-size:13px;line-height:20px;font-weight:600}
+.workspace-app .requirement-definition>ul{display:flex;flex-wrap:wrap;gap:8px 24px;margin:12px 0;padding:0;list-style:none}
+.workspace-app .requirement-definition>ul>li{font-size:13px;line-height:20px;margin:0}
+.workspace-app .requirement-definition>.caption{margin:12px 0 0}
+.workspace-app .requirement-evidence-summary{margin:0 0 24px}
+.workspace-app .requirement-map-conditions{margin-top:12px}
+.workspace-app .workbench-record-module .workbench-drawer>summary{flex-wrap:wrap;gap:8px 12px}
+.workspace-app .workbench-record-module .workbench-drawer>summary>span:first-of-type{flex:1;min-width:160px}
+.workspace-app .workbench-record-module .workbench-drawer>summary>.condition-chip{flex:0 1 auto;font-weight:400}
+
+/* Requirement areas hold the investigation; white records hold specific wording. */
+.workspace-app :is(.requirement-area-shell,.requirement-record)>summary{display:flex;flex-wrap:wrap;gap:8px 12px;list-style:none;cursor:pointer}
+.workspace-app :is(.requirement-area-shell,.requirement-record)>summary::-webkit-details-marker{display:none}
+.workspace-app :is(.requirement-area-shell,.requirement-record)>summary::before{content:'';display:block;flex:none;align-self:center;width:6px;height:6px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(-45deg)}
+.workspace-app :is(.requirement-area-shell,.requirement-record)[open]>summary::before{transform:rotate(45deg)}
+.workspace-app .requirement-area-shell{padding:0;background:var(--ws-color-background-surface-dimmer);border:1px solid var(--ws-color-grayscale-gray-20);border-radius:8px;overflow:hidden}
+.workspace-app .requirements-module-list .workbench-module-drawers>.requirement-area-shell>summary{border:0}
+.workspace-app .requirement-area-shell>summary{padding:16px 20px;border:0;background:var(--ws-color-grayscale-gray-10);align-items:center}
+.workspace-app :is(.requirement-area-heading,.requirement-record-heading){display:grid;gap:4px;min-width:0}
+.workspace-app .requirement-object-label{font-size:13px;line-height:20px;font-weight:400;color:var(--ac-text-secondary)}
+.workspace-app :is(.requirement-area-title,.requirement-record-title){font-size:16px;line-height:24px;font-weight:600;color:var(--ac-text)}
+.workspace-app .requirement-area-shell>.requirement-area-body{padding:20px;margin:0}
+.workspace-app .requirement-area-guidance>h3{font-size:13px;line-height:20px;font-weight:600;margin:0 0 8px}
+.workspace-app .requirement-area-guidance>p{font-size:16px;line-height:24px;margin:0}
+.workspace-app .requirement-area-method{margin-top:16px;padding:0;border:0}
+.workspace-app .requirement-area-method>summary{font-size:13px;line-height:20px;font-weight:400;min-height:32px;padding:6px 0;color:var(--ac-text-secondary)}
+.workspace-app .requirement-area-method .area-criteria{border:0;padding:0;margin:16px 0 0}
+.workspace-app .requirement-area-method .area-criteria>h4{font-size:13px;line-height:20px;font-weight:600}
+.workspace-app .requirement-area-proposals{margin-top:24px;padding-top:24px;border-top:1px solid var(--ws-color-grayscale-gray-20)}
+.workspace-app .requirement-area-proposals>h3{margin:0 0 16px;font-size:16px;line-height:24px;font-weight:600}
+.workspace-app .requirement-record-list{display:grid;gap:16px}
+.workspace-app .requirement-record{margin:0;padding:0;background:var(--ac-surface);border:1px solid var(--ws-color-grayscale-gray-40);border-left:4px solid var(--ws-color-grayscale-gray-40);border-radius:6px;overflow:hidden}
+.workspace-app .requirement-record[data-work="attention"]{border-left-color:var(--blue)}
+.workspace-app .requirement-record[data-work="advisory"]{border-left-color:var(--signal-warning-border)}
+.workspace-app .requirement-record>summary{padding:16px 20px;background:var(--ac-surface);align-items:center;border:0}
+.workspace-app .requirement-record>.requirement-record-body{padding:0;margin:0;background:var(--ac-surface)}
+.workspace-app .requirement-record-section{padding:20px;border-top:1px solid var(--ac-border)}
+.workspace-app .requirement-record-section>h4{margin:0 0 8px;font-size:13px;line-height:20px;font-weight:600;color:var(--ac-text)}
+.workspace-app .requirement-record-section>p{margin:0;font-size:16px;line-height:24px}
+.workspace-app .requirement-record-assessment{padding:20px;background:var(--ws-color-background-surface-dimmer);border-top:1px solid var(--ac-border)}
+.workspace-app .requirement-record-assessment>header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px 16px}
+.workspace-app .requirement-record-assessment>header>h4{margin:0;font-size:13px;line-height:20px;font-weight:600}
+.workspace-app .requirement-record-assessment>.requirement-definition{padding:0;margin:20px 0;background:transparent}
+.workspace-app .requirement-validation{margin:0;font-size:13px;line-height:20px}
+.workspace-app .requirement-validation>div{display:flex;gap:8px 16px;flex-wrap:wrap}
+.workspace-app .requirement-validation dt{font-weight:600}
+.workspace-app .requirement-validation dd{margin:0;color:var(--ac-text-secondary)}
+.workspace-app .requirement-record-footer{padding:16px 20px;border-top:1px solid var(--ws-color-grayscale-gray-20);display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px 20px;background:var(--ac-surface)}
+.workspace-app .requirement-record-actions{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:13px;line-height:20px}
+.workspace-app .requirement-record-footer .item-title-link,.workspace-app .requirement-area-footer .item-title-link{font-size:13px;line-height:20px}
+.workspace-app .requirement-area-footer{margin-top:20px;padding-top:16px;border-top:1px solid var(--ws-color-grayscale-gray-20)}
+@media(max-width:700px){.workspace-app :is(.requirement-area-shell,.requirement-record)>summary,.workspace-app .requirement-area-shell>.requirement-area-body,.workspace-app :is(.requirement-record-section,.requirement-record-assessment,.requirement-record-footer){padding:16px}}
+@media(max-width:900px){.workspace-app .sponsor-guidance-content{gap:24px}}
+@media(max-width:700px){.workspace-app .sponsor-guidance-content{padding:16px}}
+@media(max-width:700px){.workspace-app :is(.sponsor-panel-head,.sponsor-coach-title),.workspace-app .domain-working-layout>.chat-console>header,.workspace-app .field-coach{padding:16px}.workspace-app .workbench-module-header{padding:16px 16px 0}.workspace-app .workbench-module-drawers{padding:16px}.workspace-app .sponsor-framing-grid>.sponsor-panel>.sponsor-panel-head,.workspace-app .sponsor-framing-grid>.sponsor-panel>.sponsor-panel-body{padding-inline:16px}}
+@container project-title-region (max-width:760px){.project-page-header,.project-page-header:not(.has-status){grid-template-columns:minmax(0,1fr);gap:12px}}
+@media(max-width:700px){.workspace-app .sponsor-edit-block.sponsor-value-field,.workspace-app .sponsor-framing-editor .sponsor-panel-body{padding:16px}.project-title-area :is(.page-head,.sponsor-heading,.chat-page-head) p{max-width:100%}}
+
+/* Stable menu wayfinding: cool category bands; active location stays explicit. */
+.app-navigation-group[data-navigation-group="work"]{--navigation-band:var(--wayfinding-work-surface);--navigation-ink:var(--wayfinding-work-ink)}
+.app-navigation-group[data-navigation-group="collaboration"]{--navigation-band:var(--wayfinding-shared-surface);--navigation-ink:var(--wayfinding-shared-ink)}
+.app-navigation-group[data-navigation-group="records"]{--navigation-band:var(--wayfinding-record-surface);--navigation-ink:var(--wayfinding-record-ink)}
+.app-navigation .app-navigation-group-header{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:48px;box-sizing:border-box;padding:8px;margin:0 0 8px;background:var(--navigation-band);color:var(--navigation-ink);border-radius:4px}
+.app-navigation .app-navigation-group-header>h3{flex:1;min-width:0;margin:0;padding:0;background:transparent;color:inherit;font-size:13px;line-height:20px}
+.app-navigation .navigation-icon-badge{display:grid;place-items:center;flex:none;width:32px;height:32px;border-radius:6px;background:#ffffffb3;color:var(--navigation-ink,var(--ws-color-text-body-helper))}
+.app-navigation .navigation-icon-badge>svg{display:block;flex:none;width:24px;height:24px}
+.app-navigation .global-navigation-title{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;min-width:0}
+.app-navigation .global-navigation-title>span:first-child{min-width:0}
+.app-navigation .global-navigation-title>.navigation-icon-badge{background:var(--ws-color-background-surface-dimmer);color:var(--ws-color-text-body-helper)}
+.app-navigation .app-navigation-link[aria-current="page"]{background:var(--ws-color-secondary-purple-light-25);border-color:var(--ws-color-text-activation-default);box-shadow:inset 3px 0 var(--ws-color-text-activation-default)}
+.app-navigation .app-navigation-link[aria-current="page"] .navigation-icon-badge{color:var(--ws-color-text-activation-default);background:var(--ws-color-background-surface-element)}
+
+/* Shared wayfinding tokens: work, shared work and records. */
+:root{--wayfinding-work-surface:var(--ac-surface);--wayfinding-work-ink:var(--ac-ink);--wayfinding-shared-surface:var(--ac-surface);--wayfinding-shared-ink:var(--ac-ink);--wayfinding-record-surface:var(--ac-surface);--wayfinding-record-ink:var(--ac-ink)}
+.surface-wayfinding-icon{display:grid;place-items:center;flex:none;width:36px;height:36px;border-radius:8px;background:var(--ws-color-background-surface-default,var(--ac-surface));color:inherit}
+.surface-wayfinding-icon>svg{width:24px;height:24px;stroke-width:1.9}
+:root{--wayfinding-secondary-ink:var(--ac-text-secondary)}
+.workspace-app .workbench-module-header :is(.caption,.collection-origin-tiles p),.workspace-app .accountability-rail-panel>header>.accountability-rail-summary{color:var(--wayfinding-secondary-ink)}
+
+/* Read-only field subheads carry structure; metadata stays quiet. */
+.workspace-app :is(.workbench-record-module,.goal-read,.goal-measure-read) .label-value:not(:has(input,textarea,select))>label,
+#modal :is(.goal-read,.goal-measure-read) .label-value:not(:has(input,textarea,select))>label{
+ color:var(--signal-identity-ink);font-weight:600;
+}
+
+/* Stable object roles identify what a drawer contains, separately from status. */
+.workspace-app .workbench-object-heading,#modal .workbench-object-heading{
+ display:flex;flex-direction:column;align-items:stretch;gap:4px;min-width:0;flex:1;
+}
+.workspace-app .workbench-object-type,#modal .workbench-object-type{
+ display:block;font-size:13px;line-height:20px;font-weight:600;color:var(--wayfinding-secondary-ink);letter-spacing:normal;text-transform:none;
+}
+.workspace-app .measure-goal-support,#modal .measure-goal-support{
+ display:block;margin:8px 0 0;min-width:0;font-size:13px;line-height:20px;font-weight:400;color:var(--ws-color-text-body-default);white-space:normal;overflow-wrap:anywhere;
+}
+.workspace-app .requirement-record-heading>.workbench-object-type{grid-column:1/-1}
+.workspace-app :is(.requirement-record-heading,.collection-cover-heading){align-content:start}
+
+/* A nested measure is its own drawer, distinct from its gray parent goal. */
+.workspace-app .goal-read .goal-measure-read,
+#modal .goal-read .goal-measure-read{
+ --workbench-card-surface:var(--ws-color-background-surface-element,var(--ac-surface));
+ background:var(--workbench-card-surface);
+ border:1px solid var(--ws-color-grayscale-gray-60);
+}

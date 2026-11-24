@@ -1,0 +1,173 @@
+{
+  "id": "REQ-ASSESSMENT-STANDARD",
+  "revision": 1,
+  "title": "Requirement assessment standard",
+  "owner": "Project standards owner",
+  "boundary": "Human recorded judgments for a named use. Contract checks do not establish semantic sufficiency, ratification, execution permission or fulfillment.",
+  "profiles": {
+    "investigation": {
+      "label": "Investigation",
+      "description": "A bounded permitted inquiry can proceed while the proposition remains unproven.",
+      "checks": [
+        {
+          "key": "question",
+          "label": "Clear question and learning",
+          "description": "The question and intended learning are explicit.",
+          "required": true,
+          "required_evidence_level": "documentary",
+          "allow_not_applicable": false
+        },
+        {
+          "key": "context",
+          "label": "Affected context",
+          "description": "The relevant people, work and conditions are identified.",
+          "required": true,
+          "required_evidence_level": "documentary",
+          "allow_not_applicable": false
+        },
+        {
+          "key": "method",
+          "label": "Bounded method",
+          "description": "The proposed method, limits and responsible next step are stated.",
+          "required": true,
+          "required_evidence_level": "documentary",
+          "allow_not_applicable": false
+        },
+        {
+          "key": "constraints",
+          "label": "Applicable constraints",
+          "description": "Applicable policy, safety, access and authority constraints are identified without inventing permission.",
+          "required": true,
+          "required_evidence_level": "documentary",
+          "allow_not_applicable": false
+        }
+      ]
+    },
+    "prototype": {
+      "label": "Bounded prototype/test",
+      "description": "A scoped test can examine an unproven proposition without treating it as supported.",
+      "checks": [
+        {
+          "key": "question",
+          "label": "Hypothesis or question",
+          "description": "The hypothesis or question being tested is explicit.",
+          "required": true,
+          "required_evidence_level": "documentary",
+          "allow_not_applicable": false
+        },
+        {
+          "key": "context",
+          "label": "Target users and context",
+          "description": "The intended users and test conditions are stated.",
+          "required": true,
+          "required_evidence_level": "documentary",
+          "allow_not_applicable": false
+        },
+        {
+          "key": "boundaries",
+          "label": "Test boundaries and constraints",
+          "description": "The bounded test respects applicable constraints; it does not imply production permission.",
+          "required": true,
+          "required_evidence_level": "documentary",
+          "allow_not_applicable": false
+        },
+        {
+          "key": "learning",
+          "label": "Observable learning criteria",
+          "description": "The observations that would support or challenge the hypothesis are defined.",
+          "required": true,
+          "required_evidence_level": "documentary",
+          "allow_not_applicable": false
+        },
+        {
+          "key": "next-step",
+          "label": "Responsible next step",
+          "description": "A responsible next step is stated without inventing an accepted assignment.",
+          "required": true,
+          "required_evidence_level": "documentary",
+          "allow_not_applicable": false
+        }
+      ]
+    },
+    "implementation": {
+      "label": "Implementation of the named scope",
+      "description": "The named scope has actionable definition, applicable support and resolved material dependencies. This recommendation grants no execution authority.",
+      "checks": [
+        {
+          "key": "behavior",
+          "label": "Unambiguous behavior or constraint",
+          "description": "Behavior or constraint and scope are actionable and consistently interpreted.",
+          "required": true,
+          "required_evidence_level": "documentary",
+          "allow_not_applicable": false
+        },
+        {
+          "key": "context",
+          "label": "User and system context",
+          "description": "Relevant users, systems, conditions and applicability are stated.",
+          "required": true,
+          "required_evidence_level": "documentary",
+          "allow_not_applicable": false
+        },
+        {
+          "key": "acceptance",
+          "label": "Material acceptance conditions",
+          "description": "Observable acceptance conditions include applicable failure and boundary cases.",
+          "required": true,
+          "required_evidence_level": "documentary",
+          "allow_not_applicable": false
+        },
+        {
+          "key": "basis",
+          "label": "Current applicable basis",
+          "description": "The material claims have current evidence of the required level and explicit limits.",
+          "required": true,
+          "required_evidence_level": "documentary",
+          "allow_not_applicable": false
+        },
+        {
+          "key": "dependencies",
+          "label": "Design, interfaces and dependencies",
+          "description": "Material design, interface and dependency questions are resolved for this scope; a claim of none needs a grounded explanation.",
+          "required": true,
+          "required_evidence_level": "documentary",
+          "allow_not_applicable": false
+        },
+        {
+          "key": "constraints",
+          "label": "Policy and authority constraints",
+          "description": "No unresolved non-negotiable constraint violation remains. Risk acceptance or a waiver cannot be invented.",
+          "required": true,
+          "required_evidence_level": "documentary",
+          "allow_not_applicable": false
+        }
+      ]
+    }
+  },
+  "domain_guidance": {
+    "research": {
+      "implication": "Investigate the claim in its actual user and work context; preserve counterevidence and limits.",
+      "question": "What observation would support or challenge this condition, and what does the current evidence leave uncertain?"
+    },
+    "design": {
+      "implication": "Develop and test the interaction, including failure and boundary conditions relevant to this scope.",
+      "question": "What behavior must the design make observable, and which assumptions or unresolved dependencies should the test examine?"
+    },
+    "operations": {
+      "implication": "Check how the condition fits operational roles, exceptions, handoffs and existing controls.",
+      "question": "Who needs to act under which conditions, and what evidence would show that exceptions and handoffs work?"
+    },
+    "sponsor": {
+      "implication": "Connect the proposed condition to the intended value, scope and applicable business constraints.",
+      "question": "What value or obligation makes this condition material, and what uncertainty would change the direction?"
+    },
+    "requirement-owner": {
+      "implication": "Keep the definition, acceptance conditions and material dependencies actionable while preserving open questions.",
+      "question": "What must be clarified or evidenced for the next intended use, and which decision remains with its accountable owner?"
+    },
+    "default": {
+      "implication": "Apply the shared standard to your contribution without treating the domain explanation as a new judgment or permission.",
+      "question": "What can your role establish for this condition, and which evidence, limits or questions must travel with the contribution?"
+    }
+  }
+}

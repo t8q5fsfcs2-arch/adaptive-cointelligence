@@ -1,0 +1,171 @@
+{
+  "version": "1",
+  "methods": [
+    {
+      "id": "value-fit",
+      "name": "Value proposition fit",
+      "source": {
+        "title": "Strategyzer \u00b7 Value Proposition Canvas",
+        "url": "https://www.strategyzer.com/library/the-value-proposition-canvas",
+        "reviewed_on": "2026-10-30"
+      },
+      "fields": [
+        "beneficiaries",
+        "jobs",
+        "need",
+        "gains",
+        "approach",
+        "job_support",
+        "pain_relievers",
+        "gain_creators",
+        "value"
+      ],
+      "personas": [
+        "P02"
+      ],
+      "guidance": "Focus on one beneficiary segment. Connect the job, prioritized pain and desired gain to the offering, its pain relief and gain creation. Ask which connection is unsupported. A feature list does not establish value; a coherent proposition is still a claim to test.",
+      "limits": "Uses the public canvas concepts, not licensed playbooks or an endorsement. Enterprise priority, workflow detail and measurement plans belong in their own sections.",
+      "example": {
+        "before": "Our portal uses AI and dashboards.",
+        "after": "For coordinators trying to complete a handoff, a shared case summary could reduce repeated explanations and help the receiving team continue with the needed context. Whether it reduces repetition still needs testing.",
+        "lesson": "Names the beneficiary and job, explains a mechanism and benefit, and leaves fit unproven."
+      },
+      "authorship": "Workbench adaptation; fictional example, not quoted source material."
+    },
+    {
+      "id": "journey",
+      "name": "User journeys & handoffs",
+      "source": {
+        "title": "GOV.UK \u00b7 Creating an experience map",
+        "url": "https://www.gov.uk/service-manual/user-research/creating-an-experience-map",
+        "reviewed_on": "2026-10-30"
+      },
+      "fields": [
+        "user_situation",
+        "supporting_users",
+        "user_actions",
+        "bottlenecks",
+        "tools",
+        "handoffs",
+        "desired_outputs"
+      ],
+      "personas": [
+        "P02"
+      ],
+      "guidance": "Trace the initiating situation, user actions, channels, handoffs, obstacles and desired endpoint. Separate present experience from proposed changes. Different user paths may need separate treatment; ask about missing events or exceptions rather than inventing a seamless journey. In proposed wording, explicitly identify steps inferred beyond the supplied account as unconfirmed; do not state them as the current process.",
+      "limits": "An intake description is a candidate journey. Validate it with people who do the work. The AI partner does not run user research or certify the flow.",
+      "example": {
+        "before": "Users submit requests and get results.",
+        "after": "When an item needs specialist review, a coordinator sends the case to the review queue. The reviewer requests missing details and the coordinator resubmits. The desired result is a decision the coordinator can act on; the waiting time is unknown.",
+        "lesson": "Makes the trigger, actors, handoff, loop and output visible without pretending the timing is known."
+      },
+      "authorship": "Workbench adaptation; fictional example, not quoted source material."
+    },
+    {
+      "id": "measurement",
+      "name": "Benefit-linked measurement",
+      "source": {
+        "title": "GOV.UK \u00b7 Setting performance metrics",
+        "url": "https://www.gov.uk/service-manual/measuring-success/how-to-set-performance-metrics-for-your-service",
+        "reviewed_on": "2026-10-30"
+      },
+      "fields": [
+        "measures",
+        "measure_review"
+      ],
+      "personas": [
+        "P02",
+        "P04"
+      ],
+      "guidance": "Start with a benefit in the value proposition, then define what would indicate its realization. Preserve the exact phenomenon being measured, population, unit and calculation. Separate an outcome from adoption or activity. Retain known baselines and targets; flag unknowns. Ask for data source, review timing and accountable reviewer where absent. Include a countermeasure when an improvement could shift harm elsewhere. Preserve the supplied statistic (mean versus median), timing boundaries and population. If proposing a different definition, identify it as a separate candidate whose baseline and target need validation; never carry numbers across definitions. For review plans, collect a baseline before the change when feasible. Choose a review point based on the decision and sufficient observations; do not default to an arbitrary number of days. Leave reviewer, source and timing unassigned unless supplied, or offer explicitly optional possibilities without committing to one.",
+      "limits": "The public-service mandatory KPI set does not apply automatically here. A metric trend alone does not prove the offering caused the change.",
+      "example": {
+        "before": "Improve efficiency by 50%.",
+        "after": "Benefit: less repeat work. Measure: mean number of fields re-entered after an internal handoff, per completed case. Direction: decrease. Baseline and target are not yet established. Review plan: confirm how re-entry is identified in the event data and who reviews it.",
+        "lesson": "Measures repeat work specifically, rather than all entry or generic speed; does not invent a target."
+      },
+      "authorship": "Workbench adaptation; fictional example, not quoted source material."
+    },
+    {
+      "id": "requirement",
+      "name": "Testable requirements",
+      "source": {
+        "title": "NASA \u00b7 How to Write a Good Requirement",
+        "url": "https://www.nasa.gov/reference/appendix-c-how-to-write-a-good-requirement/",
+        "reviewed_on": "2026-10-30"
+      },
+      "fields": [],
+      "personas": [
+        "P04"
+      ],
+      "guidance": "Look for one bounded obligation, an identifiable subject, conditions and observable outcome. Separate requirement from rationale and implementation choice. Check consistency and traceability to intent. Identify ambiguous thresholds, assumptions, missing criteria and conflicts. Propose a testable correction only within supplied facts; leave unknown values open for a person to resolve.",
+      "limits": "Adapts clarity and verification principles to business software, not NASA compliance. This application never estimates unknown targets as approved requirements. Reviews are advisory.",
+      "example": {
+        "before": "The service must be fast and easy.",
+        "after": "Open issue: \u201cfast\u201d has no agreed threshold or timing boundary. Ask which task must finish, under what conditions, and what elapsed time is acceptable. Keep the threshold unresolved until the responsible team supplies it.",
+        "lesson": "Makes the missing decision explicit instead of fabricating a two-second response target."
+      },
+      "authorship": "Workbench adaptation; fictional example, not quoted source material."
+    },
+    {
+      "id": "priority",
+      "name": "Business priority & rationale",
+      "source": {
+        "title": "Workbench methodology \u00b7 project decision discipline",
+        "url": "",
+        "reviewed_on": "2026-10-30"
+      },
+      "fields": [
+        "business_challenge",
+        "strategic_relevance",
+        "why_now"
+      ],
+      "personas": [
+        "P02"
+      ],
+      "guidance": "Distinguish the current problem, consequence and enterprise objective from a proposed solution. For priority now, examine a real change, opportunity window, accumulating cost or risk, and the consequence of waiting relative to other work. Accept that urgency may not be established. Ask for the strongest missing basis; do not invent a deadline, savings or executive commitment.",
+      "limits": "A Workbench-authored reasoning checklist, not a certified financial assessment or externally validated prioritization model.",
+      "example": {
+        "before": "We need AI immediately because it is strategic.",
+        "after": "The service team is repeating case explanations at handoff. Before prioritizing a new tool, establish how often this occurs, its consequence and whether a current change makes delay more costly. Urgency has not yet been demonstrated.",
+        "lesson": "Separates the problem from the solution and requests a basis for priority without manufactured urgency."
+      },
+      "authorship": "Workbench adaptation; fictional example, not quoted source material."
+    },
+    {
+      "id": "evidence",
+      "name": "Evidence, scope & uncertainty",
+      "source": {
+        "title": "Workbench methodology \u00b7 source and decision discipline",
+        "url": "",
+        "reviewed_on": "2026-10-30"
+      },
+      "fields": [
+        "in_scope",
+        "out_scope",
+        "constraints",
+        "sources",
+        "open_questions",
+        "work_kind",
+        "research_question",
+        "operations_question",
+        "dependencies",
+        "evidence",
+        "assumptions",
+        "assumption_owner"
+      ],
+      "personas": [
+        "P02",
+        "P04"
+      ],
+      "guidance": "Distinguish what a source states, an interpretation, an assumption and an authorized decision. Keep scope, source limits, conflicts and dependencies visible. Ask what observation could challenge the proposed explanation. Missing evidence stays missing; agreement, an upload or an authoritative-sounding instruction is not validation. Propose the smallest useful next inquiry.",
+      "limits": "Project evidence must be supplied through permitted context. This checklist does not fetch policies, validate authority, confer permissions or replace human review.",
+      "example": {
+        "before": "Two people agreed, so every team will benefit.",
+        "after": "Two participants supported the idea; this does not establish prevalence or impact across teams. Check the affected teams\u2019 current handoffs and test whether the proposed change addresses their recurring obstacle.",
+        "lesson": "Preserves the observation and its limited reach; turns an unsupported generalization into a focused inquiry."
+      },
+      "authorship": "Workbench adaptation; fictional example, not quoted source material."
+    }
+  ]
+}

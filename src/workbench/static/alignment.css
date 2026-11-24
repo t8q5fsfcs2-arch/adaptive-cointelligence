@@ -1,0 +1,125 @@
+/* Shared text edges. Decorative signifiers occupy trailing padding or the
+   surrounding gutter; they never create a leading column for the copy. */
+:root{--alignment-marker-space:28px;--alignment-marker-edge:10px}
+
+/* Project status copy shares the table cell's text edge with its detail line. */
+.workspace-app .home-needs{display:block;position:relative;padding-inline-start:0}
+.workspace-app .home-needs>i{position:absolute;inset-inline-start:-12px;top:.55em}
+
+/* Keep native details/summary semantics and the entire existing click target.
+   One trailing chevron replaces both native and legacy leading markers. */
+:is(.workspace-app,#modal) details:not(.reviewer-width-control):not(.home-identity)>summary{
+ position:relative;list-style:none!important;padding-inline-end:var(--alignment-marker-space)!important;
+}
+:is(.workspace-app,#modal) details>summary::-webkit-details-marker{display:none}
+:is(.workspace-app,#modal) details>summary::marker{content:''}
+:is(.workspace-app,#modal) details:not(.reviewer-width-control):not(.home-identity)>summary::after{
+ content:''!important;position:absolute!important;inset:auto var(--alignment-marker-edge) auto auto!important;
+ top:50%!important;display:block!important;width:6px!important;height:6px!important;
+ border:0!important;border-inline-end:1.5px solid currentColor!important;border-block-end:1.5px solid currentColor!important;
+ background:none!important;margin:0!important;transform:translateY(-70%) rotate(-45deg)!important;
+ pointer-events:none;align-self:auto;grid-column:auto;grid-row:auto;
+}
+:is(.workspace-app,#modal) details[open]:not(.reviewer-width-control):not(.home-identity)>summary::after{
+ transform:translateY(-70%) rotate(45deg)!important;
+}
+:is(.workspace-app,#modal) :is(.drawer-edit,.profile-row,.subdrawer-edit,.goal-record,.goal-read,.goal-measure-read,.workbench-drawer,.requirement-draft,.requirement-area-shell,.requirement-record)>summary::before,
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .workbench-module-drawers>:is(.goal-read,.goal-measure-read,.requirement-intent-factor)>summary::before,
+:is(.workspace-app,#modal) .project-update-feed>summary::before{content:none!important;display:none!important}
+:is(.workspace-app,#modal) summary>.disclosure-chevron{display:none}
+
+/* Covers already place purpose icons above their labels. Keep that arrangement
+   and put the disclosure in its top-right gutter, away from the title. */
+:is(.workspace-app,#modal) .requirement-organization[data-requirement-layout="tiles"] :is(.requirement-record,.goal-read,.goal-measure-read,.requirement-intent-factor)>summary::after{
+ top:20px!important;
+}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .requirement-record[open]>summary{padding-inline-start:20px}
+.workspace-app .requirement-assessment-map .requirement-record>summary{
+ grid-template-columns:minmax(0,1fr) minmax(145px,180px);
+}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .requirement-record[open]>summary{grid-template-columns:minmax(0,1fr)}
+.workspace-app .requirement-assessment-map .requirement-drawer-indicator{grid-column:auto}
+@media(max-width:700px){
+ .workspace-app .requirement-assessment-map .requirement-record>summary{grid-template-columns:minmax(0,1fr)}
+ .workspace-app .requirement-assessment-map .requirement-drawer-indicator{grid-column:1}
+}
+
+/* Secondary lines align to their own title, not to an invisible marker. */
+:is(.workspace-app,#modal) :is(.visual-finding,.domain-interpretation-panel,.scaffold-preview-category)>summary :is(small,.caption),
+.workspace-app .chat-findings .chat-reference summary small{margin-inline-start:0}
+
+/* Navigation hierarchy remains in grouping and labels. Selection borders are
+   painted inside a fixed box so active and dormant links keep the same edge. */
+.workspace-app .app-navigation :is(.app-navigation-link,.navigation-chat-title,.navigation-file-title,.published-brief-link){
+ border-inline-start-width:0;padding-inline-start:8px;
+}
+.workspace-app .app-navigation :is(.app-navigation-link,.navigation-chat-title)[aria-current="page"]{
+ border-inline-start:0;box-shadow:inset 3px 0 var(--blue);
+}
+.workspace-app .app-navigation :is(.navigation-chats,.project-chat-navigation,.general-chat-navigation,.navigation-chat-files),
+.workspace-app .published-brief-navigation nav{margin-inline-start:0}
+.workspace-app .navigation-chat-library{padding-inline-start:0}
+.workspace-app .app-navigation :is(.business-development-title,.navigation-chats>summary,.navigation-chat-files>summary,.published-brief-navigation>summary,.navigation-more-chats>summary){padding-inline-start:8px}
+.workspace-app .sponsor-qnav button[aria-current="true"]{border-inline-start:0;box-shadow:inset 3px 0 var(--blue)}
+
+/* AI identity stays visible, on the trailing edge of the same heading line.
+   This preserves the compact reviewer height and its always-open composer. */
+:is(.workspace-app,#modal) .thought-partner-title{
+ display:flex;align-items:center;justify-content:space-between;gap:8px;min-width:0;flex:1;
+}
+:is(.workspace-app,#modal) .thought-partner-title>.ws-ai-mark{
+ order:1;margin-inline-start:auto;flex:0 0 24px;
+}
+:is(.workspace-app,#modal) .reviewer-speaker-ai{display:flex;align-items:center;justify-content:space-between;gap:8px}
+:is(.workspace-app,#modal) .reviewer-speaker-ai>.ws-ai-mark{order:1;margin-inline-start:auto}
+
+/* A labelled icon button starts with its label. Icon-only controls retain their
+   centered glyph, accessible name, focus outline and original target size. */
+:is(.workspace-app,#modal) button:has(>svg):not(.icon):not(.compact-icon-action):not(.ws-menu-button):not(.ws-settings-button):not([aria-label]){
+ display:inline-flex;align-items:center;justify-content:space-between;gap:10px;
+}
+:is(.workspace-app,#modal) button:not(.icon):not(.compact-icon-action):not(.ws-menu-button):not(.ws-settings-button):not([aria-label])>svg{order:1;flex:none}
+.workspace-app :is(.settings-navigation>summary,.nav button)>svg{order:1;margin-inline-start:auto;flex:none}
+.workspace-app button:has(>.home-icon){display:inline-flex;align-items:center;gap:10px}
+.workspace-app button>.home-icon{order:1}
+.workspace-app .home-benefit>.home-check{order:1;margin-inline-start:auto}
+.workspace-app .home-benefit>div{flex:1;min-width:0}
+.workspace-app .sponsor-framing-resources .sponsor-dropzone>.sponsor-upload-icon{order:1;margin:0}
+
+/* Alerts use their normal inset. The warning glyph lives in trailing padding;
+   the colored edge remains a signal without consuming content width. */
+:is(.workspace-app,#modal) .signal-notice:is(.signal-advisory,.signal-critical){padding-inline-start:20px;padding-inline-end:40px}
+:is(.workspace-app,#modal) .signal-notice:is(.signal-advisory,.signal-critical)::before{left:auto;right:12px}
+
+/* Recorded changes add a gutter stripe instead of shifting the same subject's
+   text when its condition changes. Ordinary content keeps its existing inset. */
+:is(.workspace-app,#modal) :is(.project-pending,.interpretation-stale,.chat-requirement.is-update,.chat-message.chat-error,.requirement-assessment-caution),
+:is(.workspace-app,#modal) .requirement-assessment-summary:is([data-assessment-state="needs-work"],[data-assessment-state="needs-reassessment"]){
+ position:relative;border-inline-start:0;padding-inline-start:0;
+}
+:is(.workspace-app,#modal) :is(.project-pending,.interpretation-stale,.chat-requirement.is-update,.chat-message.chat-error,.requirement-assessment-caution)::before,
+:is(.workspace-app,#modal) .requirement-assessment-summary:is([data-assessment-state="needs-work"],[data-assessment-state="needs-reassessment"])::before{
+ content:'';position:absolute;inset-block:0;inset-inline-start:-8px;width:3px;background:var(--signal-warning-border,var(--ac-warning));pointer-events:none;
+}
+:is(.workspace-app,#modal) .chat-message.chat-error::before{background:var(--signal-danger-ink,var(--ac-warning))}
+:is(.workspace-app,#modal) .brief-proposal-item.is-brief-update{border-inline-start:0;padding-inline-start:0;box-shadow:-3px 0 var(--signal-identity-ink)}
+:is(.workspace-app,#modal) .brief-objective.is-brief-update{border-inline-start-width:1px;padding-inline-start:12px;box-shadow:inset 3px 0 var(--signal-identity-ink)}
+#modal.domain-brief-dialog :is(.brief-objective,.brief-proposal-item).is-brief-update{border-inline-start-width:1px;padding-inline-start:16px;box-shadow:inset 3px 0 var(--signal-identity-ink)}
+:is(.workspace-app,#modal) .domain-interpretation-panel>summary small{margin-inline-start:0}
+.workspace-app .project-update-items>button{position:relative}
+.workspace-app .project-update-items>button>.update-dot{position:absolute;inset-inline-end:4px;top:8px}
+.workspace-app .project-update-items>button:has(>.update-dot){padding-inline-end:24px}
+
+/* Quoted evidence stays a semantic blockquote with a visible gutter rule.
+   Nested authored lists keep their hierarchy; no content or list semantics are
+   flattened to achieve alignment. */
+:is(.workspace-app,#modal) :is(.requirement-check-content,.chat-rail,.coach-exchange,.reviewer-ai-message) blockquote{
+ position:relative;margin-inline:0;padding-inline-start:0;border-inline-start:0;
+}
+:is(.workspace-app,#modal) :is(.requirement-check-content,.chat-rail,.coach-exchange,.reviewer-ai-message) blockquote::before{
+ content:'';position:absolute;inset-block:0;inset-inline-start:-8px;width:2px;background:var(--line);pointer-events:none;
+}
+@media(forced-colors:active){
+ :is(.workspace-app,#modal) details>summary::after{border-color:CanvasText!important}
+ .workspace-app .app-navigation :is(.app-navigation-link,.navigation-chat-title)[aria-current="page"]{outline:2px solid Highlight;outline-offset:-2px}
+}
