@@ -1,0 +1,55 @@
+{
+ "wave": 3,
+ "new_or_revised": [
+  {
+   "id": "DD-1",
+   "kind": "design-decision",
+   "group": "Design",
+   "rev": 1,
+   "date": "2026-07-22",
+   "author": "Lee Chen",
+   "text": "One-tap reschedule from the reminder message as main path for all patients, with a visible \"talk to staff\" option.",
+   "alternatives": "portal login; phone tree",
+   "status": "proposed 2026-07-22; see DEC-2",
+   "links": [
+    {
+     "relation": "informed-by",
+     "target": "FIND-1",
+     "target_rev": 1,
+     "conditions": "all patients",
+     "use": "direction"
+    },
+    {
+     "relation": "informed-by",
+     "target": "FIND-2",
+     "target_rev": 1,
+     "conditions": "",
+     "use": "direction"
+    }
+   ],
+   "comments": [
+    "2026-07-24 Dana Ortiz: \"Looks great, love the direction! Let's see what testing says.\"",
+    "2026-07-25 Ana Brooks: \"Approved from the clinic side, go for it.\""
+   ]
+  },
+  {
+   "id": "TERM-D-FRICTION",
+   "kind": "term",
+   "group": "Design",
+   "rev": 1,
+   "date": "2026-07-25",
+   "text": "Friction point: extra effort inside a product flow (taps, screens, fields, waiting).",
+   "links": [
+    {
+     "relation": "same-as",
+     "target": "EC-ACCESS",
+     "target_rev": 1,
+     "conditions": "inside the product flow; effort",
+     "use": "meaning mapping"
+    }
+   ],
+   "adopted_by": "Lee Chen (Design lead)"
+  }
+ ],
+ "new_packets": []
+}

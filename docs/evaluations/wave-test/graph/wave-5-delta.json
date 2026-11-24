@@ -1,0 +1,68 @@
+{
+ "wave": 5,
+ "new_or_revised": [
+  {
+   "id": "EVAL-1",
+   "kind": "evaluation-result",
+   "group": "Design",
+   "rev": 2,
+   "date": "2026-10-02",
+   "text": "Participant 4 excluded (staff member). 4 of 5 rescheduled unaided; the one who missed the staff option remains.",
+   "evidence": "Low"
+  },
+  {
+   "id": "REQ-5",
+   "kind": "requirement",
+   "group": "Design",
+   "rev": 3,
+   "date": "2026-10-02",
+   "text": "(unchanged)",
+   "evidence": "Low",
+   "links": [
+    {
+     "relation": "supported-by",
+     "target": "EVAL-1",
+     "target_rev": 2,
+     "conditions": "",
+     "use": "evidence"
+    }
+   ]
+  },
+  {
+   "id": "SURV-1",
+   "kind": "finding",
+   "group": "Research",
+   "rev": 1,
+   "date": "2026-10-28",
+   "text": "340 respondents, general population: 52% knew in advance, 41% forgot. Shift and irregular-hours workers (n=96): 71% knew in advance. Everyone else (n=244): 44% knew, 49% forgot.",
+   "evidence": "Moderate"
+  },
+  {
+   "id": "CHAL-1",
+   "kind": "challenge",
+   "group": "Research",
+   "rev": 1,
+   "date": "2026-10-30",
+   "author": "Sam Patel",
+   "status": "open",
+   "text": "FIND-1 holds for shift workers but not the general population.",
+   "links": [
+    {
+     "relation": "challenges",
+     "target": "FIND-1",
+     "target_rev": 1,
+     "conditions": "general population",
+     "use": ""
+    },
+    {
+     "relation": "based-on",
+     "target": "SURV-1",
+     "target_rev": 1,
+     "conditions": "",
+     "use": ""
+    }
+   ]
+  }
+ ],
+ "new_packets": []
+}

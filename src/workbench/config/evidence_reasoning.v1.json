@@ -1,0 +1,61 @@
+{
+  "id": "EVIDENCE-REASONING-STANDARD",
+  "revision": 1,
+  "framework": "evidence-reasoning-v1",
+  "title": "Evidence and reasoning standard",
+  "owner": "Methodology and applicable domain standards owner",
+  "boundary": "Ordinal judgments apply to an exact claim, scope and evidence basis. Contract validation establishes neither semantic sufficiency nor authority. No weighted score, source-count score, automatic approval or claim of calibrated probability.",
+  "dimensions": {
+    "logical-rigor": "Make the causal or explanatory chain explicit. Examine assumptions, baseline/business-as-usual, alternatives and unsupported leaps. Coherent prose is not empirical proof.",
+    "material-coverage": "Identify every consequential part, distinguish propositions, reported facts and obligations, and retain missing or challenged conditions. Inventory completeness requires semantic review.",
+    "evidence-quality": "Judge relevant source authority, provenance, method, bias and limitations for this claim. A proposed design or document assertion is not observed runtime or delivered benefit.",
+    "applicability": "Check fit to the named people, jobs, systems, operating conditions, population and time. Explain transfer limits and unknown denominators.",
+    "independent-patterns": "Distinguish independent observations or study families from copied statements, repeated quotations and synthesis of the same material. Describe recurrence, exceptions and denominators; more documents are not more independent evidence.",
+    "counterevidence": "Actively preserve contradictions, negative cases, rival explanations and disconfirming tests. An unresolved material contradiction cannot be averaged away. Lack of supplied counterevidence is not proof that none exists."
+  },
+  "levels": {
+    "not-rated": "No defensible scoped confidence judgment is supplied.",
+    "low": "Plausible but limited, indirect or missing support, material uncertainty, or an unresolved challenge.",
+    "moderate": "Relevant evidence supports the core claim within explicit limits; no unresolved material contradiction. Explain independence, applicability and remaining gaps.",
+    "high": "Strong current applicable evidence supports the material claim at the required level; required perspectives and rival explanations have been considered, with no unresolved material contradiction. High is not certainty."
+  },
+  "profiles": {
+    "business": {
+      "purpose": "Assess a provisional Business Intent argument for further investigation; no funding, implementation or benefit acceptance is granted.",
+      "checks": [
+        "Connect beneficiaries and situated jobs to the problem and its consequences.",
+        "Separate the stated need from the proposed response and the causal mechanism of expected value.",
+        "Expose business-as-usual, plausible alternatives, material assumptions and unintended effects.",
+        "Identify the applicable scope, obligations, dependencies and what would change the decision.",
+        "Specify what meaningful evidence or observation would support or challenge the intended benefit without inventing baselines, targets, owners or commitments."
+      ],
+      "completeness": "Whether the argument's material parts, links, assumptions and open questions are explicitly represented for this investigation. This is separate from evidential confidence and from a count of completed fields."
+    },
+    "domain-alignment": {
+      "purpose": "Assess the exact requirement, criterion or goal in the selected domain context. Private model recommendations and author refinements are not shared approval.",
+      "checks": [
+        "Apply the same six reasoning and evidence dimensions to the named claim and exact permitted evidence.",
+        "Documentary statements and visual prototypes do not prove runtime behavior, causal benefit or delivered outcomes.",
+        "Preserve domain-specific applicability, contradictory evidence, independent observation families and unknowns."
+      ],
+      "completeness": "Coverage of the exact criterion and material conditions in this domain assessment, separate from confidence, ratification and fulfillment."
+    }
+  },
+  "method_basis": [
+    {
+      "title": "HM Treasury Green Book 2026",
+      "url": "https://www.gov.uk/government/publications/the-green-book--2/the-green-book-2026",
+      "use": "Appraisal, business-as-usual, alternatives and uncertainty."
+    },
+    {
+      "title": "HM Treasury Magenta Book 2026",
+      "url": "https://www.gov.uk/government/publications/the-magenta-book/magenta-book-central-government-guidance-on-evaluation-html",
+      "use": "Theory of change, evaluation evidence, causal inference and context."
+    },
+    {
+      "title": "UK Government AQuA Book 2025",
+      "url": "https://www.gov.uk/guidance/the-aqua-book",
+      "use": "Proportionate analytical quality assurance and documented assumptions."
+    }
+  ]
+}

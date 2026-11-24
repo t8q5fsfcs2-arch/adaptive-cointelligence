@@ -1,0 +1,496 @@
+{
+  "name": "Research + Operations",
+  "description": "A starting profile for a business sponsor, Research and Operations. Local rules shape questions; they do not infer facts or approve requirements.",
+  "drawers": [
+    {
+      "key": "needs",
+      "label": "Customer and user needs",
+      "when": "always",
+      "owner": "sam",
+      "question": "What must each user be able to accomplish, what is missing today, and what support would let them succeed?\nDescribe the task and setting, obstacles or workarounds, and the information, tools, access or help needed. State what must change and how you will check that the need is met. Mark what is evidenced and what still needs checking.",
+      "basis_fields": [
+        "beneficiaries",
+        "supporting_users",
+        "jobs",
+        "user_situation",
+        "need",
+        "bottlenecks",
+        "tools",
+        "handoffs",
+        "desired_outputs",
+        "gains",
+        "job_support",
+        "measures",
+        "evidence",
+        "assumptions"
+      ],
+      "children": [
+        {
+          "key": "jobs",
+          "label": "User groups and jobs",
+          "question": "What must each user group accomplish, in which situation, and what marks a successful outcome?",
+          "criteria": "Name the primary and supporting users. Describe their task, trigger, context and desired outcome. Separate distinct groups when their needs differ.",
+          "evidence": "Task observations or interviews with source and date; affected user groups and sampling limits.",
+          "revisit": "Revisit when the users, task, operating context or intended outcome changes.",
+          "references": "GOV.UK user needs: https://www.gov.uk/service-manual/user-research/start-by-learning-user-needs",
+          "owner": "sam",
+          "when": "always",
+          "basis_fields": [
+            "beneficiaries",
+            "supporting_users",
+            "jobs",
+            "user_situation",
+            "need",
+            "bottlenecks",
+            "tools",
+            "handoffs",
+            "desired_outputs",
+            "gains",
+            "job_support",
+            "measures",
+            "evidence",
+            "assumptions"
+          ]
+        },
+        {
+          "key": "unmet-needs",
+          "label": "Unmet needs and required support",
+          "question": "What do users lack, and what support would let them complete their work?",
+          "criteria": "Connect each obstacle or workaround to a specific unmet need. Identify the information, access, tools or help required. Distinguish the need from a proposed feature.",
+          "evidence": "Examples of failed or difficult tasks, workarounds and missing support; evidence of frequency and consequence where available.",
+          "revisit": "Revisit when new findings challenge the need or a solution transfers the burden to another user.",
+          "references": "GOV.UK user needs: https://www.gov.uk/service-manual/user-research/start-by-learning-user-needs",
+          "owner": "sam",
+          "when": "always",
+          "basis_fields": [
+            "beneficiaries",
+            "supporting_users",
+            "jobs",
+            "user_situation",
+            "need",
+            "bottlenecks",
+            "tools",
+            "handoffs",
+            "desired_outputs",
+            "gains",
+            "job_support",
+            "measures",
+            "evidence",
+            "assumptions"
+          ]
+        },
+        {
+          "key": "priorities",
+          "label": "Need priority and value",
+          "question": "Which needs matter most, and how does meeting them deliver the promised value?",
+          "criteria": "Explain priority using consequence, frequency and affected users. Link the need to the value proposition and a measurable outcome; label unknowns.",
+          "evidence": "Prioritization rationale, supporting findings and the link to intended benefits and success measures.",
+          "revisit": "Revisit when evidence changes need severity, reach, priority or the expected benefit.",
+          "references": "GOV.UK user needs: https://www.gov.uk/service-manual/user-research/start-by-learning-user-needs",
+          "owner": "sam",
+          "when": "always",
+          "basis_fields": [
+            "beneficiaries",
+            "supporting_users",
+            "jobs",
+            "user_situation",
+            "need",
+            "bottlenecks",
+            "tools",
+            "handoffs",
+            "desired_outputs",
+            "gains",
+            "job_support",
+            "measures",
+            "evidence",
+            "assumptions"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "experience",
+      "label": "Experience and usability",
+      "when": "always",
+      "owner": "sam",
+      "question": "What must people be able to accomplish, and how will that be evaluated?",
+      "basis_fields": [
+        "beneficiaries",
+        "value",
+        "in_scope",
+        "research_question",
+        "jobs",
+        "job_support",
+        "pain_relievers",
+        "gain_creators",
+        "user_situation"
+      ],
+      "children": [
+        {
+          "key": "accessibility",
+          "label": "Accessibility",
+          "question": "Can people with different abilities complete the critical tasks with the support they use?",
+          "criteria": "Confirm the applicable accessibility target and criteria. Cover keyboard use, focus, labels, contrast, zoom and assistive technology for digital tasks. Record barriers, exceptions and alternative support.",
+          "evidence": "Criterion-level evaluation, keyboard and assistive-technology checks, and research with relevant users; record versions, findings and unresolved barriers.",
+          "revisit": "Reassess when interfaces, content, components, devices, assistive technology or the applicable standard changes.",
+          "references": "W3C WCAG 2.2: https://www.w3.org/TR/WCAG22/ \u2014 reference for digital accessibility. The category SME must confirm scope, version and target; inclusion is not certification.",
+          "owner": "sam",
+          "when": "always",
+          "basis_fields": [
+            "beneficiaries",
+            "value",
+            "in_scope",
+            "research_question",
+            "jobs",
+            "job_support",
+            "pain_relievers",
+            "gain_creators",
+            "user_situation"
+          ]
+        },
+        {
+          "key": "ease-of-use",
+          "label": "Ease of use and learnability",
+          "question": "Can new and returning users complete important tasks with acceptable effort and confidence?",
+          "criteria": "Define representative users, tasks and conditions. Agree task-success, effort, time and assistance measures with baselines and targets. Check first-use comprehension and repeat use.",
+          "evidence": "Observed task completion, time, errors, assistance and perceived difficulty; disclose sample and test conditions.",
+          "revisit": "Reassess when the workflow, user population, task frequency or performance evidence changes.",
+          "references": "GOV.UK usability benchmarking: https://www.gov.uk/service-manual/measuring-success/usability-benchmarking-a-website-or-whole-service",
+          "owner": "sam",
+          "when": "always",
+          "basis_fields": [
+            "beneficiaries",
+            "value",
+            "in_scope",
+            "research_question",
+            "jobs",
+            "job_support",
+            "pain_relievers",
+            "gain_creators",
+            "user_situation"
+          ]
+        },
+        {
+          "key": "error-recovery",
+          "label": "Error prevention and recovery",
+          "question": "Can users avoid consequential errors and recover without losing their work?",
+          "criteria": "Identify likely failure modes. Provide understandable feedback and a clear recovery action. Preserve valid work where appropriate and make consequential actions confirmable or recoverable.",
+          "evidence": "Tests for invalid input, interruptions and failed submissions; observed recovery behavior and evidence of retained work.",
+          "revisit": "Reassess when validation, business rules, integrations or failure modes change.",
+          "references": "W3C WCAG 2.2: https://www.w3.org/TR/WCAG22/ \u2014 reference for digital accessibility. The category SME must confirm scope, version and target; inclusion is not certification.",
+          "owner": "sam",
+          "when": "always",
+          "basis_fields": [
+            "beneficiaries",
+            "value",
+            "in_scope",
+            "research_question",
+            "jobs",
+            "job_support",
+            "pain_relievers",
+            "gain_creators",
+            "user_situation"
+          ]
+        },
+        {
+          "key": "clarity",
+          "label": "Content and interaction clarity",
+          "question": "Do users understand what to do, what happened and what to do next?",
+          "criteria": "Use language suited to each user group. Make labels, instructions, system status and next actions unambiguous. Keep critical information discoverable and disclose detail when needed.",
+          "evidence": "Comprehension and findability checks with representative tasks; misunderstandings and revised wording.",
+          "revisit": "Reassess when terminology, policy, content, decisions or task sequences change.",
+          "references": "GOV.UK usability benchmarking: https://www.gov.uk/service-manual/measuring-success/usability-benchmarking-a-website-or-whole-service",
+          "owner": "sam",
+          "when": "always",
+          "basis_fields": [
+            "beneficiaries",
+            "value",
+            "in_scope",
+            "research_question",
+            "jobs",
+            "job_support",
+            "pain_relievers",
+            "gain_creators",
+            "user_situation"
+          ]
+        },
+        {
+          "key": "continuity",
+          "label": "Continuity across steps and handoffs",
+          "question": "Can users pause, resume or hand work to another person without losing progress or understanding?",
+          "criteria": "Identify what must travel across steps, roles and channels. Define saved state, ownership, status and resumption behavior. Make gaps or unsupported transitions explicit.",
+          "evidence": "End-to-end journey tests including interruption, return and role handoff; evidence that context and required information remain available.",
+          "revisit": "Reassess when roles, channels, handoffs, storage behavior or dependency systems change.",
+          "references": "GOV.UK usability benchmarking: https://www.gov.uk/service-manual/measuring-success/usability-benchmarking-a-website-or-whole-service",
+          "owner": "sam",
+          "when": "always",
+          "basis_fields": [
+            "beneficiaries",
+            "value",
+            "in_scope",
+            "research_question",
+            "jobs",
+            "job_support",
+            "pain_relievers",
+            "gain_creators",
+            "user_situation"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "operations",
+      "label": "Operations and support",
+      "when": "always",
+      "owner": "maya",
+      "question": "What process, capacity and support conditions must hold for this direction to work?",
+      "basis_fields": [
+        "in_scope",
+        "constraints",
+        "operations_question",
+        "supporting_users",
+        "user_situation"
+      ],
+      "children": [
+        {
+          "key": "ownership",
+          "label": "Ownership and escalation",
+          "question": "Who receives, acts on and closes the work, including exceptions?",
+          "criteria": "Name responsible roles at each handoff. Define acknowledgment, escalation, fallback and closure conditions. Identify unresolved ownership.",
+          "evidence": "Reviewed role and handoff map; walkthroughs of normal and exceptional cases.",
+          "revisit": "Reassess when responsibilities, coverage, routing or escalation rules change.",
+          "references": "",
+          "owner": "maya",
+          "when": "always",
+          "basis_fields": [
+            "in_scope",
+            "constraints",
+            "operations_question",
+            "supporting_users",
+            "user_situation"
+          ]
+        },
+        {
+          "key": "capacity",
+          "label": "Capacity and service levels",
+          "question": "Can the operating team handle the expected demand at the agreed service level?",
+          "criteria": "Specify demand assumptions, staffing or capacity constraints, queues and service targets. Define how overload is detected and handled; do not invent capacity commitments.",
+          "evidence": "Demand and capacity data, service-level agreement or unresolved target, and overload scenarios.",
+          "revisit": "Reassess when volumes, staffing, service targets or backlog behavior change.",
+          "references": "",
+          "owner": "maya",
+          "when": "always",
+          "basis_fields": [
+            "in_scope",
+            "constraints",
+            "operations_question",
+            "supporting_users",
+            "user_situation"
+          ]
+        },
+        {
+          "key": "support",
+          "label": "Support and operational recovery",
+          "question": "How will support detect and resolve failures while preserving work?",
+          "criteria": "Define support ownership, monitoring signals, recovery steps and communication. Identify manual fallback, training and runbook needs.",
+          "evidence": "Support walkthrough, recovery exercise, runbook and training review with owners.",
+          "revisit": "Reassess after incidents, operational changes or new recovery dependencies.",
+          "references": "",
+          "owner": "maya",
+          "when": "always",
+          "basis_fields": [
+            "in_scope",
+            "constraints",
+            "operations_question",
+            "supporting_users",
+            "user_situation"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "governance",
+      "label": "Policy, access and boundaries",
+      "when": "always",
+      "owner": "maya",
+      "question": "Which obligations apply, who confirms their interpretation, and what is outside scope?",
+      "basis_fields": [
+        "constraints",
+        "out_scope",
+        "sources"
+      ],
+      "children": [
+        {
+          "key": "obligations",
+          "label": "Applicable obligations",
+          "question": "Which policies or obligations apply, to which work, and who confirms their interpretation?",
+          "criteria": "Record the authoritative source and version, scope, interpretation owner and exceptions. Separate confirmed obligations from assumptions.",
+          "evidence": "Source references and an authorized applicability decision; unresolved interpretations stay visible.",
+          "revisit": "Reassess on source revision, expiry, scope change or a challenge to interpretation.",
+          "references": "",
+          "owner": "maya",
+          "when": "always",
+          "basis_fields": [
+            "constraints",
+            "out_scope",
+            "sources"
+          ]
+        },
+        {
+          "key": "access",
+          "label": "Access and data boundaries",
+          "question": "Who may see or change which information, and under what conditions?",
+          "criteria": "Define role-based access, purpose, data scope, retention and sharing boundaries. Include denial, revocation and restricted-content cases.",
+          "evidence": "Reviewed access matrix and positive and negative access tests; authoritative retention and sharing rules.",
+          "revisit": "Reassess when roles, audiences, data sensitivity, systems or retention policies change.",
+          "references": "",
+          "owner": "maya",
+          "when": "always",
+          "basis_fields": [
+            "constraints",
+            "out_scope",
+            "sources"
+          ]
+        },
+        {
+          "key": "decisions",
+          "label": "Decision authority and auditability",
+          "question": "Which actions require a decision, who may authorize them, and what must be recorded?",
+          "criteria": "Define decision rights, exact versions, rationale, exception handling and audit records. Separate drafting from approval and execution.",
+          "evidence": "Decision workflow and versioned records; tests of stale approval, missing authority and exception paths.",
+          "revisit": "Reassess when authority, workflow, evidence basis or commitment boundaries change.",
+          "references": "",
+          "owner": "maya",
+          "when": "always",
+          "basis_fields": [
+            "constraints",
+            "out_scope",
+            "sources"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "measurement",
+      "label": "Outcomes and measurement",
+      "when": "always",
+      "owner": "priya",
+      "question": "What outcome will be measured, against which baseline, and by whom?",
+      "basis_fields": [
+        "value",
+        "measures",
+        "open_questions",
+        "business_challenge",
+        "gains"
+      ],
+      "children": [
+        {
+          "key": "outcomes",
+          "label": "Outcome and KPI definition",
+          "question": "Which observable outcome demonstrates each promised benefit?",
+          "criteria": "Link benefit to outcome and KPI. Specify metric definition, population, baseline, target, timeframe and owner; identify assumptions and counter-metrics.",
+          "evidence": "Metric specification and baseline source; rationale for targets and data limitations.",
+          "revisit": "Reassess when value, population, baseline, metric definition or targets change.",
+          "references": "",
+          "owner": "priya",
+          "when": "always",
+          "basis_fields": [
+            "value",
+            "measures",
+            "open_questions",
+            "business_challenge",
+            "gains"
+          ]
+        },
+        {
+          "key": "measurement",
+          "label": "Measurement and learning plan",
+          "question": "How will the team collect trustworthy results and act on them?",
+          "criteria": "Define data source, calculation, collection cadence, review owner and decision thresholds. Check completeness, bias and unintended consequences.",
+          "evidence": "Validated calculation and instrumentation, sample data, review schedule and a response plan for adverse results.",
+          "revisit": "Reassess when instrumentation, data quality, user behavior or observed outcomes change.",
+          "references": "",
+          "owner": "priya",
+          "when": "always",
+          "basis_fields": [
+            "value",
+            "measures",
+            "open_questions",
+            "business_challenge",
+            "gains"
+          ]
+        }
+      ]
+    },
+    {
+      "key": "technology",
+      "label": "Technology and integration",
+      "when": "digital",
+      "owner": "alex",
+      "question": "Which system behaviors and integrations are necessary, and what remains to be checked?",
+      "basis_fields": [
+        "work_kind",
+        "in_scope",
+        "sources",
+        "approach",
+        "job_support"
+      ],
+      "children": [
+        {
+          "key": "behavior",
+          "label": "System behavior and interfaces",
+          "question": "What must the system do, and what contracts must each interface honor?",
+          "criteria": "Define inputs, outputs, states, errors and interface contracts. Trace behavior to user outcomes; record assumptions about other systems.",
+          "evidence": "Contract and behavior tests linked to acceptance criteria and dependency versions.",
+          "revisit": "Reassess when interfaces, schemas, behavior or upstream contracts change.",
+          "references": "",
+          "owner": "alex",
+          "when": "always",
+          "basis_fields": [
+            "work_kind",
+            "in_scope",
+            "sources",
+            "approach",
+            "job_support"
+          ]
+        },
+        {
+          "key": "reliability",
+          "label": "Reliability and performance",
+          "question": "How must the service behave under expected load and failure?",
+          "criteria": "Agree workload, latency, availability and recovery objectives. Define degradation, retry and duplicate-handling behavior.",
+          "evidence": "Load and failure tests with measured results, environment, limits and unresolved targets.",
+          "revisit": "Reassess when load, architecture, reliability evidence or service objectives change.",
+          "references": "",
+          "owner": "alex",
+          "when": "always",
+          "basis_fields": [
+            "work_kind",
+            "in_scope",
+            "sources",
+            "approach",
+            "job_support"
+          ]
+        },
+        {
+          "key": "integrity",
+          "label": "Data integrity and integration",
+          "question": "How will information remain correct and traceable across systems?",
+          "criteria": "Identify authoritative records, identifiers, mappings, version conflicts and reconciliation. Preserve provenance and detect incomplete or repeated writes.",
+          "evidence": "Integration and reconciliation tests covering failures, duplicates and conflicting revisions.",
+          "revisit": "Reassess when sources, mappings, ownership, synchronization or data contracts change.",
+          "references": "",
+          "owner": "alex",
+          "when": "always",
+          "basis_fields": [
+            "work_kind",
+            "in_scope",
+            "sources",
+            "approach",
+            "job_support"
+          ]
+        }
+      ]
+    }
+  ]
+}

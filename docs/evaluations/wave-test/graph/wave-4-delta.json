@@ -1,0 +1,125 @@
+{
+ "wave": 4,
+ "new_or_revised": [
+  {
+   "id": "EVAL-1",
+   "kind": "evaluation-result",
+   "group": "Design",
+   "rev": 1,
+   "date": "2026-08-14",
+   "text": "5 of 6 rescheduled unaided on first use; 1 missed the staff option.",
+   "evidence": "Moderate"
+  },
+  {
+   "id": "REQ-5",
+   "kind": "requirement",
+   "group": "Design",
+   "rev": 2,
+   "date": "2026-08-20",
+   "text": "A patient reschedules unaided on first use.",
+   "evidence": "Moderate",
+   "links": [
+    {
+     "relation": "supported-by",
+     "target": "EVAL-1",
+     "target_rev": 1,
+     "conditions": "",
+     "use": "evidence"
+    }
+   ]
+  },
+  {
+   "id": "DEC-2",
+   "kind": "decision",
+   "group": "Sponsor",
+   "rev": 1,
+   "date": "2026-09-03",
+   "decided_by": "Dana Ortiz",
+   "status": "approved",
+   "text": "One-tap reschedule is the primary path.",
+   "condition": "Staff option clearly visible for visit types that need staff.",
+   "links": [
+    {
+     "relation": "approves",
+     "target": "DD-1",
+     "target_rev": 1,
+     "conditions": "",
+     "use": ""
+    },
+    {
+     "relation": "rests-on",
+     "target": "EVAL-1",
+     "target_rev": 1,
+     "conditions": "",
+     "use": "rationale"
+    }
+   ]
+  },
+  {
+   "id": "FIND-3",
+   "kind": "finding",
+   "group": "Research",
+   "rev": 1,
+   "date": "2026-09-08",
+   "author": "Sam Patel",
+   "text": "85% of after-hours reschedule attempts fall between 5 pm and 9 pm; 10 of 12 interviewees accept a next-morning staff callback requested in the evening.",
+   "evidence": "Moderate",
+   "links": [
+    {
+     "relation": "refines",
+     "target": "FIND-2",
+     "target_rev": 1,
+     "conditions": "timing of after-hours attempts",
+     "use": ""
+    }
+   ]
+  },
+  {
+   "id": "REQ-3",
+   "kind": "requirement",
+   "group": "Research",
+   "rev": 2,
+   "date": "2026-09-09",
+   "text": "Rescheduling works until 9 pm without staff; after that, patients can request a next-morning callback. Round-the-clock self-service not required.",
+   "evidence": "Moderate",
+   "change_reason": "FIND-3",
+   "links": [
+    {
+     "relation": "supported-by",
+     "target": "FIND-2",
+     "target_rev": 1,
+     "conditions": "",
+     "use": "evidence"
+    },
+    {
+     "relation": "supported-by",
+     "target": "FIND-3",
+     "target_rev": 1,
+     "conditions": "",
+     "use": "evidence"
+    }
+   ]
+  }
+ ],
+ "new_packets": [
+  {
+   "id": "PK-SPONSOR",
+   "audience": "Dana Ortiz",
+   "resolved": "2026-09-05",
+   "refs": [
+    [
+     "GOAL-1",
+     2
+    ],
+    [
+     "FIND-1",
+     1
+    ],
+    [
+     "DEC-2",
+     1
+    ]
+   ]
+  }
+ ]
+}

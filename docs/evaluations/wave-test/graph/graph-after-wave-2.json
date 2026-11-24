@@ -1,0 +1,298 @@
+{
+ "as_of_wave": 2,
+ "records": [
+  {
+   "id": "GOAL-1",
+   "revisions": [
+    {
+     "id": "GOAL-1",
+     "kind": "goal",
+     "group": "Sponsor",
+     "rev": 1,
+     "date": "2026-03-02",
+     "author": "Dana Ortiz",
+     "text": "Automated reminders cut missed visits from 18% to 10% within six months of launch.",
+     "basis": "sponsor assertion"
+    },
+    {
+     "id": "GOAL-1",
+     "kind": "goal",
+     "group": "Sponsor",
+     "rev": 2,
+     "date": "2026-05-06",
+     "author": "Dana Ortiz",
+     "text": "Cut missed visits from 16% to 11% within six months by letting patients reschedule themselves at any hour; reminders not the main lever.",
+     "changed_by": "DEC-1",
+     "links": [
+      {
+       "relation": "rests-on",
+       "target": "DEC-1",
+       "target_rev": 1,
+       "conditions": "",
+       "use": "rationale"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "HYP-1",
+   "revisions": [
+    {
+     "id": "HYP-1",
+     "kind": "hypothesis",
+     "group": "Sponsor",
+     "rev": 1,
+     "date": "2026-03-02",
+     "author": "Dana Ortiz",
+     "text": "Patients miss mainly because they forget; a 48-hour reminder fixes most of it.",
+     "evidence": "Low"
+    }
+   ]
+  },
+  {
+   "id": "FIND-1",
+   "revisions": [
+    {
+     "id": "FIND-1",
+     "kind": "finding",
+     "group": "Research",
+     "rev": 1,
+     "date": "2026-04-10",
+     "author": "Sam Patel",
+     "text": "Most people who missed a visit knew in advance (9 of 12); the barrier is rescheduling, not remembering.",
+     "evidence": "Moderate",
+     "applies_to": "shift and irregular-hours workers (all 12 recruited from evening-clinic list)",
+     "links": [
+      {
+       "relation": "challenges",
+       "target": "HYP-1",
+       "target_rev": 1,
+       "conditions": "",
+       "use": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "OBS-P07",
+   "revisions": [
+    {
+     "id": "OBS-P07",
+     "kind": "observation",
+     "group": "Research",
+     "rev": 1,
+     "date": "2026-03-24",
+     "author": "Sam Patel",
+     "text": "\"I knew on Tuesday I couldn't come. The office only answers nine to five.\"",
+     "applies_to": "warehouse shift worker",
+     "links": [
+      {
+       "relation": "supports",
+       "target": "FIND-1",
+       "target_rev": 1,
+       "conditions": "",
+       "use": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "FIND-2",
+   "revisions": [
+    {
+     "id": "FIND-2",
+     "kind": "finding",
+     "group": "Research",
+     "rev": 1,
+     "date": "2026-04-18",
+     "author": "Sam Patel",
+     "text": "7 of 12 interviewees tried to reschedule after 5 pm; call logs show an evening spike in abandoned calls.",
+     "evidence": "Moderate"
+    }
+   ]
+  },
+  {
+   "id": "OBS-BASE",
+   "revisions": [
+    {
+     "id": "OBS-BASE",
+     "kind": "observation",
+     "group": "Operations",
+     "rev": 1,
+     "date": "2026-04-22",
+     "author": "Priya Nair",
+     "text": "True missed-visit rate is 16%, not 18%."
+    }
+   ]
+  },
+  {
+   "id": "DEC-1",
+   "revisions": [
+    {
+     "id": "DEC-1",
+     "kind": "decision",
+     "group": "Sponsor",
+     "rev": 1,
+     "date": "2026-05-06",
+     "decided_by": "Dana Ortiz",
+     "status": "approved",
+     "text": "Change GOAL-1 to rev 2.",
+     "links": [
+      {
+       "relation": "rests-on",
+       "target": "FIND-1",
+       "target_rev": 1,
+       "conditions": "",
+       "use": "rationale"
+      },
+      {
+       "relation": "rests-on",
+       "target": "OBS-BASE",
+       "target_rev": 1,
+       "conditions": "",
+       "use": "rationale"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "REQ-2",
+   "revisions": [
+    {
+     "id": "REQ-2",
+     "kind": "requirement",
+     "group": "Research",
+     "rev": 1,
+     "date": "2026-05-20",
+     "text": "Patients who know they cannot attend can reschedule without phoning.",
+     "evidence": "Moderate",
+     "links": [
+      {
+       "relation": "supported-by",
+       "target": "FIND-1",
+       "target_rev": 1,
+       "conditions": "shift and irregular-hours workers",
+       "use": "evidence"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "REQ-3",
+   "revisions": [
+    {
+     "id": "REQ-3",
+     "kind": "requirement",
+     "group": "Research",
+     "rev": 1,
+     "date": "2026-05-20",
+     "text": "Rescheduling works at any hour, 24/7, without staff.",
+     "evidence": "Moderate",
+     "interpretation": "Research reads \"after 5 pm\" as a need for round-the-clock self-service.",
+     "links": [
+      {
+       "relation": "supported-by",
+       "target": "FIND-2",
+       "target_rev": 1,
+       "conditions": "",
+       "use": "evidence"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "REQ-5",
+   "revisions": [
+    {
+     "id": "REQ-5",
+     "kind": "requirement",
+     "group": "Design",
+     "rev": 1,
+     "date": "2026-05-20",
+     "text": "A patient reschedules unaided on first use.",
+     "evidence": "none yet"
+    }
+   ]
+  },
+  {
+   "id": "REQ-6",
+   "revisions": [
+    {
+     "id": "REQ-6",
+     "kind": "requirement",
+     "group": "Design",
+     "rev": 1,
+     "date": "2026-05-20",
+     "text": "The system offers open slots for the same visit type and confirms by message.",
+     "evidence": "Low",
+     "links": [
+      {
+       "relation": "depends-on",
+       "target": "DEP-2",
+       "target_rev": 1,
+       "conditions": "",
+       "use": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "DEP-2",
+   "revisions": [
+    {
+     "id": "DEP-2",
+     "kind": "dependency",
+     "group": "Engineering",
+     "rev": 1,
+     "date": "2026-05-06",
+     "text": "Scheduling system must expose open slots by visit type.",
+     "status": "open"
+    }
+   ]
+  },
+  {
+   "id": "TERM-R-BARRIER",
+   "revisions": [
+    {
+     "id": "TERM-R-BARRIER",
+     "kind": "term",
+     "group": "Research",
+     "rev": 1,
+     "date": "2026-05-22",
+     "text": "Rescheduling barrier: a structural obstacle outside the product (office hours, phone queues, staffing).",
+     "links": [
+      {
+       "relation": "same-as",
+       "target": "EC-ACCESS",
+       "target_rev": 1,
+       "conditions": "outside the product; structural",
+       "use": "meaning mapping"
+      }
+     ],
+     "adopted_by": "Sam Patel (Research lead)"
+    }
+   ]
+  },
+  {
+   "id": "EC-ACCESS",
+   "revisions": [
+    {
+     "id": "EC-ACCESS",
+     "kind": "enterprise-concept",
+     "group": "Enterprise",
+     "rev": 1,
+     "date": "2026-01-10",
+     "text": "Access barrier: a structural obstacle preventing a person from obtaining a service they intend to use."
+    }
+   ]
+  }
+ ],
+ "packets": []
+}

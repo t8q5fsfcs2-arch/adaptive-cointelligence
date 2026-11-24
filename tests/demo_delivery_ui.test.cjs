@@ -1,0 +1,25 @@
+const {test}=require('node:test'),assert=require('node:assert/strict'),vm=require('node:vm'),fs=require('node:fs'),path=require('node:path');
+function h(){let dialog;const calls=[],issue={ref:{id:'ISSUE',revision:5},body:{route:'requirement',target:{id:'REQ',revision:2}}},preview={ref:{id:'PREVIEW',revision:1},current:true,body:{target:'jira',operation:'update',requirement:{id:'REQ',revision:2},decision:{id:'DEC',revision:1},issue:issue.ref,before:{title:'Photo gate',text:'Require a photo.',acceptance_criteria:'Original criteria',source:{id:'REQ',revision:1}},after:{key:'DEMO-CLINIC-101',title:'Staged evidence',text:'Allow capture first.',acceptance_criteria:'Show pending evidence.'},request:{method:'PUT',endpoint:'/rest/api/3/issue/DEMO-CLINIC-101'}}};const receipt={ref:{id:'RECEIPT',revision:1},body:{...preview.body,item_snapshot:{...preview.body.after,source:preview.body.requirement,revision:2},item:{id:'ITEM',revision:1},preview:preview.ref,actor:'alex',at:'Today'}};
+ const esc=v=>String(v??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('"','&quot;');const c={state:{demo_delivery:{issues:[{issue_id:'ISSUE',eligible:true,can_prepare:true}],previews:[preview],receipts:[]}},esc,label:r=>r.id+':v'+r.revision,date:v=>v,bridgePerson:v=>v,bridgeIssue:()=>issue,get:()=>({body:{title:'Staged evidence'}}),val:(k,v)=>`<label>${esc(k)}</label>${esc(v)}`,para:v=>`<p>${esc(v)}</p>`,tag:esc,button:(t,a,id='')=>`<button data-action="${a}" data-id="${id}">${esc(t)}</button>`,settingSelector:()=>'<select name="target"></select>',modal:(...x)=>dialog=x,command:async(a,d)=>{calls.push({a,d});return {};},closeModal(){},render(){}};vm.createContext(c);vm.runInContext(fs.readFileSync(path.join(__dirname,'../src/workbench/static/demo-delivery.js'),'utf8'),c);return {c,issue,preview,receipt,run:s=>vm.runInContext(s,c),dialog:()=>dialog,calls};}
+test('bridge associates demo action with eligible approval and recorded decider',()=>{const x=h();x.c.issue=x.issue;assert.match(x.run('demoDeliveryPanel(issue)'),/Review Jira \/ ADO update/);x.c.state.demo_delivery.issues[0].can_prepare=false;assert.doesNotMatch(x.run('demoDeliveryPanel(issue)'),/data-action="demo-delivery-start"/);assert.match(x.run('demoDeliveryPanel(issue)'),/recorded approval owner/);});
+test('review shows before after criteria and exact approval before explicit simulation',async()=>{const x=h();x.run('openDemoDeliveryPreview("PREVIEW")');const d=x.dialog();assert.match(d[1],/Require a photo/);assert.match(d[1],/Allow capture first/);assert.match(d[1],/Show pending evidence/);assert.match(d[1],/DEC:v1/);assert.equal(d[2],'Simulate update in Jira');await d[3]();assert.equal(x.calls[0].a,'demo-delivery-commit');assert.equal(x.calls[0].d.confirm_demo,true);});
+test('stale approval removes the simulated commit control',()=>{const x=h();x.preview.current=false;x.run('openDemoDeliveryPreview("PREVIEW")');assert.equal(x.dialog()[2],null);assert.equal(x.dialog()[3],null);assert.match(x.dialog()[1],/Approval context changed/);});
+test('receipt and sample work item remain visibly simulated and source linked',()=>{const x=h();x.c.state.demo_delivery.receipts=[x.receipt];x.run('openDemoDeliveryReceipt("RECEIPT")');assert.match(x.dialog()[1],/Simulated receipt/);assert.match(x.dialog()[1],/No Jira or Azure DevOps item was changed/);assert.match(x.dialog()[1],/Open sample work item/);x.run('openDemoDeliveryItem("RECEIPT")');assert.match(x.dialog()[1],/Local demo item/);assert.match(x.dialog()[1],/REQ:v2/);assert.match(x.dialog()[1],/Show pending evidence/);assert.doesNotMatch(x.dialog()[1],/https:\/\/.*atlassian/);});
+
+test('approved issue exposes saved transaction staging without implying an external send',()=>{
+ const x=h();x.c.issue=x.issue;const html=x.run('demoDeliveryPanel(issue)');
+ assert.match(html,/Handoff/);assert.match(html,/Staged transactions/);
+ assert.match(html,/Demo staged · not sent/);assert.match(html,/data-action="demo-delivery-preview"/);
+ x.c.state.demo_delivery.previews=[];assert.match(x.run('demoDeliveryPanel(issue)'),/No demo transaction staged/);
+});
+
+test('issue staging keeps stale and already simulated transactions explicit',()=>{
+ const x=h();x.c.issue=x.issue;x.preview.current=false;assert.match(x.run('demoDeliveryPanel(issue)'),/Needs refresh · not sent/);
+ x.preview.current=true;x.c.state.demo_delivery.receipts=[x.receipt];assert.match(x.run('demoDeliveryPanel(issue)'),/Demo recorded · not sent/);
+ x.c.state.demo_delivery.previews.push({...x.preview,ref:{id:'SECOND',revision:1}},{...x.preview,ref:{id:'OLDER',revision:1}});
+ const html=x.run('demoDeliveryPanel(issue)');assert.match(html,/Earlier staged transactions \(1\)/);assert.match(html,/data-id="OLDER"/);
+});
+
+test('a participant may inspect a staged demo but only the recorded approval owner sees its simulation action',()=>{
+ const x=h();x.c.state.demo_delivery.issues[0].can_prepare=false;x.run('openDemoDeliveryPreview("PREVIEW")');assert.equal(x.dialog()[2],null);assert.equal(x.dialog()[3],null);assert.match(x.dialog()[1],/Review|Allow capture first/);assert.equal(x.calls.length,0);
+});

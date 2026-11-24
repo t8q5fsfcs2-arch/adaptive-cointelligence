@@ -1,0 +1,21 @@
+{
+  "boards": {
+    "business-research": "Sponsor \u00b7 Research",
+    "business-design": "Sponsor \u00b7 Design",
+    "research-design": "Research \u00b7 Design",
+    "all-teams": "All participating teams"
+  },
+  "issue_types": {
+    "challenge": "Challenge",
+    "conflict": "Conflict",
+    "gap": "Missing context",
+    "dependency": "Dependency",
+    "question": "Information need"
+  },
+  "participants": [
+    "priya",
+    "sam",
+    "lee",
+    "alex"
+  ]
+}

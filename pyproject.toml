@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "intelligence-workbench"
+version = "0.1.0"
+description = "Local laboratory for governed context and cross-domain decisions"
+requires-python = ">=3.12"
+dependencies = ["networkx==3.7", "pypdf>=6,<7"]
+
+[project.scripts]
+workbench-demo = "workbench.demo:main"
+workbench-review = "workbench.review_cli:main"
+workbench-web = "workbench.web:main"
+workbench-model = "workbench.model_provider:configure"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+workbench = ["static/*", "config/*.json"]

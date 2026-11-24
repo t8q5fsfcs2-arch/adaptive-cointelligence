@@ -1,0 +1,258 @@
+[
+  {
+    "id": "q2",
+    "section": "Project Goals",
+    "title": "Problems to solve",
+    "kind": "list",
+    "hint": "One problem per line",
+    "prompt": "Which problems must this project solve to be worth doing?",
+    "consider": [
+      "Name the problem, then its cost.",
+      "Keep solutions out of this answer."
+    ]
+  },
+  {
+    "id": "q3",
+    "section": "Project Goals",
+    "title": "Outcomes",
+    "kind": "list",
+    "hint": "3–5 outcomes",
+    "prompt": "If this project works, what will be different for the people involved?",
+    "consider": [
+      "Describe outcomes, not features.",
+      "Who notices first when it’s working? Metrics come later in Measuring Success."
+    ]
+  },
+  {
+    "id": "q4",
+    "section": "Users",
+    "title": "Define users",
+    "kind": "roles",
+    "hint": "One card per user or role",
+    "prompt": "Who uses, operates, approves or is affected by this system, including customers where relevant?",
+    "consider": [
+      "Who uses, operates or is affected by the system, and what do they do in their job?",
+      "What event, request or information prompts each person to act?",
+      "What do they do next, and what information or action do they pass on to someone else?",
+      "What feedback tells them their action was received or the work is complete?"
+    ]
+  },
+  {
+    "id": "q5",
+    "section": "Current Process",
+    "title": "Current process",
+    "kind": "list",
+    "hint": "Steps in order",
+    "prompt": "Walk through how the work happens today, step by step.",
+    "consider": [
+      "List steps in order; this becomes input to a process flow.",
+      "Name who acts at each step."
+    ]
+  },
+  {
+    "id": "q6",
+    "section": "Current Process",
+    "title": "Pain points",
+    "kind": "list",
+    "hint": "Broken, slow, risky or missing",
+    "prompt": "What is not working today, and where in the process does it break down?",
+    "consider": [
+      "One pain point per line.",
+      "Approximate is fine; this is an area Research will investigate."
+    ]
+  },
+  {
+    "id": "q7",
+    "section": "Evidence",
+    "title": "Formal evidence",
+    "kind": "list",
+    "hint": "Data, audits, reports",
+    "prompt": "What data, audits or reports show this problem is real?",
+    "consider": [
+      "Prefer numbers and named sources.",
+      "Much of this may come from your uploaded documents."
+    ]
+  },
+  {
+    "id": "q8",
+    "section": "Evidence",
+    "title": "Informal evidence",
+    "kind": "list",
+    "hint": "Quotes or themes",
+    "prompt": "What do the people involved, staff and leaders say about the current process?",
+    "consider": [
+      "Use real quotes where you have them."
+    ]
+  },
+  {
+    "id": "q9",
+    "section": "Expected Outcomes & Behaviors",
+    "title": "Future state process",
+    "kind": "list",
+    "hint": "Steps in order",
+    "prompt": "How should the work happen once this succeeds?",
+    "consider": [
+      "Mirror the current process steps so the difference is clear."
+    ]
+  },
+  {
+    "id": "q10",
+    "section": "Expected Outcomes & Behaviors",
+    "title": "Project must-haves",
+    "kind": "list",
+    "hint": "Observable behaviors",
+    "prompt": "What must the system always do?",
+    "consider": [
+      "Write as observable behavior."
+    ]
+  },
+  {
+    "id": "q11",
+    "section": "Uncertainty & Edge Cases",
+    "title": "Unclear or uncertain scenarios",
+    "kind": "list",
+    "hint": "When information isn’t clear",
+    "prompt": "What should happen when a request does not have enough information to act on?",
+    "consider": [
+      "Who asks for more detail, and how?"
+    ]
+  },
+  {
+    "id": "q12",
+    "section": "Uncertainty & Edge Cases",
+    "title": "Fallbacks",
+    "kind": "list",
+    "hint": "Unclear ownership, missing path, or failure",
+    "prompt": "Which kinds of failure need a fallback, and who is responsible for each?",
+    "consider": [
+      "Use existing answers and decisions first. Clarify only what remains unresolved.",
+      "If ownership is unclear: where should the item go, and who acknowledges responsibility?",
+      "If the path is known but not available: what happens next, and who owns the item?",
+      "If a technical step fails: what must be retained, retried and communicated?",
+      "Undecided is valid: name an owner and the next check. Operations and engineering can refine the recovery details."
+    ]
+  },
+  {
+    "id": "q13",
+    "section": "Uncertainty & Edge Cases",
+    "title": "Edge cases",
+    "kind": "list",
+    "hint": "Unusual situations",
+    "prompt": "What unusual situations must the system handle?",
+    "consider": [
+      "Duplicates, missing details, requests that span teams or locations."
+    ]
+  },
+  {
+    "id": "q14",
+    "section": "Scope",
+    "title": "In scope",
+    "kind": "list",
+    "hint": "What we will build",
+    "prompt": "What is definitely included in this first release?",
+    "consider": [
+      "Name capabilities, not screens."
+    ]
+  },
+  {
+    "id": "q15",
+    "section": "Scope",
+    "title": "Out of scope",
+    "kind": "list",
+    "hint": "What we won’t do",
+    "prompt": "What is explicitly excluded?",
+    "consider": [
+      "Exclusions prevent scope creep later.",
+      "Carry forward existing scope decisions and their sources. Revisit only an unresolved boundary, a relevant change, or an authority conflict."
+    ]
+  },
+  {
+    "id": "q16",
+    "section": "Scope",
+    "title": "Unknown",
+    "kind": "list",
+    "hint": "Open boundaries",
+    "prompt": "Which boundaries are still undecided?",
+    "consider": [
+      "Flag them now so Research can help resolve them.",
+      "Carry forward existing scope decisions and their sources. Revisit only an unresolved boundary, a relevant change, or an authority conflict."
+    ]
+  },
+  {
+    "id": "q17",
+    "section": "Measuring Success",
+    "title": "Success metrics",
+    "kind": "list",
+    "hint": "Baseline and target",
+    "prompt": "Which measures, with today’s baseline and a target, define success?",
+    "consider": [
+      "Tie each target to a baseline."
+    ]
+  },
+  {
+    "id": "q18",
+    "section": "Measuring Success",
+    "title": "Measurement cadence",
+    "kind": "list",
+    "hint": "When to check",
+    "prompt": "How often, and where, will these measures be reviewed?",
+    "consider": [
+      "Name the data source and the forum."
+    ]
+  },
+  {
+    "id": "q19",
+    "section": "Constraints & Limits",
+    "title": "Operational limits",
+    "kind": "list",
+    "hint": "Operating conditions",
+    "prompt": "What operational conditions must the solution work within?",
+    "consider": [
+      "Devices, connectivity, shift patterns, labor agreements."
+    ]
+  },
+  {
+    "id": "q20",
+    "section": "Constraints & Limits",
+    "title": "Project limits",
+    "kind": "list",
+    "hint": "Rules that can’t be broken",
+    "prompt": "Which project rules can never be broken?",
+    "consider": [
+      "Policy, security, budget and timeline."
+    ]
+  },
+  {
+    "id": "q21",
+    "section": "Risks & Dependencies",
+    "title": "Project risks",
+    "kind": "list",
+    "hint": "What could go wrong",
+    "prompt": "What could stop this project from succeeding?",
+    "consider": [
+      "Adoption, data quality, ownership."
+    ]
+  },
+  {
+    "id": "q22",
+    "section": "Risks & Dependencies",
+    "title": "Dependencies",
+    "kind": "list",
+    "hint": "Teams and systems",
+    "prompt": "What teams or systems does this depend on?",
+    "consider": [
+      "Include the software delivery team here."
+    ]
+  },
+  {
+    "id": "q23",
+    "section": "Risks & Dependencies",
+    "title": "Additional stakeholders",
+    "kind": "list",
+    "hint": "Operational or not",
+    "prompt": "Who else has a stake in this, including non-operational groups?",
+    "consider": [
+      "Finance, Legal, Labor Relations, Corporate Communications."
+    ]
+  }
+]

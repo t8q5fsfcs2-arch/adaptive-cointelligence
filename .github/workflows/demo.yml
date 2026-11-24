@@ -1,0 +1,50 @@
+name: Adaptive Cointelligence demo
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  portable-demo:
+    strategy:
+      fail-fast: false
+      matrix:
+        # Intel avoids the macOS arm64 hosted-runner capacity queue.
+        os: [ubuntu-latest, macos-15-intel, windows-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+    env:
+      PYTHONPATH: src
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements-demo.txt
+      - name: Fresh one-command installation and workflow check
+        run: python run_demo.py --check
+      - name: Repeat using the saved environment
+        run: python run_demo.py --check
+      - name: Preservation and package tests
+        run: python -c "import os,pathlib,subprocess; p=pathlib.Path('.demo/venv')/('Scripts/python.exe' if os.name=='nt' else 'bin/python'); subprocess.run([str(p),'-m','unittest','discover','-s','tests','-p','test_demo_package.py','-v'],check=True)"
+      - name: Model setup, project routing and document workflow
+        run: python -c "import os,pathlib,subprocess; p=pathlib.Path('.demo/venv')/('Scripts/python.exe' if os.name=='nt' else 'bin/python'); subprocess.run([str(p),'-m','unittest','discover','-s','tests','-p','test_model_connections.py','-v'],check=True)"
+      - name: Reviewer launcher and release boundaries
+        run: python -c "import os,pathlib,subprocess; p=pathlib.Path('.demo/venv')/('Scripts/python.exe' if os.name=='nt' else 'bin/python'); [subprocess.run([str(p),'-m','unittest','discover','-s','tests','-p',pattern,'-v'],check=True) for pattern in ['test_reviewer_launcher.py','test_release_package.py']]"
+      - name: Linux regression prerequisites
+        if: matrix.os == 'ubuntu-latest'
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils fonts-dejavu-core
+      - name: Backend regressions
+        if: matrix.os == 'ubuntu-latest'
+        run: .demo/venv/bin/python scripts/test_offline.py
+      - name: Interface regressions
+        if: matrix.os == 'ubuntu-latest'
+        run: node --test tests/*.test.cjs
+      - name: Startup leaves the checkout clean
+        run: python -c "import subprocess; s=subprocess.check_output(['git','status','--porcelain'],text=True); assert not s,s"

@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "decision": "D014 revision 2. Components are fixed; teams vary block types and vocabulary, never components. Changing this file needs a decision record.",
+  "components": {
+    "actor": {"label": "Actor", "holds": "Who it is about", "fields": ["people", "role", "population", "participants", "applies_people"]},
+    "situation": {"label": "Situation", "holds": "When or where it applies", "fields": ["situation", "conditions", "condition", "scope", "trigger", "applies_situation"]},
+    "claim": {"label": "Claim", "holds": "What is said", "payload": ["statement"], "fields": ["steps", "need"]},
+    "basis": {"label": "Basis", "holds": "The source it came from", "evidence": true, "fields": ["source_basis", "location"]},
+    "strength": {"label": "Strength", "holds": "How sure", "fields": ["applies_confidence"], "evidence_review": true},
+    "time": {"label": "Time", "holds": "When it was true", "fields": ["applies_time"]},
+    "rationale": {"label": "Rationale", "holds": "Why", "payload": ["rationale"], "fields": ["rationale_basis", "consequence"]},
+    "alternatives": {"label": "Alternatives", "holds": "What else was considered", "fields": ["alternatives", "counterexamples"]},
+    "criterion": {"label": "Criterion", "holds": "What good looks like", "fields": ["criteria", "acceptance_criteria", "target"]},
+    "measure": {"label": "Measure", "holds": "How you would know", "fields": ["measure", "outcome", "baseline"]},
+    "owner": {"label": "Owner", "holds": "Who is responsible", "fields": ["accountable_owner"], "author_fallback": true},
+    "status": {"label": "Status", "holds": "Open, resolved, approved", "always": true}
+  },
+  "recipes": {
+    "observation": {"required": ["actor", "situation", "claim", "basis", "time"], "optional": ["strength"]},
+    "finding": {"required": ["actor", "situation", "claim", "basis", "strength", "time"], "optional": ["alternatives"]},
+    "user-situation": {"required": ["actor", "situation", "claim"], "optional": ["basis", "time"]},
+    "user-flow": {"required": ["actor", "situation", "claim", "basis"], "optional": ["criterion"]},
+    "evaluation-result": {"required": ["actor", "claim", "basis", "strength", "criterion", "measure"], "optional": ["time"]},
+    "implication": {"required": ["claim", "rationale", "situation"], "optional": ["basis"]},
+    "user-story": {"required": ["actor", "claim", "criterion"], "optional": ["situation"]},
+    "design-decision": {"required": ["claim", "rationale", "alternatives", "owner", "status"], "optional": ["criterion"]},
+    "performance-goal": {"required": ["claim", "measure", "time", "owner"], "optional": ["criterion"]},
+    "lesson": {"required": ["claim", "situation", "basis", "strength"], "optional": ["actor", "time"]},
+    "hypothesis": {"required": ["claim", "situation"], "optional": ["basis"]},
+    "challenge": {"required": ["claim", "rationale"], "optional": ["basis"]},
+    "dependency": {"required": ["claim", "owner", "status"], "optional": ["time"]},
+    "question": {"required": ["claim"], "optional": ["owner"]},
+    "artifact": {"required": ["claim", "basis"], "optional": ["criterion"]},
+    "note": {"required": ["claim"], "optional": []}
+  },
+  "categories": {
+    "needs": {"label": "Customer and user needs", "needs": ["actor", "situation", "claim", "strength"], "relations": ["supports", "informs"], "families": ["evidence"]},
+    "experience": {"label": "Experience and usability", "needs": ["actor", "criterion", "measure"], "relations": ["supports", "informs", "measures"], "families": ["evidence", "outputs"]},
+    "operations": {"label": "Operations and support", "needs": ["claim", "situation", "owner"], "relations": ["supports", "informs", "constrains", "depends-on"], "families": ["evidence", "direction", "open"]},
+    "governance": {"label": "Policy, access and boundaries", "needs": ["claim", "situation", "basis"], "relations": ["constrains", "informs", "supports"], "families": ["evidence", "direction", "open"]},
+    "measurement": {"label": "Outcomes and measurement", "needs": ["measure", "time", "owner"], "relations": ["measures", "supports"], "families": ["evidence", "direction"]},
+    "technology": {"label": "Technology and integration", "needs": ["claim", "criterion", "owner"], "relations": ["depends-on", "constrains", "informs", "supports"], "families": ["direction", "open"]}
+  },
+  "use_by_family": {"evidence": "evidence", "direction": "direction", "open": "open question", "outputs": "output"},
+  "packet_types": {
+    "design-review": {"label": "Design review", "anchor_kinds": ["requirement", "knowledge-card"], "relations": ["supports", "informs", "measures", "supported-by", "refines"], "depth": 2, "revision_policy": "pinned"},
+    "sponsor-update": {"label": "Sponsor update", "anchor_kinds": ["requirement", "intent"], "relations": ["supports", "informs", "challenges", "references"], "depth": 1, "revision_policy": "latest"},
+    "engineering-handoff": {"label": "Engineering handoff", "anchor_kinds": ["requirement"], "relations": ["depends-on", "constrains", "informs", "references"], "depth": 2, "revision_policy": "pinned"}
+  }
+}

@@ -1,0 +1,99 @@
+/* Decisions & Issues: the requested response leads, reference work supports it. */
+.accountability-attention-panel .accountability-item>summary{position:relative;grid-template-columns:minmax(0,1fr);gap:8px 16px;padding:24px 28px 24px 0}
+.accountability-attention-panel .accountability-item>summary::after{position:absolute;right:4px;top:50%;grid-row:auto}
+.workspace-app .accountability-attention-panel .accountability-item>summary>strong{font-size:16px;line-height:24px;color:var(--ac-text)}
+.accountability-attention-panel .accountability-item>summary>.accountability-item-meta{font-size:13px;line-height:20px;gap:8px;color:var(--ac-text-secondary);margin-top:4px}
+.accountability-attention-panel .accountability-item-task,
+.accountability-attention-panel .accountability-item-waiting{grid-column:1;display:grid;gap:2px;min-width:0}
+.accountability-attention-panel .accountability-item-task{display:grid;gap:6px;font-size:13px;line-height:20px;color:var(--ac-text);margin-top:16px}
+.accountability-attention-panel .accountability-item-task>span{display:block}
+.accountability-attention-panel .accountability-item-task>span:last-child{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;font-size:13px;line-height:20px;font-weight:400;color:var(--ac-text)}
+.accountability-attention-panel .accountability-item-waiting{color:var(--ws-color-text-body-helper);margin-top:4px}
+.accountability-attention-panel .accountability-item-waiting>span:last-child{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+.workspace-app .accountability-attention-panel .accountability-preview-label{font-size:13px;line-height:20px;font-weight:600;color:var(--ac-text)}
+.accountability-attention-panel .accountability-item.is-for-you>summary>strong{font-weight:600}
+.accountability-attention-panel .accountability-item:not(.is-for-you)>summary>strong{font-weight:600}
+.accountability-attention-panel .accountability-item-facts{font-size:13px;line-height:20px;gap:8px 24px;margin-top:16px;color:var(--ac-text-secondary)}
+.accountability-attention-panel .accountability-item-facts :is(span,time){font-size:13px;line-height:20px;color:var(--ac-text-secondary)}
+.accountability-attention-panel .accountability-item-facts:empty{display:none}
+.accountability-attention-panel .accountability-item-facts>span{min-width:0}
+.accountability-attention-panel .accountability-other{padding-top:24px;border-top:1px solid var(--ac-border-strong);color:var(--ac-text)}
+.accountability-attention-panel .accountability-detail{gap:24px;padding-bottom:24px}
+.accountability-attention-panel .accountability-next-action{gap:8px}
+.accountability-attention-panel .accountability-detail{font-size:13px;line-height:20px}
+.accountability-attention-panel .accountability-detail :is(p,.pre,li,.item-title-link){font-size:13px;line-height:20px}
+.accountability-attention-panel .accountability-next-action :is(.pre,p:last-child){font-weight:400;color:var(--ac-text)}
+.workspace-app .accountability-attention-panel :is(.accountability-preview-label,.accountability-detail-label,.label-value>label,.decision-rights-context>h3){font-size:13px;line-height:20px;font-weight:600;color:var(--signal-identity-ink)}
+.accountability-attention-panel .accountability-detail>.label-value{display:grid;gap:8px}
+.accountability-attention-panel .accountability-detail>.label-value>*{margin:0}
+.accountability-attention-panel .accountability-detail>.decision-rights-context{margin:0}
+.accountability-attention-panel .decision-rights-context>h3{margin:0 0 8px}
+.accountability-panel+.accountability-panel{margin-top:24px}
+.accountability-layout,.accountability-project-rail{gap:24px}
+.accountability-attention-panel,.accountability-project-rail .accountability-rail-panel{background:var(--ac-surface);border-color:var(--ac-border-strong)}
+.accountability-attention-panel>h2{font-size:24px;line-height:32px;font-weight:600;color:var(--ac-ink);margin-bottom:24px}
+.bridge-lane>h2{font-size:16px;line-height:24px}
+.bridge-card>.pre{font-size:16px;line-height:24px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;color:var(--ac-text)}
+.bridge-card .caption{font-size:13px;line-height:20px}
+.bridge-card .acx-item-title{font-size:16px;line-height:24px;font-weight:600}
+.workspace-app .bridge-item-indicators{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:12px 0 16px}
+.workspace-app .bridge-item-task-label{display:block;margin-bottom:6px;font-size:13px;line-height:20px;font-weight:600;color:var(--ac-text)}
+.accountability-attention-panel .accountability-detail-facts{display:flex;flex-wrap:wrap;gap:12px 24px;margin:0}
+.accountability-attention-panel .accountability-detail-facts dt{font-size:13px;line-height:20px;font-weight:400;color:var(--ac-text-secondary)}
+.accountability-attention-panel .accountability-detail-facts dd{font-size:13px;line-height:20px;margin:4px 0 0;color:var(--ac-text)}
+.bridge-card .bridge-card-facts{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:16px;font-size:13px;line-height:20px;color:var(--ac-text-secondary)}
+.timeline-status-row .bridge-item-indicators{margin:8px 0 16px}
+.status-now-heading .bridge-item-indicators{margin:8px 0 0}
+.bridge-sections .bridge-tab{color:var(--ac-text);font-weight:400}
+.bridge-sections .bridge-tab[aria-current=page]{color:var(--ac-accent-text);border-bottom:3px solid var(--ac-accent);font-weight:600}
+.bridge-sections .bridge-tab:hover:not(:disabled):not([aria-current=page]){color:var(--ac-text);border-bottom-color:transparent;background:var(--ac-surface-subtle)}
+
+/* The same white-module hangline is retained; reference headings are quieter. */
+.accountability-project-rail .accountability-rail-panel h2{font-size:16px;line-height:24px;font-weight:500;color:var(--ac-text)}
+.accountability-project-rail .accountability-rail-panel>header{padding:24px 24px 16px}
+.accountability-project-rail .accountability-rail-preview,
+.accountability-project-rail .accountability-rail-owners,
+.accountability-project-rail .accountability-rail-empty{background:transparent;padding-inline:24px}
+.accountability-project-rail .accountability-rail-panel>p.accountability-rail-meta{background:transparent}
+.accountability-project-rail .accountability-rail-action{padding:12px 24px;border-top:1px solid var(--ac-border)}
+.workspace-app .requirement-rail-group{padding:0 24px 20px;margin:0}
+.workspace-app .requirement-rail-group>h3{font-size:13px;line-height:20px;font-weight:600;color:var(--ac-text-secondary);margin:0 0 10px}
+.workspace-app .requirement-rail-review-item{display:grid;justify-items:start;gap:8px;padding:14px 16px;background:var(--ws-color-background-surface-dimmer);border-radius:4px}
+.workspace-app .requirement-rail-review-item>.item-title-link{font-size:13px;line-height:20px;font-weight:600}
+.workspace-app .requirement-rail-browse{padding-top:20px;border-top:1px solid var(--line)}
+.workspace-app .requirement-rail-browse>ul{padding:0;margin:0;list-style:none;display:grid;gap:14px}
+.workspace-app .requirement-rail-browse li{display:flex;align-items:baseline;justify-content:space-between;gap:12px;font-size:13px;line-height:20px}
+.workspace-app .requirement-rail-browse li>.item-title-link{font-size:13px;line-height:20px;font-weight:400}
+.workspace-app .requirement-rail-browse li>span{color:var(--muted)}
+.workspace-app .accountability-rail-workspace-action{display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%;min-height:32px;padding:6px 12px;border:1px solid var(--ws-color-grayscale-gray-20);border-radius:4px;background:var(--ws-color-background-surface-dimmer);color:var(--ws-color-text-body-default);font-size:13px;line-height:20px;font-weight:400;text-align:left}
+.workspace-app .accountability-rail-workspace-action:hover:not(:disabled){background:var(--ws-color-grayscale-gray-10)}
+
+/* Routine updates have one neutral control; all exact event actions stay inside. */
+.accountability-update-summary{padding:4px 0 12px;border-bottom:1px solid var(--line);margin-bottom:4px}
+.accountability-update-links{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px}
+.accountability-update-links .item-title-link{font-size:13px;line-height:20px;font-weight:400}
+.bridge-page .accountability-controls-actions .project-update-feed>summary{background:transparent;border-color:transparent}
+.bridge-page .accountability-controls-actions .project-update-feed>summary::before{display:none}
+.bridge-page .accountability-controls-actions .project-update-feed>summary:hover,
+.bridge-page .accountability-controls-actions .project-update-feed[open]>summary{background:var(--ws-color-background-surface-dimmer);border-color:var(--line)}
+
+@container accountability-page (max-width:760px){
+ .accountability-main{grid-row:1}
+ .accountability-project-rail{grid-row:2}
+}
+@container accountability-page (max-width:700px){
+ .accountability-project-rail{grid-template-columns:minmax(0,1fr)}
+}
+
+/* Stable section color supports wayfinding; actual concerns retain alert chips. */
+.workspace-app .accountability-panel>h2{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 16px;margin:0 0 24px;background:var(--wayfinding-shared-surface);color:var(--wayfinding-shared-ink);border-radius:4px}
+.workspace-app .accountability-panel[aria-labelledby="accountability-recent-title"]>h2{background:var(--wayfinding-record-surface);color:var(--wayfinding-record-ink)}
+.workspace-app .accountability-project-rail .accountability-rail-panel>header{display:grid;grid-template-columns:minmax(0,1fr) 36px;align-items:center;gap:8px 12px;background:var(--wayfinding-shared-surface);color:var(--wayfinding-shared-ink);margin-bottom:16px}
+.workspace-app .accountability-project-rail .accountability-rail-panel[data-wayfinding-section="work"]>header{background:var(--wayfinding-record-surface);color:var(--wayfinding-record-ink)}
+.workspace-app .accountability-project-rail .accountability-rail-panel[data-wayfinding-section="reviews"]>header{background:var(--wayfinding-shared-surface);color:var(--wayfinding-shared-ink)}
+.workspace-app .accountability-rail-panel>header>h2{grid-column:1;margin:0;color:inherit}
+.workspace-app .accountability-rail-panel>header>.surface-wayfinding-icon{grid-column:2;grid-row:1}
+.workspace-app .accountability-rail-panel>header>.accountability-rail-summary{grid-column:1/-1;margin:0}
+/* Header bands extend to the container edge; text keeps the body hangline. */
+.workspace-app .accountability-panel>h2{margin:-24px -24px 24px;padding:24px}
+@media(max-width:700px){.workspace-app .accountability-panel>h2{margin:-16px -16px 24px;padding:16px}}

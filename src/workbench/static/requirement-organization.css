@@ -1,0 +1,146 @@
+.workspace-app .requirement-organization{display:grid;gap:24px;min-width:0}
+.workspace-app .requirement-organization>.section{margin:0}
+.workspace-app .requirement-organization-category+.requirement-organization-category{margin-top:24px}
+.workspace-app .requirement-organization-category-heading{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:8px 16px;padding:12px 16px;margin:0 0 16px;background:var(--ws-color-background-surface-dimmer);border-radius:4px}
+.workspace-app .requirement-organization-category-heading>h3{margin:0;color:var(--ws-color-text-body-default);font-size:16px;line-height:24px;font-weight:600}
+.workspace-app .requirement-organization-category-heading>.caption{font-size:13px;line-height:20px}
+.workspace-app .requirement-organization-areas{padding:0 24px 24px;font-size:13px;line-height:20px}
+.workspace-app .requirement-organization-areas>summary{padding:0;min-height:32px;cursor:pointer;color:var(--blue)}
+.workspace-app .requirement-organization-area-list{display:grid;gap:16px;margin-top:16px}
+.workspace-app .requirement-organization-area-list h3{margin:0;font-size:13px;line-height:20px;font-weight:600}
+.workspace-app .requirement-organization-area-list ul{margin:8px 0 0;padding-left:20px}
+.workspace-app .requirement-organization-area-list li+li{margin-top:8px}
+.workspace-app .requirement-organization-area-list .item-title-link{font-size:13px;line-height:20px}
+.workspace-app .requirement-organization-intent .workbench-module-header>p{margin:8px 0 0;font-size:13px;line-height:20px}
+.workspace-app .requirement-intent-factor{margin:0;padding:0;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.workspace-app .requirement-intent-factor+ .requirement-intent-factor{margin-top:16px}
+.workspace-app .requirement-intent-factor>summary{padding:12px 16px;background:var(--ws-color-background-surface-dimmer);font-size:16px;line-height:24px;font-weight:600;cursor:pointer}
+.workspace-app .requirement-intent-factor>.details-body{padding:16px;margin:0;font-size:13px;line-height:20px}
+.workspace-app .requirement-intent-factor .label-value+.label-value{margin-top:16px}
+.workspace-app .requirement-intent-factor .label-value :is(label,.pre){font-size:13px;line-height:20px}
+.workspace-app .requirement-intent-factor .label-value>label{font-weight:600;color:var(--signal-identity-ink)}
+.workspace-app .requirement-intent-factor .record-metadata{margin-top:16px}
+.workspace-app .requirement-intent-factor>summary:focus-visible,.workspace-app .requirement-organization-areas>summary:focus-visible{outline:2px solid var(--blue);outline-offset:-2px}
+@media(max-width:700px){.workspace-app .requirement-organization-areas{padding:0 16px 16px}.workspace-app .requirement-organization-category-heading,.workspace-app .requirement-intent-factor>summary{padding:12px 16px}}
+
+/* Alternate collection layout. Rows retain the previous presentation and DOM. */
+.requirement-view-controls{display:flex;align-items:center;flex-wrap:wrap;gap:8px 16px;min-width:0}
+.workspace-app .requirement-layout-control{display:inline-flex;align-items:center;gap:8px;font-size:13px;line-height:20px;white-space:nowrap}
+.workspace-app .requirement-layout-control>select{width:94px;min-height:32px;font-size:13px;line-height:20px}
+.requirement-cover-state{display:contents}
+.requirement-category-icon,.requirement-tile-preview,.requirement-cover-authority,.requirement-cover-icon,.requirement-collection-cover,.collection-origin-tiles{display:none}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"]>.workbench-record-module{container-type:inline-size;container-name:requirement-collection}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .collection-origin-rows{display:none}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .collection-origin-tiles{display:block;margin:8px 0 0;font-size:13px;line-height:20px}
+.workspace-app .collection-origin-tiles>summary{cursor:pointer;color:var(--blue);font-size:13px;line-height:20px;font-weight:400}
+.workspace-app .collection-origin-tiles>.details-body{padding-top:12px}
+/* A common three-column rhythm packs categories without changing their order. */
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .requirement-category-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px 12px;align-items:start}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .requirement-organization-category{grid-column:span 1;margin:0;min-width:0}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .requirement-organization-category[data-category-size="2"]{grid-column:span 2}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .requirement-organization-category[data-category-size="3"]{grid-column:span 3}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .requirement-organization-category-heading{display:flex;align-items:flex-start;min-height:40px;box-sizing:border-box;padding:0;margin:0 0 12px;background:transparent;border-radius:0}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .requirement-organization-category-heading>h3{font-size:13px;line-height:20px;color:var(--signal-identity-ink)}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .requirement-organization-category-heading>.caption{display:none}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .requirement-record-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;align-items:start}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .requirement-organization-category[data-category-size="1"]>.requirement-record-list{grid-template-columns:1fr}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .requirement-organization-category[data-category-size="2"]>.requirement-record-list{grid-template-columns:repeat(2,minmax(0,1fr))}
+/* Covers separate the stable name and purpose from the changing status strip. */
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] :is(.requirement-record,.requirement-intent-factor,.goal-read,.goal-measure-read){min-width:0}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .requirement-record{margin:0}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .requirement-record>summary{position:relative;display:flex;flex-direction:column;align-items:stretch;gap:10px;width:100%;min-height:216px;box-sizing:border-box;padding:14px;border:0}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .requirement-record>summary::before{position:absolute;right:12px;top:17px;margin:0}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .requirement-record-heading{display:grid;grid-template-columns:minmax(0,1fr);align-items:start;flex:none;gap:8px;min-height:82px;min-width:0;padding-right:0;width:100%;box-sizing:border-box}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] :is(.requirement-cover-icon,.collection-cover-icon){display:flex;align-items:center;height:20px;color:var(--signal-identity-ink)}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .requirement-record-heading>.condition-chip{grid-column:1;font-size:13px;line-height:18px}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] :is(.requirement-record-title,.collection-cover-title){display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;overflow-wrap:anywhere;font-size:13px;line-height:18px;font-weight:600}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] :is(.requirement-tile-preview,.collection-cover-preview){display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;overflow-wrap:anywhere;font-size:13px;line-height:18px;font-weight:400;color:var(--ws-color-text-body-helper)}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] :is(.requirement-drawer-indicator,.collection-cover-status){margin-top:auto;margin-inline:-8px;width:auto;padding:8px;background:var(--ws-color-background-surface-default,var(--ac-surface));border-radius:4px;font-size:13px;line-height:18px;font-weight:400;box-sizing:border-box;min-width:0;color:var(--ws-color-text-body-helper)}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .requirement-drawer-indicator{grid-column:auto;gap:6px;width:auto}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .requirement-drawer-indicator .requirement-coverage{font-size:13px;line-height:18px}
+/* Authority is a recorded state, separate from confidence and evidence coverage. */
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .requirement-cover-authority{display:block;grid-column:1;font-size:13px;line-height:18px;font-weight:400;color:var(--ws-color-text-body-helper)}
+/* Goals and context use the same cover structure, with purpose-specific icons. */
+.workspace-app .requirement-organization[data-requirement-layout="tiles"]>.workbench-record-module:not(.requirement-organization-requirements)>.workbench-module-drawers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;align-items:start}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .workbench-module-drawers>:is(.goal-read,.goal-measure-read,.requirement-intent-factor){margin:0;padding:0;overflow:hidden}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .workbench-module-drawers>:is(.goal-read,.goal-measure-read,.requirement-intent-factor)>summary{position:relative;display:block;padding:14px;font-size:13px;line-height:18px;list-style:none;background:var(--ws-color-background-surface-dimmer);box-sizing:border-box;cursor:pointer}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .workbench-module-drawers>:is(.goal-read,.goal-measure-read,.requirement-intent-factor)>summary::-webkit-details-marker{display:none}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .workbench-module-drawers>:is(.goal-read,.goal-measure-read,.requirement-intent-factor)>summary::before{content:'';position:absolute;right:12px;top:17px;width:6px;height:6px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(-45deg);margin:0}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .collection-row-title{display:none}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .requirement-collection-cover{display:flex;flex-direction:column;gap:10px;min-height:202px;min-width:0}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .collection-cover-heading{display:grid;grid-template-columns:minmax(0,1fr);align-items:start;gap:8px;min-height:82px;padding-right:0;box-sizing:border-box}
+/* An open drawer is an active reading surface, not another small tile. */
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .requirement-organization-category:has(.requirement-record[open]){grid-column:1/-1}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] :is(.requirement-record,.goal-read,.goal-measure-read,.requirement-intent-factor):hover{border-color:var(--ws-color-text-activation-default)}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .workbench-module-drawers>:is(.goal-read,.goal-measure-read,.requirement-intent-factor)[open],
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .requirement-record[open]{grid-column:1/-1;border-color:var(--signal-identity-ink);box-shadow:inset 3px 0 var(--signal-identity-ink)}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] :is(.requirement-record,.goal-read,.goal-measure-read,.requirement-intent-factor)[open]>summary{background:var(--ws-color-background-surface-default,var(--ac-surface))}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .requirement-record[open]>summary{display:grid;grid-template-columns:1fr;align-items:center;gap:12px;min-height:0;padding:16px 32px 16px 16px}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .requirement-record[open] .requirement-record-heading{min-height:0}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .requirement-record[open] .requirement-record-title{display:block;overflow:visible}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .requirement-record[open]>summary>.requirement-tile-preview{display:none}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .requirement-record[open]>summary>.requirement-drawer-indicator{margin:0;padding:8px 0;background:transparent}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .workbench-module-drawers>:is(.goal-read,.goal-measure-read,.requirement-intent-factor)[open]>summary::before{transform:rotate(45deg)}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .workbench-module-drawers>:is(.goal-read,.goal-measure-read,.requirement-intent-factor)[open] .requirement-collection-cover{min-height:0;gap:8px}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .workbench-module-drawers>:is(.goal-read,.goal-measure-read,.requirement-intent-factor)[open] .collection-cover-heading{min-height:0}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .workbench-module-drawers>:is(.goal-read,.goal-measure-read,.requirement-intent-factor)[open] .collection-cover-title{display:block;overflow:visible}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .workbench-module-drawers>:is(.goal-read,.goal-measure-read,.requirement-intent-factor)[open] :is(.collection-cover-preview,.collection-cover-status){display:none}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .workbench-module-drawers>:is(.goal-read,.goal-measure-read,.requirement-intent-factor)>.details-body{padding:16px;font-size:13px;line-height:20px}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] :is(.requirement-record,.goal-read,.goal-measure-read,.requirement-intent-factor)>summary:focus-visible{outline:2px solid var(--blue);outline-offset:-3px}
+@container requirement-collection (max-width:570px){
+ .workspace-app .requirement-organization[data-requirement-layout="tiles"] :is(.requirement-category-grid,.requirement-record-list),
+ .workspace-app .requirement-organization[data-requirement-layout="tiles"]>.workbench-record-module:not(.requirement-organization-requirements)>.workbench-module-drawers{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .workspace-app .requirement-organization[data-requirement-layout="tiles"] .requirement-organization-category[data-category-size="3"]{grid-column:span 2}
+}
+@container requirement-collection (max-width:400px){
+ .workspace-app .requirement-organization[data-requirement-layout="tiles"] :is(.requirement-category-grid,.requirement-record-list),
+ .workspace-app .requirement-organization[data-requirement-layout="tiles"] .requirement-organization-category[data-category-size="2"]>.requirement-record-list,
+ .workspace-app .requirement-organization[data-requirement-layout="tiles"]>.workbench-record-module:not(.requirement-organization-requirements)>.workbench-module-drawers{grid-template-columns:1fr}
+ .workspace-app .requirement-organization[data-requirement-layout="tiles"] .requirement-organization-category[data-category-size]{grid-column:1/-1}
+ .workspace-app .requirement-organization[data-requirement-layout="tiles"] .requirement-record[open]>summary{grid-template-columns:1fr}
+}
+/* Keep the tile boundary quiet; color and outline appear on interaction. */
+.workspace-app .main .requirement-organization[data-requirement-layout="tiles"] .workbench-module-drawers>:is(.goal-read,.goal-measure-read,.requirement-intent-factor){padding:0;margin:0;border-color:transparent}
+.workspace-app .main .requirement-organization[data-requirement-layout="tiles"] .requirement-record{border-color:transparent}
+.workspace-app .main .requirement-organization[data-requirement-layout="tiles"] .requirement-record-heading{min-width:0}
+.workspace-app .main .requirement-organization[data-requirement-layout="tiles"] :is(.requirement-record,.goal-read,.goal-measure-read,.requirement-intent-factor):hover{border-color:var(--ws-color-text-activation-default)}
+.workspace-app .main .requirement-organization[data-requirement-layout="tiles"] :is(.requirement-record,.goal-read,.goal-measure-read,.requirement-intent-factor)[open]{border-color:var(--signal-identity-ink)}
+/* Category panels are the functional navigation level, above individual items. */
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .requirement-organization-category{background:var(--ws-color-background-surface-default,var(--ac-surface));border:1px solid var(--ws-color-grayscale-gray-20);border-radius:6px;overflow:hidden}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .requirement-organization-category-heading{align-items:center;flex-wrap:nowrap;gap:12px;min-height:64px;margin:0;padding:12px 15px;background:var(--signal-identity-ink);color:var(--ac-text-inverse)}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .requirement-organization-category-heading>h3{flex:1;min-width:0;color:inherit;font-size:13px;line-height:20px;font-weight:600}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .requirement-category-icon{display:flex;flex:none;align-items:center}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .requirement-organization-category>.requirement-record-list{gap:12px;background:var(--ws-color-background-surface-default,var(--ac-surface))}
+.workspace-app .main .requirement-organization[data-requirement-layout="tiles"] .requirement-organization-category .requirement-record{border-radius:0}
+/* Closed requirement covers need a name and condition; prose belongs inside. */
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .requirement-record:not([open]) .requirement-record-title{min-height:54px}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .requirement-record>summary>.requirement-tile-preview{display:none}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .requirement-cover-state{display:grid;gap:4px;margin-top:auto;margin-inline:-8px;padding:8px;background:var(--ws-color-background-surface-default,var(--ac-surface));border-radius:4px;font-size:13px;line-height:18px;font-weight:400;color:var(--ws-color-text-body-helper)}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .requirement-cover-state>.requirement-drawer-indicator{margin:0;padding:0;background:transparent}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .requirement-record[open] .requirement-cover-state{margin:0;padding:8px 0;background:transparent}
+/* One measured cover height across all three collections; open content is free. */
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .requirement-record:not([open])>summary,
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .workbench-module-drawers>:is(.goal-read,.goal-measure-read,.requirement-intent-factor):not([open])>summary{height:var(--requirement-tile-height,auto)}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .workbench-module-drawers>:is(.goal-read,.goal-measure-read,.requirement-intent-factor):not([open])>summary>.requirement-collection-cover{height:100%;box-sizing:border-box}
+
+/* Brief navigation labels unfold into the full, unchanged source titles. */
+.card-title-brief{display:none}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] details:not([open])>summary .card-title-full{display:none}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] details:not([open])>summary .card-title-brief{display:inline}
+
+/* Muted color identifies a place or function, never a confidence or approval. */
+.collection-module-icon{display:none}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"]>.workbench-record-module{--collection-wayfinding-surface:var(--wayfinding-shared-surface);--collection-wayfinding-ink:var(--wayfinding-shared-ink)}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"]>.requirement-organization-goals{--collection-wayfinding-surface:var(--wayfinding-work-surface);--collection-wayfinding-ink:var(--wayfinding-work-ink)}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"]>.requirement-organization-intent{--collection-wayfinding-surface:var(--wayfinding-work-surface);--collection-wayfinding-ink:var(--wayfinding-work-ink)}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"]>.workbench-record-module>.workbench-module-header{display:grid;grid-template-columns:minmax(0,1fr) 36px;align-items:center;gap:12px 16px;padding-bottom:16px;background:var(--collection-wayfinding-surface);border-bottom:1px solid var(--ws-color-grayscale-gray-20)}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"]>.workbench-record-module>.workbench-module-header>h2{grid-column:1;margin:0}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"]>.workbench-record-module>.workbench-module-header>:not(h2):not(.collection-module-icon){grid-column:1/-1;margin:0}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .collection-module-icon{display:grid;place-items:center;width:36px;height:36px;grid-column:2;grid-row:1;background:var(--ws-color-background-surface-default,var(--ac-surface));color:var(--collection-wayfinding-ink);border-radius:8px}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] :is(.collection-module-icon,.requirement-category-icon) svg{width:24px;height:24px;stroke-width:1.9}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .requirement-organization-category{--category-wayfinding-surface:var(--wayfinding-shared-surface);--category-wayfinding-ink:var(--wayfinding-shared-ink)}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .requirement-organization-category-heading{background:var(--category-wayfinding-surface);color:var(--category-wayfinding-ink);border-bottom:1px solid var(--ws-color-grayscale-gray-20)}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .requirement-category-icon{display:grid;place-items:center;width:32px;height:32px;border-radius:6px;background:var(--ws-color-background-surface-default,var(--ac-surface))}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] :is(.requirement-cover-icon,.collection-cover-icon){display:grid;place-items:center;width:36px;height:36px;border-radius:8px;background:var(--collection-wayfinding-surface);color:var(--collection-wayfinding-ink)}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] .requirement-cover-icon{background:var(--category-wayfinding-surface);color:var(--category-wayfinding-ink)}
+.workspace-app .requirement-organization[data-requirement-layout="tiles"] :is(.requirement-cover-icon,.collection-cover-icon) svg{width:24px;height:24px;stroke-width:1.9}

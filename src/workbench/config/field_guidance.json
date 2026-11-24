@@ -1,0 +1,250 @@
+{
+  "version": "2",
+  "authorship": "Workbench-authored guidance and fictional examples; method references are not project evidence.",
+  "groups": {
+    "goal": {
+      "title": {
+        "title": "Goal",
+        "what": "Name the outcome in a short phrase.",
+        "why": "An outcome keeps the work focused on a benefit, rather than a feature list.",
+        "example": "Reduce repeated explanations at handoff.",
+        "method": "measurement"
+      },
+      "outcome": {
+        "title": "What should improve?",
+        "what": "Describe who should experience what change.",
+        "why": "This connects the proposed work to the benefit that success measures must test.",
+        "example": "Case workers can continue a case without asking the customer to repeat their history.",
+        "method": "measurement"
+      },
+      "beneficiary": {
+        "title": "Who benefits?",
+        "what": "Identify the user group and relevant situation.",
+        "why": "Different groups can experience different results; a precise group makes research and measurement meaningful.",
+        "example": "Case workers receiving an escalated support request.",
+        "method": "measurement"
+      },
+      "rationale": {
+        "title": "Connection to value",
+        "what": "Explain how this outcome delivers a promised benefit.",
+        "why": "The link tests whether the goal supports the value proposition or is merely adjacent work.",
+        "example": "A usable handoff history could reduce repeated explanations and effort; this connection still needs testing.",
+        "method": "measurement"
+      },
+      "owner": {
+        "title": "Accountable owner",
+        "what": "Name the person accountable for reviewing progress, or leave ownership unresolved.",
+        "why": "The owner makes the result actionable when it misses expectations.",
+        "example": "Service owner to be confirmed before the pilot.",
+        "method": "measurement"
+      },
+      "basis_fields": {
+        "title": "Why this belongs",
+        "what": "The AI partner can suggest which saved intake answers explain this goal. Review the connection and choose what to keep.",
+        "why": "These links keep the work connected to business intent and make later changes easier to review.",
+        "example": "An intake answer about repeated explanations could support a goal to reduce effort at handoff. It does not prove that the goal has been achieved.",
+        "method": "measurement"
+      }
+    },
+    "measure": {
+      "name": {
+        "title": "Measure",
+        "what": "Use a short name for the result you will track.",
+        "why": "A clear name helps people distinguish the outcome from the activity intended to improve it.",
+        "example": "Repeat explanations per handoff.",
+        "method": "measurement"
+      },
+      "definition": {
+        "title": "Calculation or observation",
+        "what": "Specify what is counted, the unit, and any calculation.",
+        "why": "Two reviewers should be able to calculate the same result from the same evidence.",
+        "example": "Number of cases with a repeated explanation divided by all observed handoffs, expressed as a percentage.",
+        "method": "measurement"
+      },
+      "population": {
+        "title": "Population and scope",
+        "what": "Specify which people, cases, locations and exclusions the result covers.",
+        "why": "The denominator and scope determine what conclusions the result can support.",
+        "example": "All pilot handoffs at the selected service desk; exclude training cases and report exclusions separately.",
+        "method": "measurement"
+      },
+      "baseline": {
+        "title": "Baseline",
+        "what": "Give the current result, its observation period and source; say if it is unknown.",
+        "why": "You need a comparable starting point to interpret a later change.",
+        "example": "Not yet measured. Observe the current handoff process before the pilot.",
+        "method": "measurement"
+      },
+      "target": {
+        "title": "Target",
+        "what": "Specify the desired result using the same definition and unit as the baseline.",
+        "why": "A justified threshold makes the goal evaluable; an unsupported number is only a proposal.",
+        "example": "A reduction from the baseline; the amount will be agreed after baseline collection.",
+        "method": "measurement"
+      },
+      "timeframe": {
+        "title": "Evaluation period",
+        "what": "Define when the result will be evaluated, allowing enough observations.",
+        "why": "A date without sufficient data can create a misleading pass or failure.",
+        "example": "Review after the pilot has covered the agreed case types and observation volume.",
+        "method": "measurement"
+      },
+      "data_source": {
+        "title": "Data source",
+        "what": "Identify the records or research that supply the measure and confirm access.",
+        "why": "A measure is usable only if the necessary evidence can actually be collected.",
+        "example": "Observed handoffs linked to case records; access and event definitions need confirmation.",
+        "method": "measurement"
+      },
+      "cadence": {
+        "title": "Review frequency",
+        "what": "Say how often the measure will be reviewed and for what decision.",
+        "why": "The review should be frequent enough to act on changes without producing unnecessary reporting.",
+        "example": "Weekly during the pilot to decide whether the handoff needs adjustment.",
+        "method": "measurement"
+      },
+      "owner": {
+        "title": "Measurement owner",
+        "what": "Identify who collects, checks and explains the result.",
+        "why": "Someone must resolve data-quality questions and bring findings to a decision.",
+        "example": "Pilot analyst; responsibility to be confirmed.",
+        "method": "measurement"
+      },
+      "guardrail": {
+        "title": "What must not get worse?",
+        "what": "Name a possible adverse outcome and how you would detect it.",
+        "why": "Improving one metric can transfer effort or harm elsewhere.",
+        "example": "Track missing case details alongside faster handoffs.",
+        "method": "measurement"
+      },
+      "review_plan": {
+        "title": "Resolve missing information",
+        "what": "List the unknown, who should resolve it, and the decision or date it blocks.",
+        "why": "An explicit plan keeps an honest gap from becoming an unnoticed assumption.",
+        "example": "Confirm baseline collection and its owner before selecting a numeric target.",
+        "method": "measurement"
+      },
+      "goal_ids": {
+        "title": "Goals measured",
+        "what": "Link the outcomes this measure could demonstrate.",
+        "why": "The link explains why the metric matters; activity alone does not prove a benefit.",
+        "example": "Link repeated explanations to the goal of reducing customer effort.",
+        "method": "measurement"
+      },
+      "basis_fields": {
+        "title": "Why this belongs",
+        "what": "The AI partner can suggest which saved intake answers explain this measure. Review the connection and choose what to keep.",
+        "why": "These links keep the work connected to business intent and make later changes easier to review.",
+        "example": "An intake answer about repeated explanations could support a goal to reduce effort at handoff. It does not prove that the goal has been achieved.",
+        "method": "measurement"
+      }
+    },
+    "requirement": {
+      "requirement": {
+        "title": "What must be true?",
+        "what": "Describe one necessary behavior or condition, for a clear actor and situation.",
+        "why": "A bounded requirement connects intent to something a team can implement and verify.",
+        "example": "When a saved case is reopened, the case worker can access the recorded handoff history.",
+        "method": "requirement"
+      },
+      "acceptance_criteria": {
+        "title": "Acceptance criteria",
+        "what": "State observable checks and the conditions under which each passes.",
+        "why": "These checks establish whether the requirement is met; they do not prove a business KPI improved.",
+        "example": "Reopen a saved case and verify that the previously recorded handoff history is available.",
+        "method": "requirement"
+      },
+      "question": {
+        "title": "Question to resolve",
+        "what": "Ask what the team needs to discover to define this requirement area.",
+        "why": "A specific question directs evidence gathering toward a decision.",
+        "example": "Which details does the receiving worker need to continue each supported case type?",
+        "method": "requirement"
+      },
+      "rationale": {
+        "title": "Why this area belongs",
+        "what": "Connect this area to a benefit, risk or obligation in the intake.",
+        "why": "The rationale makes relevance inspectable when scope or evidence changes.",
+        "example": "Without prior case history, workers may need to repeat the customer interview.",
+        "method": "requirement"
+      },
+      "label": {
+        "title": "Area name",
+        "what": "Name the specific topic covered by this area.",
+        "why": "A clear label helps specialists find work relevant to their expertise.",
+        "example": "Handoff information completeness.",
+        "method": "requirement"
+      },
+      "owner": {
+        "title": "Investigation lead",
+        "what": "Identify who will coordinate the investigation for this area.",
+        "why": "Investigation ownership makes open questions actionable; it is not authority to approve.",
+        "example": "Service design lead for handoff usability.",
+        "method": "requirement"
+      },
+      "exclusion_reason": {
+        "title": "Reason for exclusion",
+        "what": "Explain why the area is outside this project and when to reconsider it.",
+        "why": "An exclusion should be a visible scope decision, not an unexamined omission.",
+        "example": "Not part of the pilot; reconsider before expanding to another case type.",
+        "method": "requirement"
+      },
+      "goal_ids": {
+        "title": "Goals supported",
+        "what": "Link outcomes this requirement supports; independent obligations may remain unlinked.",
+        "why": "Links show why work matters without forcing a policy or constraint into an invented benefit.",
+        "example": "Connect usable handoff history to reduced repeated explanations.",
+        "method": "requirement"
+      },
+      "conditions": {
+        "title": "Conditions and boundaries",
+        "what": "State where this requirement applies and any exceptions.",
+        "why": "Explicit limits prevent a local finding from becoming an unsupported universal obligation.",
+        "example": "Applies to authorized workers in the pilot case types.",
+        "method": "requirement"
+      },
+      "text": {
+        "title": "What must be true?",
+        "what": "Describe one necessary behavior or condition, for a clear actor and situation.",
+        "why": "A bounded requirement connects intent to something a team can implement and verify.",
+        "example": "When a saved case is reopened, the case worker can access the recorded handoff history.",
+        "method": "requirement"
+      },
+      "title": {
+        "title": "Area name",
+        "what": "Name the specific topic covered by this area.",
+        "why": "A clear label helps specialists find work relevant to their expertise.",
+        "example": "Handoff information completeness.",
+        "method": "requirement"
+      },
+      "project_question": {
+        "title": "Project question",
+        "what": "Ask what the team needs to discover to define this requirement area.",
+        "why": "A specific question directs evidence gathering toward a decision.",
+        "example": "Which details does the receiving worker need to continue each supported case type?",
+        "method": "requirement"
+      },
+      "project_rationale": {
+        "title": "Why it matters here",
+        "what": "Connect this area to a benefit, risk or obligation in the intake.",
+        "why": "The rationale makes relevance inspectable when scope or evidence changes.",
+        "example": "Without prior case history, workers may need to repeat the customer interview.",
+        "method": "requirement"
+      },
+      "project_checks": {
+        "title": "Project checks",
+        "what": "State observable checks and the conditions under which each passes.",
+        "why": "These checks establish whether the requirement is met; they do not prove a business KPI improved.",
+        "example": "Reopen a saved case and verify that the previously recorded handoff history is available.",
+        "method": "requirement"
+      },
+      "project_gaps": {
+        "title": "Open questions",
+        "what": "Ask what the team needs to discover to define this requirement area.",
+        "why": "A specific question directs evidence gathering toward a decision.",
+        "example": "Which details does the receiving worker need to continue each supported case type?",
+        "method": "requirement"
+      }
+    }
+  }
+}

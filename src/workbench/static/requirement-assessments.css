@@ -1,0 +1,140 @@
+/* Evidence coverage is scoped to frozen checks and a stated use, never approval. */
+.requirement-assessment-summary{display:grid;gap:8px;min-width:0;width:100%;font-size:13px;line-height:20px;font-weight:400;color:var(--ws-color-text-body-default)}
+.requirement-assessment-summary-line{display:flex;flex-wrap:wrap;gap:8px 20px;align-items:baseline}
+.requirement-assessment-summary-line>span:first-child{font-weight:600}
+.requirement-assessment-summary[data-assessment-state="suitable"] .requirement-assessment-summary-line>span:first-child{padding:3px 8px;border-radius:4px;background:var(--ws-color-secondary-purple-light-25);color:var(--ws-color-text-activation-default)}
+.requirement-assessment-summary[data-assessment-state="needs-work"] .requirement-assessment-summary-line>span:first-child,.requirement-assessment-summary[data-assessment-state="needs-reassessment"] .requirement-assessment-summary-line>span:first-child{padding:3px 8px;border-radius:4px;background:var(--signal-warning-surface);color:var(--signal-warning-ink)}
+.requirement-assessment-summary[data-assessment-state="needs-work"],.requirement-assessment-summary[data-assessment-state="needs-reassessment"]{border-left:3px solid var(--signal-warning-border);padding-left:12px}
+.requirement-assessment-next{display:block;color:var(--ws-color-text-body-default);font-weight:400}
+.requirement-assessment-next>strong{font-weight:600;color:var(--signal-identity-ink);margin-right:6px}
+.requirement-record-heading+.requirement-assessment-summary{flex:1 0 100%}
+.requirement-coverage{display:grid;gap:6px;width:min(100%,380px);font-size:13px;line-height:20px}
+.requirement-coverage-bar{display:flex;width:100%;height:6px;border-radius:3px;overflow:hidden;background:var(--ac-border);gap:2px}
+.requirement-coverage-bar>span{min-width:3px;flex-basis:0}
+.coverage-supported{background:var(--ac-accent-text)}.coverage-unresolved{background:var(--ac-warning-border)}.coverage-contradicted{background:var(--ac-danger)}.coverage-unchecked{background:var(--ac-border-strong)}
+.requirement-coverage-counts{font-weight:400;color:var(--muted)}
+.workspace-app .requirement-assessment{display:grid;gap:16px;padding:20px;background:transparent;border:0;border-top:1px solid var(--line);margin:0}
+.workspace-app .requirement-assessment>header{margin:0}
+.workspace-app .requirement-assessment :is(h4,h5){margin:0 0 8px;font-size:13px;line-height:20px;font-weight:600;color:var(--signal-identity-ink)}
+.workspace-app .requirement-assessment :is(p,li,dt,dd,summary,.pre,.label-value>label){font-size:13px;line-height:20px}
+.requirement-assessment-detail{padding-top:0;margin:0}
+.requirement-record-body .requirement-assessment>.requirement-assessment-summary{display:none}
+.requirement-assessment-detail>.details-body{display:grid;gap:24px;margin-top:16px}
+.requirement-assessment-detail .label-value,.requirement-assessment-detail p{margin:0}
+.requirement-assessment-detail .label-value>label{font-weight:600;margin-bottom:6px}
+.requirement-assessment-use{display:grid;gap:8px;max-width:260px;font-size:13px;line-height:20px}
+.requirement-assessment-use>select{font-size:13px;line-height:20px}
+.requirement-assessment-actions{display:flex;flex-wrap:wrap;gap:8px 12px}
+.requirement-check-result{margin-top:16px;padding-top:16px;border-top:1px solid var(--line)}
+.requirement-check-result>summary{padding:8px 0;font-size:13px;line-height:20px}
+.requirement-check-heading{display:inline-flex;width:calc(100% - 20px);justify-content:space-between;align-items:baseline;gap:12px}
+.requirement-check-heading>strong{min-width:0;font-weight:600}
+.requirement-check-heading>span{flex:none;color:var(--muted)}
+.requirement-check-content{display:grid;gap:12px;padding-top:12px}
+.requirement-check-result blockquote{margin:12px 0;padding-left:12px;border-left:2px solid var(--line)}
+.requirement-assessment-caution{border-left:3px solid var(--signal-warning-border);padding-left:12px}
+.requirement-assessment-history+.requirement-assessment-history{margin-top:16px;padding-top:16px;border-top:1px solid var(--line)}
+.requirement-assessment-dialog .assessment-edit-check{margin:16px 0;padding:16px;background:var(--ws-color-background-surface-dimmer);border:0;border-radius:4px}
+.requirement-assessment-dialog .assessment-edit-check>summary{font-size:16px;line-height:24px;font-weight:600}
+.requirement-assessment-dialog .assessment-edit-check>.details-body{display:grid;gap:16px}
+.requirement-assessment-dialog .form-field{margin:0}
+.requirement-assessment-dialog .form-field>span{font-size:13px;line-height:20px;font-weight:600}
+.requirement-assessment-dialog .assessment-citation{padding:16px;background:var(--ac-surface);border-radius:4px;display:grid;gap:12px}
+.requirement-assessment-dialog .assessment-citation+.assessment-citation{margin-top:16px}
+.requirement-assessment-dialog .assessment-source-preview .pre{max-height:200px;overflow:auto;font-size:13px;line-height:20px}
+.requirement-assessment-dialog [data-assessment-use-checks][hidden]{display:none}
+
+.pending-requirement>summary>.requirement-assessment-summary{grid-column:1/-1;width:100%}
+@media(max-width:700px){.workspace-app .requirement-assessment{padding:16px}}
+.workspace-app .requirement-assessment-map{margin:0;padding:0}
+.requirement-assessment-map>.workbench-module-header{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:12px 24px}
+.requirement-coverage-legend{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:13px;line-height:20px;font-weight:400;color:var(--muted)}
+.requirement-coverage-legend>span{display:inline-flex;align-items:center;gap:6px}
+.requirement-coverage-legend i{display:inline-block;width:8px;height:8px}
+.requirement-assessment-map .requirement-record-list{display:grid;gap:16px}
+.workspace-app .requirement-assessment-map .requirement-record>summary{display:grid;grid-template-columns:8px minmax(0,1fr) minmax(145px,180px);gap:16px;align-items:center}
+.workspace-app .requirement-assessment-map .requirement-record>summary>.requirement-record-heading{min-width:0}
+.requirement-record-heading>.condition-chip{width:fit-content}
+.requirement-drawer-indicator{display:grid;gap:6px;min-width:0;width:100%;font-size:13px;line-height:20px;font-weight:400;color:var(--muted)}
+.requirement-drawer-status{font-weight:600;color:var(--ws-color-text-body-default)}
+.requirement-drawer-indicator .requirement-coverage{width:100%}
+.requirement-drawer-indicator .requirement-coverage-counts{display:none}
+.requirement-drawer-indicator .coverage-awaiting{background:repeating-linear-gradient(135deg,var(--ws-color-grayscale-gray-20) 0 4px,var(--ws-color-background-surface-dimmer) 4px 8px)}
+.requirement-drawer-indicator[data-assessment-state="needs-work"] .requirement-drawer-status,.requirement-drawer-indicator[data-assessment-state="needs-reassessment"] .requirement-drawer-status{color:var(--signal-warning-ink);background:var(--signal-warning-surface);padding:2px 6px;border-radius:4px}
+.requirement-drawer-indicator[data-assessment-state="suitable"] .requirement-drawer-status{color:var(--ws-color-text-activation-default);background:var(--ws-color-secondary-purple-light-25);padding:2px 6px;border-radius:4px}
+@media(max-width:700px){.workspace-app .requirement-assessment-map .requirement-record>summary{grid-template-columns:8px minmax(0,1fr);gap:12px}.requirement-assessment-map .requirement-drawer-indicator{grid-column:2}}
+.workspace-app .requirement-assessment-map .requirement-record[data-work="none"]{border-left-width:1px}
+.workspace-app .requirement-assessment-map .requirement-record:not([open])>summary{background:var(--ws-color-background-surface-dimmer)}
+.requirement-map-guidance{margin-top:24px;font-size:13px;line-height:20px}
+.requirement-map-guidance>summary{padding:12px 0}
+.requirement-map-guidance>.details-body{margin-top:16px}
+
+/* Discrete counts preserve proportions under the app's strict no-inline-style CSP. */
+.requirement-coverage-bar>span[data-coverage-units="1"]{flex-grow:1}
+.requirement-coverage-bar>span[data-coverage-units="2"]{flex-grow:2}
+.requirement-coverage-bar>span[data-coverage-units="3"]{flex-grow:3}
+.requirement-coverage-bar>span[data-coverage-units="4"]{flex-grow:4}
+.requirement-coverage-bar>span[data-coverage-units="5"]{flex-grow:5}
+.requirement-coverage-bar>span[data-coverage-units="6"]{flex-grow:6}
+.requirement-coverage-bar>span[data-coverage-units="7"]{flex-grow:7}
+.requirement-coverage-bar>span[data-coverage-units="8"]{flex-grow:8}
+.requirement-coverage-bar>span[data-coverage-units="9"]{flex-grow:9}
+.requirement-coverage-bar>span[data-coverage-units="10"]{flex-grow:10}
+.requirement-coverage-bar>span[data-coverage-units="11"]{flex-grow:11}
+.requirement-coverage-bar>span[data-coverage-units="12"]{flex-grow:12}
+.requirement-coverage-bar>span[data-coverage-units="13"]{flex-grow:13}
+.requirement-coverage-bar>span[data-coverage-units="14"]{flex-grow:14}
+.requirement-coverage-bar>span[data-coverage-units="15"]{flex-grow:15}
+.requirement-coverage-bar>span[data-coverage-units="16"]{flex-grow:16}
+.requirement-coverage-bar>span[data-coverage-units="17"]{flex-grow:17}
+.requirement-coverage-bar>span[data-coverage-units="18"]{flex-grow:18}
+.requirement-coverage-bar>span[data-coverage-units="19"]{flex-grow:19}
+.requirement-coverage-bar>span[data-coverage-units="20"]{flex-grow:20}
+.requirement-coverage-bar>span[data-coverage-units="21"]{flex-grow:21}
+.requirement-coverage-bar>span[data-coverage-units="22"]{flex-grow:22}
+.requirement-coverage-bar>span[data-coverage-units="23"]{flex-grow:23}
+.requirement-coverage-bar>span[data-coverage-units="24"]{flex-grow:24}
+.requirement-coverage-bar>span[data-coverage-units="25"]{flex-grow:25}
+.requirement-coverage-bar>span[data-coverage-units="26"]{flex-grow:26}
+.requirement-coverage-bar>span[data-coverage-units="27"]{flex-grow:27}
+.requirement-coverage-bar>span[data-coverage-units="28"]{flex-grow:28}
+.requirement-coverage-bar>span[data-coverage-units="29"]{flex-grow:29}
+.requirement-coverage-bar>span[data-coverage-units="30"]{flex-grow:30}
+.requirement-coverage-bar>span[data-coverage-units="31"]{flex-grow:31}
+.requirement-coverage-bar>span[data-coverage-units="32"]{flex-grow:32}
+.requirement-coverage-bar>span[data-coverage-units="33"]{flex-grow:33}
+.requirement-coverage-bar>span[data-coverage-units="34"]{flex-grow:34}
+.requirement-coverage-bar>span[data-coverage-units="35"]{flex-grow:35}
+.requirement-coverage-bar>span[data-coverage-units="36"]{flex-grow:36}
+.requirement-coverage-bar>span[data-coverage-units="37"]{flex-grow:37}
+.requirement-coverage-bar>span[data-coverage-units="38"]{flex-grow:38}
+.requirement-coverage-bar>span[data-coverage-units="39"]{flex-grow:39}
+.requirement-coverage-bar>span[data-coverage-units="40"]{flex-grow:40}
+.requirement-coverage-bar>span[data-coverage-units="41"]{flex-grow:41}
+.requirement-coverage-bar>span[data-coverage-units="42"]{flex-grow:42}
+.requirement-coverage-bar>span[data-coverage-units="43"]{flex-grow:43}
+.requirement-coverage-bar>span[data-coverage-units="44"]{flex-grow:44}
+.requirement-coverage-bar>span[data-coverage-units="45"]{flex-grow:45}
+.requirement-coverage-bar>span[data-coverage-units="46"]{flex-grow:46}
+.requirement-coverage-bar>span[data-coverage-units="47"]{flex-grow:47}
+.requirement-coverage-bar>span[data-coverage-units="48"]{flex-grow:48}
+.requirement-coverage-bar>span[data-coverage-units="49"]{flex-grow:49}
+.requirement-coverage-bar>span[data-coverage-units="50"]{flex-grow:50}
+.requirement-coverage-bar>span[data-coverage-units="51"]{flex-grow:51}
+.requirement-coverage-bar>span[data-coverage-units="52"]{flex-grow:52}
+.requirement-coverage-bar>span[data-coverage-units="53"]{flex-grow:53}
+.requirement-coverage-bar>span[data-coverage-units="54"]{flex-grow:54}
+.requirement-coverage-bar>span[data-coverage-units="55"]{flex-grow:55}
+.requirement-coverage-bar>span[data-coverage-units="56"]{flex-grow:56}
+.requirement-coverage-bar>span[data-coverage-units="57"]{flex-grow:57}
+.requirement-coverage-bar>span[data-coverage-units="58"]{flex-grow:58}
+.requirement-coverage-bar>span[data-coverage-units="59"]{flex-grow:59}
+.requirement-coverage-bar>span[data-coverage-units="60"]{flex-grow:60}
+.business-intent-conclusion{display:grid;gap:8px;margin:16px 0 0;min-width:0}
+.business-intent-conclusion :is(h4,p,summary,.pre,.label-value>label){font-size:13px;line-height:20px}
+.business-intent-conclusion>h4{margin:0;font-weight:600;color:var(--signal-identity-ink)}
+.business-intent-conclusion>p,.business-intent-conclusion .label-value{margin:0}
+.business-intent-conclusion-result{font-weight:600}
+.business-intent-conclusion>details{margin-top:4px}
+.business-intent-conclusion>details>.details-body{display:grid;gap:16px}
+.business-intent-conclusion .label-value>label{font-weight:600;margin-bottom:6px}

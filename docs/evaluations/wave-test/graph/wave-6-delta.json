@@ -1,0 +1,117 @@
+{
+ "wave": 6,
+ "new_or_revised": [
+  {
+   "id": "SPEC-D2",
+   "kind": "artifact",
+   "group": "Design",
+   "rev": 1,
+   "date": "2026-11-05",
+   "author": "Lee Chen",
+   "text": "Design spec v2: one-tap default for all patients and all reminders. Cites \"most patients who miss already know in advance\" and \"5 of 6 unaided\". Friction points removed: portal login, phone queue.",
+   "links": [
+    {
+     "relation": "informed-by",
+     "target": "FIND-1",
+     "target_rev": 1,
+     "conditions": "all patients",
+     "use": "rationale"
+    },
+    {
+     "relation": "supported-by",
+     "target": "EVAL-1",
+     "target_rev": 1,
+     "conditions": "",
+     "use": "evidence"
+    },
+    {
+     "relation": "implements",
+     "target": "DD-1",
+     "target_rev": 1,
+     "conditions": "",
+     "use": ""
+    }
+   ]
+  },
+  {
+   "id": "ENG-H1",
+   "kind": "artifact",
+   "group": "Engineering",
+   "rev": 1,
+   "date": "2026-11-12",
+   "author": "Ravi Gomez",
+   "text": "Engineering handoff: rescheduling at any hour, 24/7 without staff; estimate includes high-availability tier (~40% of infrastructure cost). Slots API unconfirmed.",
+   "links": [
+    {
+     "relation": "implements",
+     "target": "REQ-3",
+     "target_rev": 1,
+     "conditions": "",
+     "use": ""
+    },
+    {
+     "relation": "implements",
+     "target": "REQ-6",
+     "target_rev": 1,
+     "conditions": "",
+     "use": ""
+    },
+    {
+     "relation": "depends-on",
+     "target": "DEP-2",
+     "target_rev": 1,
+     "conditions": "",
+     "use": ""
+    }
+   ]
+  }
+ ],
+ "new_packets": [
+  {
+   "id": "PK-DESIGN-SPEC",
+   "audience": "Lee Chen (Design)",
+   "resolved": "2026-11-05",
+   "refs": [
+    [
+     "FIND-1",
+     1
+    ],
+    [
+     "EVAL-1",
+     1
+    ],
+    [
+     "DD-1",
+     1
+    ],
+    [
+     "REQ-2",
+     1
+    ],
+    [
+     "REQ-5",
+     2
+    ]
+   ]
+  },
+  {
+   "id": "PK-ENG-HANDOFF",
+   "audience": "Ravi Gomez (Engineering)",
+   "resolved": "2026-11-12",
+   "refs": [
+    [
+     "REQ-3",
+     1
+    ],
+    [
+     "REQ-6",
+     1
+    ],
+    [
+     "DEP-2",
+     1
+    ]
+   ]
+  }
+ ]
+}
