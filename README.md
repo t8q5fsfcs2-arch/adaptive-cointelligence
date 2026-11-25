@@ -47,6 +47,7 @@ node --test tests/*.cjs
 
 ## Documentation
 
+- [IKE application authority and Builder entry](applications/adaptive-cointelligence/index.md) (future native application; start here for corpus preparation)
 - [Architecture overview](docs/architecture.md)
 - [Decisions](docs/decisions/README.md)
 - [CLAUDE.md](CLAUDE.md): project instructions for development with Claude

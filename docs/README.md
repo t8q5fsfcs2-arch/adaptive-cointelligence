@@ -1,5 +1,6 @@
 # Documentation
 
+- [IKE application authority and Builder entry](../applications/adaptive-cointelligence/index.md).
 - [Architecture overview](architecture.md): what the system is, the objects it
   keeps distinct and the lifecycle of consequential work.
 - [Developer guide](developer-guide.md): for backend and full-stack engineers;

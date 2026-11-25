@@ -7,6 +7,11 @@ records in [decisions](decisions/README.md); this log points to them.
 **Decision** is something the owner chose or approved. **Action** is work done.
 Commits are on `claude/northstar-ux` unless noted. "Pushed" means on GitHub.
 
+## 2026-11-25 · branch `claude/ike-app`
+
+- **Decision:** reserve a separate home for the canonical future IKE application, with its authored authority and Builder source index.
+- **Action:** added the [application authority](../applications/adaptive-cointelligence/index.md), methodology provenance, and proposed proof. No Python behavior, native Corpus binding, app package or deployment changed.
+
 ## Open items
 
 - `given-northstar` tag is not on GitHub (the push connection drops); the given
