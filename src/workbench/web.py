@@ -396,6 +396,8 @@ class Handler(BaseHTTPRequestHandler):
         files["/requirement-assessments.js"] = ("requirement-assessments.js", "text/javascript; charset=utf-8")
         files["/requirement-evidence.js"] = ("requirement-evidence.js", "text/javascript; charset=utf-8")
         files["/knowledge-system.js"] = ("knowledge-system.js", "text/javascript; charset=utf-8")
+        files["/aperture.js"] = ("aperture.js", "text/javascript; charset=utf-8")
+        files["/aperture.css"] = ("aperture.css", "text/css; charset=utf-8")
         files["/requirement-assessments.css"] = ("requirement-assessments.css", "text/css; charset=utf-8")
         files["/requirement-organization.js"] = ("requirement-organization.js", "text/javascript; charset=utf-8")
         files["/requirement-organization.css"] = ("requirement-organization.css", "text/css; charset=utf-8")

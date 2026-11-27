@@ -13,6 +13,29 @@ working branches of a previous repository. "Pushed" means on GitHub.
 - The live AI partner needs a model connection; without one, AI actions are
   disabled or explain why.
 
+## 2026-11-27
+
+- **Decision:** the owner asked for each person's main project screens to lead with
+  three things, bold and unmissable: the goal, what matters now and one next move,
+  changing with Business Intent status and the plan stage. Reason: people should
+  want the product because it narrows attention to the project and its goals.
+  Presentation only: it reads existing state and saves, approves or publishes nothing.
+- **Action:** added the project focus band (`static/aperture.js`, `aperture.css`) at
+  the top of Project home, Business Intent, the workbench, Requirements, Decisions &
+  Issues and Handoff, for the sponsor, Research, Design and the requirement owner.
+  - Business Intent status: not published, in review, change requested, published,
+    revised (naming whose finding changed it).
+  - Plan stage: Intent, Investigate, Align, Deliver, from intent, open issues, open
+    decisions and approvals.
+  - What matters now: at most three lines per person and stage.
+  - Next move: anything waiting on the person first, otherwise the step for their
+    role and stage; stated without a button when they are already on that screen.
+  - On the workbench the band replaces the heads-up strip and keeps its two
+    click-throughs (changed inputs, weakest area).
+  - Not shown on detail pages, record pages, or to the legacy reviewer and the
+    administrator. Checked at desktop, tablet and phone, light and dark, on the
+    seeded project and a fresh one. 14 new UI tests.
+
 ## 2026-11-26
 
 - **Decision:** keep old developer-guide links working for the partner's
