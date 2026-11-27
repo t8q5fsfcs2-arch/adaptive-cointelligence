@@ -15,6 +15,14 @@ working branches of a previous repository. "Pushed" means on GitHub.
 
 ## 2026-11-26
 
+- **Decision:** keep old developer-guide links working for the partner's
+  `omniarcs/ike-app` branch, and also send them a direct mapping.
+- **Action:** added `docs/developer-guide.md`, a redirect page. Each old section
+  heading remains, so existing links land, and says where its content now lives in
+  the developer manual. The "three kinds of change" table, which the manual had
+  dropped, is kept there as it stood. Their branch now has no broken links when
+  applied on `main` (48 of 48 resolve; tested in a throwaway copy). Their branch
+  was not changed.
 - **Decision:** `main` now grows by ordinary commits. No more amending or
   force-pushing. Reason: a partner is building infrastructure on this repository
   (branch `omniarcs/ike-app`, based on the 24 November version of `main`), and
