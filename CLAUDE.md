@@ -96,7 +96,11 @@ viable change and test the affected invariants.
 - Work only in this repository and its local clone (`~/Developer/adaptive-cointelligence`).
   Never read from, write to, branch from or push to any other repository or folder,
   including earlier prototype repositories. If a task seems to need one, stop and ask.
-- Commit in the user's local clone. Push to GitHub only when the user says so.
+- Add new commits on top of `main`. Never amend, rebase or force-push `main`: a
+  partner builds on this repository and rewritten history breaks their work.
+- Branches created by anyone else (for example `omniarcs/*`) belong to them. Read
+  them if asked; never change, merge, rebase or delete them without the user's say.
+- Push to GitHub only when the user says so.
 - Keep [the decision and action log](docs/log.md) current: add what was decided and
   what was done, with commits, in every round of work, newest first.
 

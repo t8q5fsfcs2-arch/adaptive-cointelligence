@@ -15,6 +15,14 @@ working branches of a previous repository. "Pushed" means on GitHub.
 
 ## 2026-11-26
 
+- **Decision:** `main` now grows by ordinary commits. No more amending or
+  force-pushing. Reason: a partner is building infrastructure on this repository
+  (branch `omniarcs/ike-app`, based on the 24 November version of `main`), and
+  rewriting history breaks work built on it. Partner branches are theirs and are
+  not touched.
+- **Action:** the Claude GitHub App now has access to this repository only by the
+  owner's install, so pushes go directly to `main` on the owner's command. The
+  bundle hand-off is retired.
 - **Decision:** the owner approved rewording the wording inherited from the earlier
   prototype, including one worked example inside the integrity grounding prompt. The
   example keeps the same rule and outcome (an excluded activity next to an included
